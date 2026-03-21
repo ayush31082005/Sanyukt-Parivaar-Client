@@ -392,7 +392,7 @@ const UserDashboardLayout = () => {
                 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
                 
                 /* Selection Color */
-                ::selection { background: #10b98133; color: #10b981; }
+                ::selection { background: rgba(200, 169, 106, 0.28); color: #C8A96A; }
             `}</style>
         </div>
     );

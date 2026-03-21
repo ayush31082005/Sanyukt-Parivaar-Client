@@ -213,7 +213,7 @@ const GrievancePage = () => {
                     <div className="lg:col-span-1 space-y-6">
                         {/* Guidelines Card */}
                         <div className="bg-white rounded-[14px] shadow-lg overflow-hidden animate-slide-right">
-                            <div className="bg-[#B8FFB8] p-4 text-[#0A7A2F]">
+                            <div className="bg-[#F8D7A8] p-4 text-[#B59410]">
                                 <h2 className="text-xl font-bold flex items-center gap-2">
                                     <FileText className="w-5 h-5" />
                                     Guidelines
@@ -236,7 +236,7 @@ const GrievancePage = () => {
 
                         {/* Nodal Office Contact Details */}
                         <div className="bg-white rounded-[14px] shadow-lg overflow-hidden animate-slide-right animation-delay-200">
-                            <div className="bg-[#F8D7A8] p-4 text-[#F7931E]">
+                            <div className="bg-[#F8D7A8] p-4 text-[#B59410]">
                                 <h2 className="text-xl font-bold flex items-center gap-2">
                                     <UserCircle className="w-5 h-5" />
                                     Our Nodal Office Contact Details
@@ -273,7 +273,7 @@ const GrievancePage = () => {
                     {/* Right Column - Grievance Form */}
                     <div className="lg:col-span-2">
                         <div className="bg-white rounded-[14px] shadow-lg overflow-hidden animate-slide-left">
-                            <div className="bg-[#B8FFB8] p-4 text-[#0A7A2F]">
+                            <div className="bg-[#F8D7A8] p-4 text-[#B59410]">
                                 <h2 className="text-xl font-bold flex items-center gap-2">
                                     <MessageSquare className="w-5 h-5" />
                                     Submit Grievance
@@ -421,7 +421,7 @@ const GrievancePage = () => {
                                     {/* Submit Button */}
                                     <button
                                         type="submit"
-                                        className="w-full bg-[#B8FFB8] hover:bg-[#B8FFB8]/90 text-[#0A7A2F] font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2 group"
+                                        className="w-full bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-[#C8A96A]/30 flex items-center justify-center gap-2 group"
                                     >
                                         <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                         Submit
@@ -435,7 +435,7 @@ const GrievancePage = () => {
                 {/* Check Grievance Status Section */}
                 <div className="mt-8">
                     <div className="bg-white rounded-[14px] shadow-lg overflow-hidden animate-slide-up">
-                        <div className="bg-[#B8FFB8] p-4 text-[#0A7A2F]">
+                        <div className="bg-[#F8D7A8] p-4 text-[#B59410]">
                             <h2 className="text-xl font-bold flex items-center gap-2">
                                 <ExternalLink className="w-5 h-5" />
                                 Check Grievance Status
@@ -448,7 +448,7 @@ const GrievancePage = () => {
                             <div className="flex justify-center mt-4">
                                 <button
                                     onClick={() => setShowStatusModal(true)}
-                                    className="inline-flex items-center gap-2 bg-[#F7931E] hover:bg-[#F7931E]/90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg group"
+                                    className="inline-flex items-center gap-2 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#C8A96A]/30 group"
                                 >
                                     Check Grievance Status
                                     <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -518,7 +518,7 @@ const GrievancePage = () => {
 
                                     <button
                                         onClick={closeModal}
-                                        className="w-full bg-[#B8FFB8] hover:bg-[#B8FFB8]/90 text-[#0A7A2F] font-bold py-3 rounded-lg transition-colors mt-4"
+                                        className="w-full bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-bold py-3 rounded-lg transition-all hover:shadow-[0_0_15px_rgba(200,169,106,0.3)] mt-4"
                                     >
                                         Close
                                     </button>
@@ -584,7 +584,7 @@ const GrievancePage = () => {
                                     {/* Check Status Button */}
                                     <button
                                         type="submit"
-                                        className="w-full bg-[#F7931E] hover:bg-[#F7931E]/90 text-white font-bold py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg mt-4"
+                                        className="w-full bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-bold py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-[#C8A96A]/30 mt-4"
                                     >
                                         Check Status
                                     </button>

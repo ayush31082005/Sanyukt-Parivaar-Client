@@ -163,7 +163,7 @@ const CheckoutPage = () => {
                     contact: shippingInfo.phone,
                 },
                 theme: {
-                    color: "#0A7A2F",
+                    color: "#C8A96A",
                 },
             };
 

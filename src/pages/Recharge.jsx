@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Smartphone, Tv, Wifi, CheckCircle2, ChevronRight, Zap, CircleUser, Wallet, Heart, Shield, Clock, Users, Gift, Receipt, Search, Copy, Share2, Info, ExternalLink } from 'lucide-react';
+import { Smartphone, Tv, Wifi, CheckCircle2, ChevronRight, Zap, CircleUser, Wallet, Heart, Shield, Clock, Users, Gift, Receipt, Search, Copy, Share2, Info, ExternalLink, ShieldCheck, Lock, IndianRupee } from 'lucide-react';
 import toast from 'react-hot-toast';
 import api from '../api';
 import PaymentMethodModal from '../components/PaymentMethodModal';
@@ -238,11 +238,11 @@ const Recharge = () => {
             {/* 1. PAGE BANNER / HEADER SECTION */}
             <section className="relative h-[300px] flex items-center justify-center overflow-hidden bg-[#0D0D0D]">
                 <div
-                    className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-luminosity"
+                    className="absolute inset-0 bg-cover bg-center opacity-100"
                     style={{ backgroundImage: "url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070')" }}
                 ></div>
 
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0D0D0D]/50 to-[#0D0D0D]"></div>
+                <div className="absolute inset-0 bg-[#0D0D0D]/40 bg-gradient-to-r from-[#0D0D0D]/90 via-[#0D0D0D]/60 to-transparent"></div>
 
                 <div className="relative z-10 text-center px-4 w-full flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-8">
                     <div className="flex-1 text-center md:text-left animate-fade-in">
@@ -255,7 +255,7 @@ const Recharge = () => {
                         </div>
 
                         <p className="text-lg md:text-xl font-light text-[#F5E6C8]/80 max-w-2xl drop-shadow-md leading-relaxed">
-                            Fast, secure, and exclusive services for the <span className="font-serif italic text-[#C8A96A]">Sanyukt</span> community. 
+                            Fast, secure, and exclusive services for the <span className="font-serif italic text-[#C8A96A]">Sanyukt</span> community.
                         </p>
                     </div>
                 </div>
@@ -270,7 +270,7 @@ const Recharge = () => {
                     </h2>
                     <div className="space-y-6 text-[#F5E6C8]/70 text-lg leading-relaxed font-light">
                         <p>
-                            Experience the pinnacle of convenience with our curated digital services. 
+                            Experience the pinnacle of convenience with our curated digital services.
                             From seamless recharges to impactful contributions, we empower your lifestyle while fostering community growth.
                         </p>
                     </div>
@@ -410,8 +410,8 @@ const Recharge = () => {
                                                     <div className="flex gap-2">
                                                         <button
                                                             onClick={() => {
-                                                                 navigator.clipboard.writeText(window.location.origin + '/donate?for=' + (userData.memberId || userData._id));
-                                                                 toast.success('Link Copied!');
+                                                                navigator.clipboard.writeText(window.location.origin + '/donate?for=' + (userData.memberId || userData._id));
+                                                                toast.success('Link Copied!');
                                                             }}
                                                             className="p-2 bg-[#1A1A1A] hover:bg-[#C8A96A]/10 rounded-xl text-[#C8A96A] border border-[#C8A96A]/10 transition-all"
                                                         >
@@ -426,7 +426,7 @@ const Recharge = () => {
                                                                         url: window.location.origin + '/donate?for=' + (userData.memberId || userData._id)
                                                                     });
                                                                 } else {
-                                                                     toast.error('Sharing not supported');
+                                                                    toast.error('Sharing not supported');
                                                                 }
                                                             }}
                                                             className="p-2 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] rounded-xl text-[#0D0D0D] shadow-lg shadow-gold-900/10 transition-all"
@@ -443,7 +443,7 @@ const Recharge = () => {
                                     <div className="lg:col-span-2 space-y-4">
                                         <div className="bg-[#1A1A1A] rounded-[2rem] p-6 shadow-2xl flex flex-col items-center justify-center h-full border border-[#C8A96A]/10 relative overflow-hidden group/card">
                                             <div className="absolute inset-0 bg-gradient-to-b from-[#C8A96A]/5 to-transparent"></div>
-                                            
+
                                             <div className="relative group/qr mb-5">
                                                 <div className="absolute inset-0 bg-[#C8A96A]/20 rounded-3xl blur-2xl opacity-0 group-hover/qr:opacity-100 transition-opacity duration-700"></div>
                                                 <div className="relative bg-[#0D0D0D] p-5 rounded-3xl border border-[#C8A96A]/30 shadow-2xl flex flex-col items-center group-hover/qr:border-[#C8A96A] transition-colors duration-500">
@@ -460,7 +460,7 @@ const Recharge = () => {
                                                             <Smartphone className="w-4 h-4 text-[#C8A96A]" />
                                                             <span className="text-[10px] font-black text-[#F5E6C8] uppercase tracking-[0.3em]">Secure Scan</span>
                                                         </div>
-                                                        <span className="text-[11px] font-bold text-[#C8A96A] uppercase tracking-wider text-center">Transfer to Sanyukt Corporate</span>
+                                                        <span className="text-[11px] font-bold text-[#C8A96A] uppercase tracking-wider text-center">Sanykt Parivaar Rich Life</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -473,12 +473,12 @@ const Recharge = () => {
                                                 </div>
                                             </div>
 
-                                            <p className="mt-6 text-[9px] text-[#F5E6C8]/40 font-bold uppercase tracking-[0.2em] flex flex-col items-center gap-2">
+                                            <div className="mt-6 text-[9px] text-[#F5E6C8]/40 font-bold uppercase tracking-[0.2em] flex flex-col items-center gap-2">
                                                 <div className="flex items-center gap-2">
                                                     <ShieldCheck className="w-3.5 h-3.5 text-[#C8A96A]" />
                                                     <span>Verified by Razorpay & NPCI</span>
                                                 </div>
-                                            </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -517,7 +517,7 @@ const Recharge = () => {
                                         <Icon className={`w-5 h-5 ${isActive ? 'text-[#0D0D0D]' : 'group-hover:scale-110 transition-transform'}`} />
                                         <span className={`font-black text-[11px] uppercase tracking-[0.2em] ${isActive ? 'text-[#0D0D0D]' : ''}`}>{tab.label}</span>
                                         {isActive && (
-                                            <motion.div 
+                                            <motion.div
                                                 layoutId="activeTabGlow"
                                                 className="absolute inset-0 bg-white/10"
                                             />
@@ -546,7 +546,7 @@ const Recharge = () => {
 
                                             <div className="bg-[#1A1A1A] rounded-3xl p-8 border border-[#C8A96A]/10 shadow-2xl relative overflow-hidden group">
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A96A]/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
-                                                
+
                                                 <div className="flex items-center gap-4 mb-8">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] rounded-2xl flex items-center justify-center shadow-xl shadow-gold-900/10">
                                                         <Zap className="w-6 h-6 text-[#0D0D0D]" />
@@ -653,7 +653,7 @@ const Recharge = () => {
                                                     <Smartphone className="w-16 h-16 text-[#C8A96A]/20 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500" />
                                                     <h4 className="text-xl font-serif font-bold text-[#F5E6C8] mb-1">Mobile Rewards</h4>
                                                     <p className="text-[#C8A96A]/40 text-[10px] font-black uppercase tracking-widest">Digital Loyalty Program</p>
-                                                    
+
                                                     <div className="mt-6 p-4 bg-[#0D0D0D] rounded-2xl border border-[#C8A96A]/20 shadow-2xl">
                                                         <span className="text-3xl font-serif font-bold text-[#C8A96A]">5%</span>
                                                         <span className="text-[#F5E6C8]/60 text-[10px] ml-2 font-black uppercase tracking-widest">Reward Credits</span>
@@ -1085,7 +1085,7 @@ const Recharge = () => {
                 {/* 5. HOW IT WORKS SECTION */}
                 <section className="bg-[#1A1A1A] rounded-[3rem] p-10 md:p-20 relative overflow-hidden shadow-2xl border border-[#C8A96A]/10 mt-20">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C8A96A]/30 to-transparent"></div>
-                    
+
                     <div className="relative z-10">
                         <div className="text-center mb-20">
                             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 tracking-tight text-[#C8A96A]">The Ritual of Recharge</h2>
@@ -1121,10 +1121,10 @@ const Recharge = () => {
 
                             <div className="relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#C8A96A]/10 to-transparent rounded-[3rem] blur-3xl"></div>
-                                
+
                                 <div className="relative bg-[#0D0D0D] rounded-[3rem] p-12 border border-[#C8A96A]/20 shadow-3xl overflow-hidden group">
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#C8A96A]/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-                                    
+
                                     <div className="text-center relative z-10">
                                         <div className="w-24 h-24 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-700">
                                             <ShieldCheck className="w-12 h-12" />

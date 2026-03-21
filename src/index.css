@@ -15,6 +15,7 @@ body {
   background-color: var(--color-bg-deep);
   color: var(--color-cream);
   font-family: 'Inter', sans-serif;
+  color-scheme: dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -208,4 +209,94 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 .animate-slide-in-right {
     opacity: 0;
     animation-fill-mode: forwards;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Global "Home Theme" normalizer                                              */
+/* Many legacy pages use light (white/gray/green) utility classes. Instead of  */
+/* rewriting every page, map those common utilities to the Home palette.       */
+/* -------------------------------------------------------------------------- */
+@layer utilities {
+  /* Common light page backgrounds */
+  .bg-white { background-color: var(--color-bg-card); }
+  .bg-gray-50, .bg-gray-100,
+  .bg-slate-50, .bg-slate-100,
+  .bg-green-50, .bg-green-100,
+  .bg-orange-50, .bg-emerald-50 {
+    background-color: var(--color-bg-deep);
+  }
+
+  /* Arbitrary light backgrounds used in policy pages */
+  .bg-\[\#F8FAF5\], .bg-\[\#f8fafc\], .bg-\[\#F8FAFC\] { background-color: var(--color-bg-deep); }
+
+  /* Common light text tokens */
+  .text-slate-900, .text-gray-900, .text-gray-800 { color: var(--color-cream); }
+  .text-slate-700, .text-gray-700 { color: color-mix(in srgb, var(--color-cream) 85%, transparent); }
+  .text-slate-600, .text-slate-500,
+  .text-gray-600, .text-gray-500,
+  .text-slate-400, .text-gray-400 {
+    color: color-mix(in srgb, var(--color-cream) 65%, transparent);
+  }
+
+  /* Arbitrary dark text used in policy pages */
+  .text-\[\#222222\], .text-\[\#333333\] { color: var(--color-cream); }
+
+  /* Border tokens */
+  .border-slate-50, .border-slate-100, .border-slate-200,
+  .border-gray-100, .border-gray-200, .border-gray-300 {
+    border-color: var(--glass-border);
+  }
+
+  /* Legacy green/orange accents -> gold */
+  .text-green-700, .text-green-600, .text-green-500, .text-green-400,
+  .text-emerald-700, .text-emerald-600, .text-emerald-500, .text-emerald-400,
+  .text-orange-700, .text-orange-600, .text-orange-500 {
+    color: var(--color-gold);
+  }
+  .bg-orange-500, .bg-green-600, .bg-green-500, .bg-emerald-500 { background-color: var(--color-gold); }
+
+  /* Legacy arbitrary greens/oranges -> gold */
+  .text-\[\#0A7A2F\] { color: var(--color-gold); }
+  .border-\[\#0A7A2F\] { border-color: var(--color-gold); }
+  .text-\[\#F7931E\] { color: var(--color-gold-bright); }
+  .border-\[\#F7931E\] { border-color: var(--color-gold-bright); }
+  .bg-\[\#F7931E\] { background-color: var(--color-gold-bright); }
+  .bg-\[\#0A7A2F\] {
+    background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-gold-bright) 100%);
+  }
+  .bg-\[\#0A7A2F\]\/5 { background-color: rgba(200, 169, 106, 0.05); }
+  .bg-\[\#0A7A2F\]\/10 { background-color: rgba(200, 169, 106, 0.10); }
+  .bg-\[\#0A7A2F\]\/20 { background-color: rgba(200, 169, 106, 0.20); }
+  .bg-\[\#0A7A2F\]\/30 { background-color: rgba(200, 169, 106, 0.30); }
+  .hover\:bg-\[\#0A7A2F\]\/90:hover { background-color: rgba(200, 169, 106, 0.90); }
+
+  .border-\[\#0A7A2F\]\/10 { border-color: rgba(200, 169, 106, 0.10); }
+  .border-\[\#0A7A2F\]\/20 { border-color: rgba(200, 169, 106, 0.20); }
+  .border-\[\#0A7A2F\]\/50 { border-color: rgba(200, 169, 106, 0.50); }
+
+  .bg-\[\#F7931E\]\/5 { background-color: rgba(212, 175, 55, 0.05); }
+  .bg-\[\#F7931E\]\/10 { background-color: rgba(212, 175, 55, 0.10); }
+  .bg-\[\#F7931E\]\/20 { background-color: rgba(212, 175, 55, 0.20); }
+  .hover\:bg-\[\#F7931E\]\/90:hover { background-color: rgba(212, 175, 55, 0.90); }
+
+  .text-\[\#F7931E\]\/60 { color: rgba(212, 175, 55, 0.60); }
+  .text-\[\#0A7A2F\]\/60 { color: rgba(200, 169, 106, 0.60); }
+
+  /* Specific legacy light-green background used in Legal page */
+  .bg-\[\#E8F5E9\] { background-color: rgba(200, 169, 106, 0.08); }
+  .hover\:bg-\[\#E8F5E9\]:hover { background-color: rgba(200, 169, 106, 0.12); }
+
+  /* Legacy gradient stops used in some dashboards/admin */
+  .from-green-50 { --tw-gradient-from: var(--color-bg-deep); --tw-gradient-to: color-mix(in srgb, var(--color-bg-deep) 0%, transparent); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+  .to-green-50 { --tw-gradient-to: var(--color-bg-deep); }
+  .via-white { --tw-gradient-stops: var(--tw-gradient-from), var(--color-bg-card), var(--tw-gradient-to); }
+  .from-green-400 { --tw-gradient-from: var(--color-gold); --tw-gradient-to: color-mix(in srgb, var(--color-gold) 0%, transparent); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+  .to-green-600 { --tw-gradient-to: var(--color-gold-bright); }
+  .from-\[\#0A7A2F\] { --tw-gradient-from: var(--color-gold); --tw-gradient-to: color-mix(in srgb, var(--color-gold) 0%, transparent); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+  .to-\[\#2F7A32\] { --tw-gradient-to: var(--color-gold-bright); }
+
+  /* Focus rings */
+  .ring-green-500 { --tw-ring-color: color-mix(in srgb, var(--color-gold) 45%, transparent); }
+  .focus\:ring-green-500:focus { --tw-ring-color: color-mix(in srgb, var(--color-gold) 45%, transparent); }
+  .focus\:ring-\[\#0A7A2F\]:focus { --tw-ring-color: color-mix(in srgb, var(--color-gold) 45%, transparent); }
 }

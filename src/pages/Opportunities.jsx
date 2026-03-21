@@ -88,7 +88,7 @@ const OpportunitiesPage = () => {
                 {/* Benefits of Direct Selling */}
                 <div className="mb-12 animate-slide-up">
                     <div className="bg-white rounded-[14px] shadow-lg overflow-hidden">
-                        <div className="bg-gradient-to-r from-[#0A7A2F] to-[#2F7A32] p-6 text-white">
+                        <div className="bg-[#B59410] p-6 text-white">
                             <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-3">
                                 <Award className="w-8 h-8" />
                                 BENEFITS OF DIRECT SELLING
@@ -115,7 +115,7 @@ const OpportunitiesPage = () => {
                 {/* Why Sayukt Parivar Global Marketing? */}
                 <div className="mb-12 animate-slide-up animation-delay-200">
                     <div className="bg-white rounded-[14px] shadow-lg overflow-hidden">
-                        <div className="bg-gradient-to-r from-[#F7931E] to-[#F8B84A] p-6 text-white">
+                        <div className="bg-[#B59410] p-6 text-white">
                             <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-3">
                                 <Heart className="w-8 h-8" />
                                 WHY Sanyukt Parivaar & Rich Life Pvt.Ltd.?

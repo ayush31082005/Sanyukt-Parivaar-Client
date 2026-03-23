@@ -13,14 +13,14 @@ import {
 
 // Lazy load section components
 const HeroSection = React.lazy(() => import('./HomeComponents/HeroSection'));
-const RechargeSection = React.lazy(() => import('./HomeComponents/RechargeSection'));
+// const RechargeSection = React.lazy(() => import('./HomeComponents/RechargeSection'));
 const AboutSection = React.lazy(() => import('./HomeComponents/AboutSection'));
 const WhyChooseSection = React.lazy(() => import('./HomeComponents/WhyChooseSection'));
 const ProductsCarousel = React.lazy(() => import('./HomeComponents/ProductsCarousel'));
 const BusinessOpportunity = React.lazy(() => import('./HomeComponents/BusinessOpportunity'));
 const TrainingSection = React.lazy(() => import('./HomeComponents/TrainingSection'));
 const NewsSection = React.lazy(() => import('./HomeComponents/NewsSection'));
-const ContactFormSection = React.lazy(() => import('./HomeComponents/ContactFormSection'));
+// const ContactFormSection = React.lazy(() => import('./HomeComponents/ContactFormSection'));
 
 import ProductDetailsModal from '../components/ProductDetailsModal';
 import PaymentMethodModal from '../components/PaymentMethodModal';
@@ -523,7 +523,7 @@ const HomePage = () => {
                     handleNavigation={handleNavigation}
                 />
 
-                <RechargeSection
+                {/* <RechargeSection
                     mobileNumber={mobileNumber}
                     setMobileNumber={setMobileNumber}
                     operator={operator}
@@ -534,7 +534,7 @@ const HomePage = () => {
                     openPlanPopup={openPlanPopup}
                     handleRecharge={handleRecharge}
                     isLoggedIn={isLoggedIn}
-                />
+                /> */}
 
                 <AboutSection
                     aboutImage={aboutImage}
@@ -589,13 +589,13 @@ const HomePage = () => {
 
                 <NewsSection />
 
-                <ContactFormSection
+                {/* <ContactFormSection
                     contactForm={contactForm}
                     setContactForm={setContactForm}
                     handleContactSubmit={handleContactSubmit}
                     contactSubmitting={contactSubmitting}
                     contactSuccess={contactSuccess}
-                />
+                /> */}
 
                 {/* Final Trust Section */}
                 <section className="py-24 bg-[#0D0D0D] relative overflow-hidden" >

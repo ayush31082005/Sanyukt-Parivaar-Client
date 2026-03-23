@@ -23,7 +23,7 @@ const LegalPage = () => {
         {
             id: 'privacy',
             title: 'Privacy Policy',
-            icon: <Shield className="w-6 h-6 text-[#0A7A2F]" />,
+            icon: <Shield className="w-6 h-6 text-current" />,
             path: '/privacy-policy',
             content: {
                 intro: "Sanyukt Parivaar & Rich Life Pvt.Ltd. respects the privacy of its users, members, and customers. This Privacy Policy explains how we collect, use, protect, and disclose personal information provided on our website and digital platforms.",
@@ -157,7 +157,7 @@ const LegalPage = () => {
         {
             id: 'terms',
             title: 'Terms & Conditions',
-            icon: <FileText className="w-6 h-6 text-[#0A7A2F]" />,
+            icon: <FileText className="w-6 h-6 text-current" />,
             path: '/terms-conditions',
             content: {
                 intro: "By accessing or using the services of Sanyukt Parivaar & Rich Life Pvt.Ltd., you agree to comply with the following terms and conditions.",
@@ -277,7 +277,7 @@ const LegalPage = () => {
         {
             id: 'refund',
             title: 'Refund & Cancellation Policy',
-            icon: <RefreshCw className="w-6 h-6 text-[#0A7A2F]" />,
+            icon: <RefreshCw className="w-6 h-6 text-current" />,
             path: '/cancellation-policy',
             content: {
                 intro: "Sanyukt Parivaar & Rich Life Pvt.Ltd. follows a transparent refund and cancellation policy in accordance with applicable laws.",
@@ -397,7 +397,7 @@ const LegalPage = () => {
         {
             id: 'exchange',
             title: 'Exchange Policy',
-            icon: <Repeat className="w-6 h-6 text-[#0A7A2F]" />,
+            icon: <Repeat className="w-6 h-6 text-current" />,
             path: '/exchange-policy',
             content: {
                 intro: "We allow product exchanges under specific conditions to ensure customer satisfaction.",
@@ -478,7 +478,7 @@ const LegalPage = () => {
         {
             id: 'payment',
             title: 'Payment Policy',
-            icon: <CreditCard className="w-6 h-6 text-[#0A7A2F]" />,
+            icon: <CreditCard className="w-6 h-6 text-current" />,
             path: '/payment-policy',
             content: {
                 intro: "All payments on the Sanyukt Parivaar & Rich Life Pvt.Ltd. platform are processed securely through authorized payment gateways.",
@@ -598,7 +598,7 @@ const LegalPage = () => {
         {
             id: 'shipping',
             title: 'Shipping & Delivery Policy',
-            icon: <Truck className="w-6 h-6 text-[#0A7A2F]" />,
+            icon: <Truck className="w-6 h-6 text-current" />,
             path: '/shipping-delivery',
             content: {
                 intro: "We aim to deliver products in a timely and safe manner across serviceable locations.",
@@ -710,7 +710,7 @@ const LegalPage = () => {
         {
             id: 'marketing',
             title: 'Marketing & Sales Policy',
-            icon: <Megaphone className="w-6 h-6 text-[#0A7A2F]" />,
+            icon: <Megaphone className="w-6 h-6 text-current" />,
             path: '/marketing-sales-policy',
             content: {
                 intro: "Sanyukt Parivaar & Rich Life Pvt.Ltd. follows ethical and legal direct selling practices.",
@@ -860,7 +860,7 @@ const LegalPage = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#222222] mb-4 animate-slide-up">
                     Sanyukt Parivaar & Rich Life Pvt.Ltd.
                 </h2>
-                <p className="text-lg text-[#2F7A32] font-medium mb-6">
+                <p className="text-lg text-white font-medium mb-6">
                     Legal Information and Policies
                 </p>
                 <div className="w-[60px] h-[3px] bg-[#0A7A2F] mx-auto"></div>
@@ -973,37 +973,37 @@ const LegalPage = () => {
                                                 const isExpanded = expandedSections[sectionKey];
 
                                                 return (
-                                                    <div key={subIdx} className="border border-gray-200 rounded-lg overflow-hidden">
+                                                    <div key={subIdx} className="border border-[#C8A96A]/20 rounded-lg overflow-hidden mb-3">
                                                         {/* Dropdown Header */}
                                                         <button
                                                             onClick={() => toggleSection(policy.id, `${sectionIdx}-${subIdx}`)}
-                                                            className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left"
+                                                            className="w-full flex items-center justify-between p-4 bg-[#1A1A1A] hover:bg-[#252525] transition-colors text-left"
                                                         >
-                                                            <span className="font-semibold text-[#222222]">
+                                                            <span className="font-semibold text-[#F5E6C8]">
                                                                 {subSection.title}
                                                             </span>
                                                             {isExpanded ? (
-                                                                <ChevronUp className="w-5 h-5 text-[#0A7A2F] flex-shrink-0" />
+                                                                <ChevronUp className="w-5 h-5 text-[#C8A96A] flex-shrink-0" />
                                                             ) : (
-                                                                <ChevronDown className="w-5 h-5 text-[#0A7A2F] flex-shrink-0" />
+                                                                <ChevronDown className="w-5 h-5 text-[#C8A96A] flex-shrink-0" />
                                                             )}
                                                         </button>
 
                                                         {/* Dropdown Content */}
                                                         {isExpanded && (
-                                                            <div className="p-4 bg-white border-t border-gray-200">
+                                                            <div className="p-4 bg-[#0D0D0D] border-t border-[#C8A96A]/20">
                                                                 {subSection.content && (
-                                                                    <p className="text-[#222222] mb-4">{subSection.content}</p>
+                                                                    <p className="text-[#F5E6C8]/80 mb-4 leading-relaxed">{subSection.content}</p>
                                                                 )}
 
                                                                 {subSection.items && (
                                                                     <div className="space-y-4">
                                                                         {subSection.items.map((item, itemIdx) => (
-                                                                            <div key={itemIdx} className="pl-4 border-l-2 border-[#F7931E]">
-                                                                                <h5 className="font-bold text-[#0A7A2F] mb-1">
+                                                                            <div key={itemIdx} className="pl-4 border-l-2 border-[#C8A96A]">
+                                                                                <h5 className="font-bold text-[#C8A96A] mb-1">
                                                                                     {item.subheading}
                                                                                 </h5>
-                                                                                <p className="text-[#222222] text-sm">
+                                                                                <p className="text-[#F5E6C8]/60 text-sm leading-relaxed">
                                                                                     {item.text}
                                                                                 </p>
                                                                             </div>
@@ -1037,12 +1037,12 @@ const LegalPage = () => {
 
             {/* Official Certifications Section */}
             <section className="py-12 px-4 max-w-4xl mx-auto">
-                <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold text-[#0A7A2F] inline-block relative pb-2">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-serif font-bold text-[#C8A96A] inline-block relative pb-3">
                         Official Certifications & Documents
-                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#F7931E]"></span>
+                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-[2px] bg-[#C8A96A]/60"></span>
                     </h2>
-                    <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    <p className="text-[#F5E6C8]/60 mt-4 max-w-2xl mx-auto">
                         View and download our official company registration and compliance documents.
                     </p>
                 </div>
@@ -1050,69 +1050,69 @@ const LegalPage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {/* Certificate 1  */}
                     <a href="/certifications/certificate_1.pdf" target="_blank" rel="noopener noreferrer"
-                        className="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group">
-                        <div className="w-16 h-16 bg-[#F8FAF5] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0A7A2F] transition-colors">
-                            <FileText className="w-8 h-8 text-[#0A7A2F] group-hover:text-white transition-colors" />
+                        className="flex flex-col items-center p-8 bg-[#1A1A1A] rounded-[1.5rem] shadow-xl hover:shadow-[0_0_20px_rgba(200,169,106,0.15)] transition-all duration-300 border border-[#C8A96A]/10 hover:border-[#C8A96A] group">
+                        <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C8A96A] transition-colors duration-500">
+                            <FileText className="w-8 h-8 text-[#C8A96A] group-hover:text-[#0D0D0D] transition-colors duration-500" />
                         </div>
-                        <h3 className="font-bold text-[#222222] text-center group-hover:text-[#0A7A2F] transition-colors">Certificate of Incorporation</h3>
-                        <span className="text-sm text-[#F7931E] mt-2 flex items-center gap-1 group-hover:underline">
-                            View PDF <ChevronRight className="w-4 h-4" />
+                        <h3 className="font-serif font-bold text-[#F5E6C8] text-center mb-4 group-hover:text-[#C8A96A] transition-colors duration-500 leading-snug">Certificate of<br/>Incorporation</h3>
+                        <span className="text-xs uppercase tracking-widest font-black text-[#C8A96A]/60 mt-auto flex items-center gap-1 group-hover:text-[#C8A96A] transition-colors duration-300">
+                            View PDF <ChevronRight className="w-3 h-3" />
                         </span>
                     </a>
 
                     {/* Certificate 2 */}
                     <a href="/certifications/certificate_2.pdf" target="_blank" rel="noopener noreferrer"
-                        className="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group">
-                        <div className="w-16 h-16 bg-[#F8FAF5] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0A7A2F] transition-colors">
-                            <FileText className="w-8 h-8 text-[#0A7A2F] group-hover:text-white transition-colors" />
+                        className="flex flex-col items-center p-8 bg-[#1A1A1A] rounded-[1.5rem] shadow-xl hover:shadow-[0_0_20px_rgba(200,169,106,0.15)] transition-all duration-300 border border-[#C8A96A]/10 hover:border-[#C8A96A] group">
+                        <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C8A96A] transition-colors duration-500">
+                            <FileText className="w-8 h-8 text-[#C8A96A] group-hover:text-[#0D0D0D] transition-colors duration-500" />
                         </div>
-                        <h3 className="font-bold text-[#222222] text-center group-hover:text-[#0A7A2F] transition-colors">Memorandum of Association</h3>
-                        <span className="text-sm text-[#F7931E] mt-2 flex items-center gap-1 group-hover:underline">
-                            View PDF <ChevronRight className="w-4 h-4" />
+                        <h3 className="font-serif font-bold text-[#F5E6C8] text-center mb-4 group-hover:text-[#C8A96A] transition-colors duration-500 leading-snug">Memorandum of<br/>Association</h3>
+                        <span className="text-xs uppercase tracking-widest font-black text-[#C8A96A]/60 mt-auto flex items-center gap-1 group-hover:text-[#C8A96A] transition-colors duration-300">
+                            View PDF <ChevronRight className="w-3 h-3" />
                         </span>
                     </a>
 
                     {/* Certificate 3 */}
                     <a href="/certifications/certificate_3.pdf" target="_blank" rel="noopener noreferrer"
-                        className="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group">
-                        <div className="w-16 h-16 bg-[#F8FAF5] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0A7A2F] transition-colors">
-                            <FileText className="w-8 h-8 text-[#0A7A2F] group-hover:text-white transition-colors" />
+                        className="flex flex-col items-center p-8 bg-[#1A1A1A] rounded-[1.5rem] shadow-xl hover:shadow-[0_0_20px_rgba(200,169,106,0.15)] transition-all duration-300 border border-[#C8A96A]/10 hover:border-[#C8A96A] group">
+                        <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C8A96A] transition-colors duration-500">
+                            <FileText className="w-8 h-8 text-[#C8A96A] group-hover:text-[#0D0D0D] transition-colors duration-500" />
                         </div>
-                        <h3 className="font-bold text-[#222222] text-center group-hover:text-[#0A7A2F] transition-colors">Articles of Association</h3>
-                        <span className="text-sm text-[#F7931E] mt-2 flex items-center gap-1 group-hover:underline">
-                            View PDF <ChevronRight className="w-4 h-4" />
+                        <h3 className="font-serif font-bold text-[#F5E6C8] text-center mb-4 group-hover:text-[#C8A96A] transition-colors duration-500 leading-snug">Articles of<br/>Association</h3>
+                        <span className="text-xs uppercase tracking-widest font-black text-[#C8A96A]/60 mt-auto flex items-center gap-1 group-hover:text-[#C8A96A] transition-colors duration-300">
+                            View PDF <ChevronRight className="w-3 h-3" />
                         </span>
                     </a>
 
                     {/* Udyam */}
                     <a href="/certifications/udyam_registration.pdf" target="_blank" rel="noopener noreferrer"
-                        className="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group">
-                        <div className="w-16 h-16 bg-[#F8FAF5] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0A7A2F] transition-colors">
-                            <Award className="w-8 h-8 text-[#0A7A2F] group-hover:text-white transition-colors" />
+                        className="flex flex-col items-center p-8 bg-[#1A1A1A] rounded-[1.5rem] shadow-xl hover:shadow-[0_0_20px_rgba(200,169,106,0.15)] transition-all duration-300 border border-[#C8A96A]/10 hover:border-[#C8A96A] group">
+                        <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C8A96A] transition-colors duration-500">
+                            <Award className="w-8 h-8 text-[#C8A96A] group-hover:text-[#0D0D0D] transition-colors duration-500" />
                         </div>
-                        <h3 className="font-bold text-[#222222] text-center group-hover:text-[#0A7A2F] transition-colors">Udyam Registration Certificate</h3>
-                        <span className="text-sm text-[#F7931E] mt-2 flex items-center gap-1 group-hover:underline">
-                            View PDF <ChevronRight className="w-4 h-4" />
+                        <h3 className="font-serif font-bold text-[#F5E6C8] text-center mb-4 group-hover:text-[#C8A96A] transition-colors duration-500 leading-snug">Udyam Registration<br/>Certificate</h3>
+                        <span className="text-xs uppercase tracking-widest font-black text-[#C8A96A]/60 mt-auto flex items-center gap-1 group-hover:text-[#C8A96A] transition-colors duration-300">
+                            View PDF <ChevronRight className="w-3 h-3" />
                         </span>
                     </a>
 
                     {/* TAN */}
                     <a href="/certifications/tan_certificate.pdf" target="_blank" rel="noopener noreferrer"
-                        className="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group">
-                        <div className="w-16 h-16 bg-[#F8FAF5] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#0A7A2F] transition-colors">
-                            <Shield className="w-8 h-8 text-[#0A7A2F] group-hover:text-white transition-colors" />
+                        className="flex flex-col items-center p-8 bg-[#1A1A1A] rounded-[1.5rem] shadow-xl hover:shadow-[0_0_20px_rgba(200,169,106,0.15)] transition-all duration-300 border border-[#C8A96A]/10 hover:border-[#C8A96A] group">
+                        <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C8A96A] transition-colors duration-500">
+                            <Shield className="w-8 h-8 text-[#C8A96A] group-hover:text-[#0D0D0D] transition-colors duration-500" />
                         </div>
-                        <h3 className="font-bold text-[#222222] text-center group-hover:text-[#0A7A2F] transition-colors">TAN Certificate</h3>
-                        <span className="text-sm text-[#F7931E] mt-2 flex items-center gap-1 group-hover:underline">
-                            View PDF <ChevronRight className="w-4 h-4" />
+                        <h3 className="font-serif font-bold text-[#F5E6C8] text-center mb-4 group-hover:text-[#C8A96A] transition-colors duration-500 leading-snug">TAN<br/>Certificate</h3>
+                        <span className="text-xs uppercase tracking-widest font-black text-[#C8A96A]/60 mt-auto flex items-center gap-1 group-hover:text-[#C8A96A] transition-colors duration-300">
+                            View PDF <ChevronRight className="w-3 h-3" />
                         </span>
                     </a>
                 </div>
             </section>
 
             {/* Last Updated */}
-            <section className="py-6 px-4 max-w-4xl mx-auto text-center">
-                <div className="flex items-center justify-center gap-2 text-gray-500 text-sm">
+            <section className="py-12 px-4 max-w-4xl mx-auto text-center border-t border-[#C8A96A]/10 mt-12">
+                <div className="flex items-center justify-center gap-2 text-[#C8A96A]/40 text-sm font-black tracking-widest uppercase">
                     <Calendar className="w-4 h-4" />
                     <span>Last Updated: {lastUpdated}</span>
                 </div>

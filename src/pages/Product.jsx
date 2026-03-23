@@ -305,7 +305,7 @@ const ProductsPage = () => {
                                     style={{ animationDelay: `${index * 0.1}s` }}
                                 >
                                     {/* Product Image */}
-                                    <div className="relative h-64 bg-[#0D0D0D] overflow-hidden">
+                                    <div className="relative h-52 bg-[#0D0D0D] overflow-hidden">
                                         {product.image && !hasImageError ? (
                                             <img
                                                 src={imageUrl}
@@ -341,7 +341,7 @@ const ProductsPage = () => {
                                     </div>
 
                                     {/* Product Details */}
-                                    <div className="p-5">
+                                    <div className="p-4">
                                         {/* Rating */}
                                         <div className="flex items-center gap-2 mb-3">
                                             <div className="flex items-center gap-0.5">
@@ -367,7 +367,7 @@ const ProductsPage = () => {
                                             <span className="text-[9px] font-bold text-[#C8A96A] uppercase tracking-[0.2em] mb-1 block">
                                                 {product.category === "Beauty and cosmetic home based products" ? "Beauty & Cosmetics" : product.category}
                                             </span>
-                                            <h3 className="font-serif font-bold text-[#F5E6C8] text-base group-hover:text-[#C8A96A] transition-colors duration-300 leading-tight line-clamp-2 min-h-[2.5rem]">
+                                            <h3 className="font-serif font-bold text-[#F5E6C8] text-sm group-hover:text-[#C8A96A] transition-colors duration-300 leading-tight line-clamp-2 min-h-[2rem]">
                                                 {product.name}
                                             </h3>
                                         </div>
@@ -375,7 +375,7 @@ const ProductsPage = () => {
                                         {/* Price Section */}
                                         <div className="flex items-center justify-between gap-2 mb-4">
                                             <div className="flex items-baseline gap-2">
-                                                <span className="text-xl font-bold text-[#C8A96A]">
+                                                <span className="text-lg font-bold text-[#C8A96A]">
                                                     ₹{formatCurrency(product.price)}
                                                 </span>
                                                 {product.oldPrice && (
@@ -396,7 +396,7 @@ const ProductsPage = () => {
                                             {isInCart(product._id) ? (
                                                 <button
                                                     onClick={() => handleRemoveFromCart(product._id, product.name)}
-                                                    className="py-2.5 rounded-xl text-[11px] font-bold transition-all flex items-center justify-center gap-1.5 border border-[#3B2F2F] text-[#F5E6C8]/60 hover:bg-[#3B2F2F] hover:text-[#C8A96A]"
+                                                    className="py-2 rounded-xl text-[10px] font-bold transition-all flex items-center justify-center gap-1.5 border border-[#3B2F2F] text-[#F5E6C8]/60 hover:bg-[#3B2F2F] hover:text-[#C8A96A]"
                                                 >
                                                     <Trash2 className="w-3.5 h-3.5" /> Remove
                                                 </button>
@@ -404,7 +404,7 @@ const ProductsPage = () => {
                                                 <button
                                                     onClick={() => handleAddToCart(product)}
                                                     disabled={product.stock === 0}
-                                                    className={`py-2.5 rounded-xl text-[11px] font-bold transition-all flex items-center justify-center gap-1.5 border border-[#C8A96A]/30 ${product.stock === 0
+                                                    className={`py-2 rounded-xl text-[10px] font-bold transition-all flex items-center justify-center gap-1.5 border border-[#C8A96A]/30 ${product.stock === 0
                                                         ? 'opacity-30 cursor-not-allowed'
                                                         : 'text-[#C8A96A] hover:bg-[#C8A96A] hover:text-[#0D0D0D]'
                                                         }`}
@@ -415,7 +415,7 @@ const ProductsPage = () => {
                                             <button
                                                 onClick={() => buyNow(product)}
                                                 disabled={product.stock === 0}
-                                                className={`py-2.5 rounded-xl text-[11px] font-bold transition-all flex items-center justify-center shadow-lg ${product.stock > 0
+                                                className={`py-2 rounded-xl text-[10px] font-bold transition-all flex items-center justify-center shadow-lg ${product.stock > 0
                                                     ? 'bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] hover:shadow-gold-900/40 hover:-translate-y-0.5'
                                                     : 'bg-[#3B2F2F] text-[#C8A96A]/40 cursor-not-allowed'
                                                     }`}

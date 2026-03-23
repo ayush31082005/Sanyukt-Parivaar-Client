@@ -64,19 +64,20 @@ const AboutUsPage = () => {
     return (
         <div className="min-h-screen bg-[#0D0D0D] font-sans text-[#F5E6C8]">
             {/* Hero Banner Section */}
-            <header className="relative h-[320px] flex items-center justify-center overflow-hidden">
-                <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity"
-                    style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')" }}>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/20 via-[#0D0D0D]/60 to-[#0D0D0D]"></div>
-                
-                <div className="relative z-10 text-center px-4">
-                    <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#C8A96A] mb-6 tracking-tight drop-shadow-2xl animate-fade-in">
+            <header className="relative w-full h-[320px] bg-cover bg-center"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')" }}>
+                {/* Solid overlay to dim the image, just like Legal Policies page */}
+                <div className="absolute inset-0 bg-black/70"></div>
+
+                {/* Content Container */}
+                <div className="relative h-full flex flex-col items-center justify-center text-center px-4 pt-16">
+                    <h1 className="text-5xl md:text-6xl font-serif font-bold text-[#C8A96A] mb-4 drop-shadow-lg animate-fade-in">
                         Our Legacy
                     </h1>
-                    <div className="flex items-center justify-center text-[#F5E6C8]/60 text-xs font-black uppercase tracking-[0.3em] backdrop-blur-sm bg-white/5 py-3 px-8 rounded-full border border-white/10">
-                        <span onClick={() => navigate('/')} className="hover:text-[#C8A96A] cursor-pointer transition-colors">Vision</span>
+
+                    {/* Breadcrumbs matching the aesthetic */}
+                    <div className="flex items-center text-[#F5E6C8]/90 text-sm md:text-base font-medium tracking-widest uppercase">
+                        <span onClick={() => navigate('/')} className="cursor-pointer hover:text-[#C8A96A] transition-colors">Vision</span>
                         <ChevronRight className="w-4 h-4 mx-3 text-[#C8A96A]" />
                         <span className="text-[#C8A96A]">Our Story</span>
                     </div>
@@ -86,20 +87,20 @@ const AboutUsPage = () => {
             {/* Intro Heading Section */}
             <section className="py-20 md:py-32 px-4 max-w-7xl mx-auto text-center relative">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-[#C8A96A] to-transparent opacity-30"></div>
-                
-                <div className="inline-block mb-6 px-6 py-2 rounded-full border border-[#C8A96A]/20 bg-[#C8A96A]/5">
+
+                {/* <div className="inline-block mb-6 px-6 py-2 rounded-full border border-[#C8A96A]/20 bg-[#C8A96A]/5">
                     <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#C8A96A]">Architects of Abundance</span>
-                </div>
+                </div> */}
 
                 <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#C8A96A] mb-8 leading-tight animate-slide-up">
-                    Welcome to the <br/>
-                    <span className="text-[#F5E6C8]">Sanyukt Parivaar Elite</span>
+                    Welcome to the <br />
+                    <span className="text-[#F5E6C8]">Sanyukt Parivaar & Rich Life</span>
                 </h2>
-                
+
                 <p className="text-xl md:text-2xl text-[#F5E6C8]/40 font-serif italic max-w-3xl mx-auto leading-relaxed mb-12">
-                    "A curated collective dedicated to the art of generational wealth and unified growth."
+                    "A People-Centric Multi-Level Marketing Organization."
                 </p>
-                
+
                 <div className="flex items-center justify-center gap-4">
                     <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#C8A96A]/30"></div>
                     <div className="w-3 h-3 rotate-45 border border-[#C8A96A]/40"></div>
@@ -123,7 +124,7 @@ const AboutUsPage = () => {
                                 Through structured training, leadership development, and a proven compensation plan, we help individuals from all walks of life build a stable and scalable business with absolute confidence.
                             </p>
                         </div>
-                        
+
                         <div className="pt-8 border-t border-[#C8A96A]/10 flex flex-wrap gap-8">
                             <div className="flex flex-col">
                                 <span className="text-3xl font-serif font-bold text-[#C8A96A]">5k+</span>
@@ -152,7 +153,7 @@ const AboutUsPage = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-60"></div>
                         </div>
-                        
+
                         <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-[#1A1A1A] rounded-3xl border border-[#C8A96A]/20 p-4 shadow-3xl hidden md:block">
                             <img
                                 src={teamImage}
@@ -200,11 +201,11 @@ const AboutUsPage = () => {
             {/* CORE VALUES SECTION */}
             <section className="py-24 px-4 max-w-7xl mx-auto relative overflow-hidden">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C8A96A]/5 rounded-full blur-[120px] -z-10"></div>
-                
+
                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-center text-[#C8A96A] mb-20 animate-slide-up">
                     Our Core Principles
                 </h2>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {coreValues.map((value, index) => (
                         <div
@@ -213,7 +214,7 @@ const AboutUsPage = () => {
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
                             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#C8A96A]/5 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
-                            
+
                             <div className="relative mb-6">
                                 <div className="w-14 h-14 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500 shadow-lg">
                                     <CheckCircle className="w-6 h-6" />
@@ -242,7 +243,7 @@ const AboutUsPage = () => {
                         <div className="space-y-10 animate-slide-right">
                             <div className="space-y-6">
                                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#C8A96A] leading-tight">
-                                    Why Choose the <br/> Elite Collective?
+                                    Why Choose the <br /> Elite Collective?
                                 </h2>
                                 <p className="text-[#F5E6C8]/60 leading-relaxed text-lg">
                                     We are more than a company - we are an ecosystem committed to high-performance empowerment. Our model focuses on stability, recurring prosperity, and leadership-driven legacy.
@@ -302,13 +303,13 @@ const AboutUsPage = () => {
             <section className="py-32 px-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[#C8A96A] opacity-5"></div>
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#C8A96A]/30 to-transparent"></div>
-                
+
                 <div className="max-w-4xl mx-auto text-center relative z-10">
                     <div className="w-20 h-px bg-[#C8A96A]/40 mx-auto mb-12"></div>
                     <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#F5E6C8] mb-12 leading-tight">
                         Begin Your <span className="text-[#C8A96A]">Elite Legacy</span> Today
                     </h2>
-                    
+
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}

@@ -64,31 +64,31 @@ const Recharge = () => {
     const BSNL_LOGO = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'><text x='100' y='52' font-family='Arial,sans-serif' font-size='32' font-weight='900' fill='%23FF6600' text-anchor='middle'>BSNL</text></svg>`;
 
     const mobileOperators = [
-        { id: 'airtel', name: 'Airtel', logo: AIRTEL_LOGO, tagline: '5G Ready' },
-        { id: 'jio', name: 'Jio', logo: JIO_LOGO, tagline: 'True 5G' },
-        { id: 'vi', name: 'Vi', logo: VI_LOGO, tagline: 'Best Value' },
-        { id: 'bsnl', name: 'BSNL', logo: BSNL_LOGO, tagline: 'Pan-India' }
+        { id: 'airtel', name: 'Airtel', logo: AIRTEL_LOGO, tagline: '5G Ready', colorClass: 'hover:bg-[#ED1C24] hover:border-[#ED1C24]', activeClass: 'bg-[#ED1C24] border-[#ED1C24]' },
+        { id: 'jio', name: 'Jio', logo: JIO_LOGO, tagline: 'True 5G', colorClass: 'hover:bg-[#0066CC] hover:border-[#0066CC]', activeClass: 'bg-[#0066CC] border-[#0066CC]' },
+        { id: 'vi', name: 'Vi', logo: VI_LOGO, tagline: 'Best Value', colorClass: 'hover:bg-[#E11D48] hover:border-[#E11D48]', activeClass: 'bg-[#E11D48] border-[#E11D48]' },
+        { id: 'bsnl', name: 'BSNL', logo: BSNL_LOGO, tagline: 'Pan-India', colorClass: 'hover:bg-[#FF6600] hover:border-[#FF6600]', activeClass: 'bg-[#FF6600] border-[#FF6600]' }
     ];
 
     const dthOperators = [
-        { id: 'tataplay', name: 'Tata Play', logo: '📺', tagline: 'HD Quality' },
-        { id: 'airteldth', name: 'Airtel DTH', logo: '🛰️', tagline: 'HD Quality' },
-        { id: 'dishtv', name: 'Dish TV', logo: '📡', tagline: 'Best Value' },
-        { id: 'd2h', name: 'd2h', logo: '📺', tagline: 'Popular' }
+        { id: 'tataplay', name: 'Tata Play', logo: '📺', tagline: 'HD Quality', colorClass: 'hover:bg-[#E30A5C] hover:border-[#E30A5C]', activeClass: 'bg-[#E30A5C] border-[#E30A5C]' },
+        { id: 'airteldth', name: 'Airtel DTH', logo: '🛰️', tagline: 'HD Quality', colorClass: 'hover:bg-[#ED1C24] hover:border-[#ED1C24]', activeClass: 'bg-[#ED1C24] border-[#ED1C24]' },
+        { id: 'dishtv', name: 'Dish TV', logo: '📡', tagline: 'Best Value', colorClass: 'hover:bg-[#E2231A] hover:border-[#E2231A]', activeClass: 'bg-[#E2231A] border-[#E2231A]' },
+        { id: 'd2h', name: 'd2h', logo: '📺', tagline: 'Popular', colorClass: 'hover:bg-[#8CC63F] hover:border-[#8CC63F]', activeClass: 'bg-[#8CC63F] border-[#8CC63F]' }
     ];
 
     const datacardOperators = [
-        { id: 'jiofi', name: 'JioFi', logo: '🌐', tagline: 'High Speed' },
-        { id: 'airtel4g', name: 'Airtel 4G', logo: '📶', tagline: 'Pan-India' },
-        { id: 'vi_dongle', name: 'Vi Dongle', logo: '💻', tagline: 'Best Value' },
-        { id: 'bsnl_evdo', name: 'BSNL', logo: '📡', tagline: 'Wide Coverage' }
+        { id: 'jiofi', name: 'JioFi', logo: '🌐', tagline: 'High Speed', colorClass: 'hover:bg-[#0066CC] hover:border-[#0066CC]', activeClass: 'bg-[#0066CC] border-[#0066CC]' },
+        { id: 'airtel4g', name: 'Airtel 4G', logo: '📶', tagline: 'Pan-India', colorClass: 'hover:bg-[#ED1C24] hover:border-[#ED1C24]', activeClass: 'bg-[#ED1C24] border-[#ED1C24]' },
+        { id: 'vi_dongle', name: 'Vi Dongle', logo: '💻', tagline: 'Best Value', colorClass: 'hover:bg-[#E11D48] hover:border-[#E11D48]', activeClass: 'bg-[#E11D48] border-[#E11D48]' },
+        { id: 'bsnl_evdo', name: 'BSNL', logo: '📡', tagline: 'Wide Coverage', colorClass: 'hover:bg-[#FF6600] hover:border-[#FF6600]', activeClass: 'bg-[#FF6600] border-[#FF6600]' }
     ];
 
     const deviceOperators = [
-        { id: 'iot_device', name: 'IoT Device', logo: '🤖', tagline: 'Smart Connect' },
-        { id: 'oxygen_concentrator', name: 'Oxygen Device', logo: '🌬️', tagline: 'Health Tech' },
-        { id: 'pos_terminal', name: 'POS Terminal', logo: '💳', tagline: 'Business' },
-        { id: 'gps_tracker', name: 'GPS Tracker', logo: '📍', tagline: 'Security' }
+        { id: 'iot_device', name: 'IoT Device', logo: '🤖', tagline: 'Smart Connect', colorClass: 'hover:bg-[#C8A96A] hover:border-[#C8A96A]', activeClass: 'bg-[#C8A96A] border-[#C8A96A]' },
+        { id: 'oxygen_concentrator', name: 'Oxygen Device', logo: '🌬️', tagline: 'Health Tech', colorClass: 'hover:bg-[#C8A96A] hover:border-[#C8A96A]', activeClass: 'bg-[#C8A96A] border-[#C8A96A]' },
+        { id: 'pos_terminal', name: 'POS Terminal', logo: '💳', tagline: 'Business', colorClass: 'hover:bg-[#C8A96A] hover:border-[#C8A96A]', activeClass: 'bg-[#C8A96A] border-[#C8A96A]' },
+        { id: 'gps_tracker', name: 'GPS Tracker', logo: '📍', tagline: 'Security', colorClass: 'hover:bg-[#C8A96A] hover:border-[#C8A96A]', activeClass: 'bg-[#C8A96A] border-[#C8A96A]' }
     ];
 
     const handleRecharge = (e, type) => {
@@ -589,13 +589,13 @@ const Recharge = () => {
                                                                         key={op.id}
                                                                         type="button"
                                                                         onClick={() => setMobileOperator(op.id)}
-                                                                        className={`p-3 rounded-xl border-2 transition-all flex flex-col items-center justify-center gap-1 ${mobileOperator === op.id
-                                                                            ? 'border-[#C8A96A] bg-[#C8A96A]/10'
-                                                                            : 'border-[#C8A96A]/5 bg-[#0D0D0D] hover:bg-[#1A1A1A]'
+                                                                        className={`group p-3 rounded-xl border-2 transition-all duration-300 flex flex-col items-center justify-center gap-1 ${mobileOperator === op.id
+                                                                            ? `${op.activeClass} shadow-lg shadow-black/20 text-white`
+                                                                            : `border-[#C8A96A]/5 bg-[#0D0D0D] ${op.colorClass}`
                                                                             }`}
                                                                     >
-                                                                        <img src={op.logo} alt={op.name} className="h-6 w-auto object-contain filter brightness-110" />
-                                                                        <span className={`text-[10px] font-medium ${mobileOperator === op.id ? 'text-[#C8A96A]' : 'text-[#F5E6C8]/40'
+                                                                        <img src={op.logo} alt={op.name} className={`h-6 w-auto object-contain filter transition-all duration-300 ${mobileOperator === op.id ? 'brightness-0 invert' : 'brightness-110 group-hover:brightness-0 group-hover:invert'}`} />
+                                                                        <span className={`text-[10px] font-medium transition-colors duration-300 ${mobileOperator === op.id ? 'text-white' : 'text-[#F5E6C8]/40 group-hover:text-white'
                                                                             }`}>{op.tagline}</span>
                                                                     </button>
                                                                 ))}
@@ -736,13 +736,13 @@ const Recharge = () => {
                                                                         key={op.id}
                                                                         type="button"
                                                                         onClick={() => setDthOperator(op.id)}
-                                                                        className={`p-4 rounded-2xl border-2 transition-all flex flex-col items-center justify-center gap-2 group/op ${dthOperator === op.id
-                                                                            ? 'border-[#C8A96A] bg-[#C8A96A]/10 shadow-lg shadow-gold-900/10'
-                                                                            : 'border-[#C8A96A]/5 bg-[#0D0D0D] hover:border-[#C8A96A]/20'
+                                                                        className={`p-4 rounded-2xl border-2 transition-all duration-300 flex flex-col items-center justify-center gap-2 group ${dthOperator === op.id
+                                                                            ? `${op.activeClass} shadow-lg shadow-black/20 text-white`
+                                                                            : `border-[#C8A96A]/5 bg-[#0D0D0D] ${op.colorClass}`
                                                                             }`}
                                                                     >
-                                                                        <span className="text-3xl mb-1 filter drop-shadow-md">{op.logo}</span>
-                                                                        <span className={`text-[10px] font-black uppercase tracking-widest ${dthOperator === op.id ? 'text-[#C8A96A]' : 'text-[#F5E6C8]/40'
+                                                                        <span className="text-3xl mb-1 filter drop-shadow-md transition-transform duration-300 group-hover:scale-110">{op.logo}</span>
+                                                                        <span className={`text-[10px] font-black uppercase tracking-widest transition-colors duration-300 ${dthOperator === op.id ? 'text-white' : 'text-[#F5E6C8]/40 group-hover:text-white'
                                                                             }`}>{op.name}</span>
                                                                     </button>
                                                                 ))}
@@ -868,13 +868,13 @@ const Recharge = () => {
                                                                         key={op.id}
                                                                         type="button"
                                                                         onClick={() => setDataCardOperator(op.id)}
-                                                                        className={`p-4 rounded-2xl border-2 transition-all flex flex-col items-center justify-center gap-2 group/op ${dataCardOperator === op.id
-                                                                            ? 'border-[#C8A96A] bg-[#C8A96A]/10 shadow-lg shadow-gold-900/10'
-                                                                            : 'border-[#C8A96A]/5 bg-[#0D0D0D] hover:border-[#C8A96A]/20'
+                                                                        className={`p-4 rounded-2xl border-2 transition-all duration-300 flex flex-col items-center justify-center gap-2 group ${dataCardOperator === op.id
+                                                                            ? `${op.activeClass} shadow-lg shadow-black/20 text-white`
+                                                                            : `border-[#C8A96A]/5 bg-[#0D0D0D] ${op.colorClass}`
                                                                             }`}
                                                                     >
-                                                                        <span className="text-3xl mb-1 filter drop-shadow-md">{op.logo}</span>
-                                                                        <span className={`text-[10px] font-black uppercase tracking-widest ${dataCardOperator === op.id ? 'text-[#C8A96A]' : 'text-[#F5E6C8]/40'
+                                                                        <span className="text-3xl mb-1 filter drop-shadow-md transition-transform duration-300 group-hover:scale-110">{op.logo}</span>
+                                                                        <span className={`text-[10px] font-black uppercase tracking-widest transition-colors duration-300 ${dataCardOperator === op.id ? 'text-white' : 'text-[#F5E6C8]/40 group-hover:text-white'
                                                                             }`}>{op.name}</span>
                                                                     </button>
                                                                 ))}
@@ -1000,13 +1000,13 @@ const Recharge = () => {
                                                                         key={op.id}
                                                                         type="button"
                                                                         onClick={() => setDeviceOperator(op.id)}
-                                                                        className={`p-4 rounded-2xl border-2 transition-all flex flex-col items-center justify-center gap-2 group/op ${deviceOperator === op.id
-                                                                            ? 'border-[#C8A96A] bg-[#C8A96A]/10 shadow-lg shadow-gold-900/10'
-                                                                            : 'border-[#C8A96A]/5 bg-[#0D0D0D] hover:border-[#C8A96A]/20'
+                                                                        className={`p-4 rounded-2xl border-2 transition-all duration-300 flex flex-col items-center justify-center gap-2 group ${deviceOperator === op.id
+                                                                            ? `${op.activeClass} shadow-lg shadow-black/20 text-[#C8A96A]`
+                                                                            : `border-[#C8A96A]/5 bg-[#0D0D0D] ${op.colorClass}`
                                                                             }`}
                                                                     >
-                                                                        <span className="text-3xl mb-1 filter drop-shadow-md">{op.logo}</span>
-                                                                        <span className={`text-[10px] font-black uppercase tracking-widest ${deviceOperator === op.id ? 'text-[#C8A96A]' : 'text-[#F5E6C8]/40'
+                                                                        <span className="text-3xl mb-1 filter drop-shadow-md transition-transform duration-300 group-hover:scale-110">{op.logo}</span>
+                                                                        <span className={`text-[10px] font-black uppercase tracking-widest transition-colors duration-300 ${deviceOperator === op.id ? 'text-[#0D0D0D]' : 'text-[#F5E6C8]/40 group-hover:text-[#0D0D0D]'
                                                                             }`}>{op.name}</span>
                                                                     </button>
                                                                 ))}

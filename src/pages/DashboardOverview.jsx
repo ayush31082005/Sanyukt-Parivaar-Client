@@ -36,7 +36,7 @@ const SectionHeader = ({ title, subtitle, icon: Icon }) => (
                 </div>
             )}
             <div>
-                <h2 className="text-[14px] font-black text-slate-900 uppercase tracking-[0.15em] leading-none mb-1">
+                <h2 className="text-[14px] font-black text-[#C8A96A] uppercase tracking-[0.15em] leading-none mb-1">
                     {title}
                 </h2>
                 {subtitle && (
@@ -53,7 +53,7 @@ const SectionHeader = ({ title, subtitle, icon: Icon }) => (
 const ModernWalletCard = ({ title, value, color, icon: Icon, progress, showCurrency = true }) => (
     <motion.div
         variants={cardVariants}
-        className="bg-white rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.02)] border border-slate-50 flex flex-col relative overflow-hidden group hover:shadow-xl hover:shadow-slate-200/40 transition-all duration-300"
+        className="bg-[#1A1A1A] rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.5)] border border-white/5 flex flex-col relative overflow-hidden group hover:shadow-xl hover:shadow-black/40 transition-all duration-300"
     >
         <div className="flex justify-between items-start mb-6">
             <div className={`p-3 rounded-xl shadow-sm group-hover:scale-110 transition-transform duration-300`} style={{ backgroundColor: `${color}10`, color: color }}>
@@ -69,10 +69,10 @@ const ModernWalletCard = ({ title, value, color, icon: Icon, progress, showCurre
         </div>
 
         <div className="flex flex-col gap-1">
-            <h3 className="text-[11px] font-black text-slate-500 uppercase tracking-widest">{title}</h3>
+            <h3 className="text-[11px] font-black text-slate-400 uppercase tracking-widest">{title}</h3>
             <div className="flex items-baseline gap-1.5">
-                {showCurrency && <span className="text-xl font-black text-slate-400">₹</span>}
-                <span className="text-3xl font-black text-slate-900 tracking-tighter">{value !== undefined ? value : "0"}</span>
+                {showCurrency && <span className="text-xl font-black text-slate-500">₹</span>}
+                <span className="text-3xl font-black text-white tracking-tighter">{value !== undefined ? value : "0"}</span>
             </div>
         </div>
         {progress !== undefined && (
@@ -117,7 +117,7 @@ const PerformanceMetric = ({ title, value, icon: Icon, color, trend }) => (
 const BusinessMatrixCard = ({ title, lValue, rValue, icon: Icon }) => (
     <motion.div
         variants={cardVariants}
-        className="bg-white rounded-2xl p-4 shadow-sm border border-slate-50 flex flex-col relative overflow-hidden group h-full"
+        className="bg-[#1A1A1A] rounded-2xl p-4 shadow-sm border border-white/5 flex flex-col relative overflow-hidden group h-full"
     >
         <div className="flex items-center gap-3 mb-4">
             <div className={`p-2.5 rounded-xl bg-emerald-50 text-emerald-600 shadow-sm group-hover:scale-105 transition-transform`}>
@@ -129,13 +129,13 @@ const BusinessMatrixCard = ({ title, lValue, rValue, icon: Icon }) => (
         </div>
 
         <div className="grid grid-cols-2 gap-2 mt-auto">
-            <div className="bg-slate-50/80 rounded-xl p-2.5 flex flex-col gap-0.5 group-hover:bg-white group-hover:shadow-sm transition-all border border-transparent group-hover:border-slate-100">
+            <div className="bg-white/5 rounded-xl p-2.5 flex flex-col gap-0.5 group-hover:bg-white/10 transition-all border border-transparent group-hover:border-white/10">
                 <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Left</span>
-                <span className="text-xl font-black text-slate-900 tracking-tight leading-none">{lValue !== undefined ? lValue : 0}</span>
+                <span className="text-xl font-black text-white tracking-tight leading-none">{lValue !== undefined ? lValue : 0}</span>
             </div>
-            <div className="bg-slate-50/80 rounded-xl p-2.5 flex flex-col items-end gap-0.5 group-hover:bg-white group-hover:shadow-sm transition-all border border-transparent group-hover:border-slate-100">
+            <div className="bg-white/5 rounded-xl p-2.5 flex flex-col items-end gap-0.5 group-hover:bg-white/10 transition-all border border-transparent group-hover:border-white/10">
                 <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest text-right">Right</span>
-                <span className="text-xl font-black text-slate-900 tracking-tight leading-none">{rValue !== undefined ? rValue : 0}</span>
+                <span className="text-xl font-black text-white tracking-tight leading-none">{rValue !== undefined ? rValue : 0}</span>
             </div>
         </div>
 
@@ -184,14 +184,14 @@ const DashboardOverview = () => {
     }, []);
 
     if (loading) return (
-        <div className="min-h-screen flex items-center justify-center bg-[#f8faff]">
+        <div className="min-h-screen flex items-center justify-center bg-[#0D0D0D]">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-emerald-500"></div>
         </div>
     );
     if (!userData) return null;
 
     return (
-        <div className="max-w-[1600px] mx-auto px-6 pb-12 pt-0 bg-[#f8faff] min-h-screen font-['Inter',sans-serif]">
+        <div className="max-w-[1600px] mx-auto px-6 pb-12 pt-0 bg-[#0D0D0D] min-h-screen font-['Inter',sans-serif] text-white">
             <div className="mb-8">
                 <ProfileBanner userData={userData} />
             </div>
@@ -369,11 +369,11 @@ const DashboardOverview = () => {
                     <SectionHeader title="Recent Activity" subtitle="Network Live Updates" icon={Activity} />
                     <motion.div
                         variants={cardVariants}
-                        className="bg-white rounded-[2rem] p-4 shadow-[0_20px_60px_rgb(0,0,0,0.03)] border border-slate-100 overflow-hidden relative h-[380px]"
+                        className="bg-[#1A1A1A] rounded-[2rem] p-4 shadow-[0_20px_60px_rgb(0,0,0,0.5)] border border-white/5 overflow-hidden relative h-[380px]"
                     >
                         {/* Gradient Masks for seamless feel */}
-                        <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-white to-transparent z-10"></div>
-                        <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white to-transparent z-10"></div>
+                        <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[#1A1A1A] to-transparent z-10"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#1A1A1A] to-transparent z-10"></div>
 
                         <motion.div
                             animate={{
@@ -392,15 +392,15 @@ const DashboardOverview = () => {
                                 return (
                                     <div
                                         key={`${item.id}-${index}`}
-                                        className={`flex items-center justify-between py-5 px-6 group cursor-pointer hover:bg-slate-50/80 transition-all border-b border-slate-50`}
+                                        className={`flex items-center justify-between py-5 px-6 group cursor-pointer hover:bg-white/5 transition-all border-b border-white/5`}
                                     >
                                         <div className="flex items-center gap-5">
                                             <div className={`shrink-0 w-11 h-11 rounded-2xl flex items-center justify-center ${item.color} shadow-sm group-hover:scale-105 transition-transform`}>
                                                 <Icon size={20} />
                                             </div>
                                             <div className="flex flex-col">
-                                                <div className="text-[14px] font-black text-slate-900 leading-tight">
-                                                    {item.user} <span className="font-semibold text-slate-500">{item.action}</span>
+                                                <div className="text-[14px] font-black text-white leading-tight">
+                                                    {item.user} <span className="font-semibold text-slate-400">{item.action}</span>
                                                 </div>
                                                 <div className="text-[10px] font-black text-slate-400 mt-1 uppercase tracking-widest group-hover:text-[#0A7A2F] transition-colors">
                                                     Activity Log ID: #REF-{item.id}024
@@ -424,11 +424,11 @@ const DashboardOverview = () => {
                 </div>
 
                 {/* --- FOOTER --- */}
-                <div className="mt-10 pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-8">
-                        <div>System Log: <span className="text-slate-900">Online</span></div>
-                        <div className="hidden md:block w-1.5 h-1.5 rounded-full bg-slate-200"></div>
-                        <div className="hidden md:block">Update Frequency: <span className="text-slate-900">Real-time</span></div>
+                <div className="mt-10 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-8">
+                        <div>System Log: <span className="text-emerald-500">Online</span></div>
+                        <div className="hidden md:block w-1.5 h-1.5 rounded-full bg-slate-700"></div>
+                        <div className="hidden md:block">Update Frequency: <span className="text-white">Real-time</span></div>
                     </div>
                     <div className="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest">
                         <span className="text-slate-400">Powered by</span>

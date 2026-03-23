@@ -141,7 +141,7 @@ const OpportunitiesPage = () => {
                 {/* Compensation Plan */}
                 <div className="mb-12 animate-slide-up animation-delay-400">
                     <div className="bg-white rounded-[14px] shadow-lg overflow-hidden">
-                        <div className="bg-gradient-to-r from-[#0A7A2F] to-[#2F7A32] p-6 text-white">
+                        <div className="bg-[#B59410] p-6 text-white">
                             <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-3">
                                 <TrendingUp className="w-8 h-8" />
                                 WHY Sanyukt Parivaar & Rich Life HAS BEST COMPENSATION PLAN?
@@ -176,7 +176,7 @@ const OpportunitiesPage = () => {
 
                             {/* View Compensation Plan Button */}
                             <div className="flex justify-center mt-8">
-                                <Link to="/compensation-plan" className="inline-flex items-center gap-2 bg-[#F7931E] hover:bg-[#F7931E]/90 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl group">
+                                <Link to="/compensation-plan" className="inline-flex items-center gap-2 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-black uppercase tracking-[0.3em] text-xs py-5 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-gold-900/30 active:scale-[0.98] group">
                                     VIEW COMPENSATION PLAN
                                     <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </Link>
@@ -233,25 +233,29 @@ const OpportunitiesPage = () => {
                 </div>
             </section>
 
-            {/* CTA Section - Light Green */}
-            <section className="py-16 px-4 bg-gradient-to-r from-[#A8D5BA] to-[#C8E6C9] mt-8">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#0A7A2F] mb-6">
+            {/* CTA Section - Dark Theme */}
+            <section className="py-16 px-4 bg-[#1A1A1A] mt-12 relative overflow-hidden border-t border-b border-[#C8A96A]/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                {/* Decorative background effects */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C8A96A]/30 to-transparent"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#C8A96A]/5 rounded-full blur-[100px] pointer-events-none"></div>
+                
+                <div className="max-w-4xl mx-auto text-center relative z-10">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#C8A96A] mb-6 font-serif tracking-tight">
                         Start Your Entrepreneurial Journey Today!
                     </h2>
-                    <p className="text-[#2F4F4F] mb-8 max-w-2xl mx-auto font-medium">
+                    <p className="text-[#F5E6C8]/60 mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                         Join Sanyukt Parivaar & Rich Life Pvt.Ltd. and unlock unlimited earning potential with the industry's best compensation plan.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             to="/register"
-                            className="bg-[#0A7A2F] text-white hover:bg-[#2F7A32] font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                            className="bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-black uppercase tracking-[0.3em] text-xs py-5 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-gold-900/30 active:scale-[0.98] group flex items-center justify-center"
                         >
                             Register Now
                         </Link>
                         <Link
                             to="/contact"
-                            className="bg-[#F7931E] text-white hover:bg-[#F7931E]/90 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                            className="bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-black uppercase tracking-[0.3em] text-xs py-5 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-gold-900/30 active:scale-[0.98] group flex items-center justify-center"
                         >
                             Contact Sales
                         </Link>

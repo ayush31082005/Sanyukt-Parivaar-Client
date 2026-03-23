@@ -167,7 +167,7 @@ const UserDashboardLayout = () => {
     if (!userData) return null;
 
     return (
-        <div className="min-h-screen bg-white flex">
+        <div className="min-h-screen bg-[#0D0D0D] flex">
             {/* Sidebar */}
             <aside
                 className={`fixed left-0 h-[calc(100vh-60px)] md:h-[calc(100vh-80px)] top-[60px] md:top-[80px] bg-[#0A7A2F] text-white transition-all duration-300 z-50 shadow-none overflow-y-auto no-scrollbar
@@ -356,7 +356,7 @@ const UserDashboardLayout = () => {
 
             {/* Main Content Area */}
             <main
-                className={`flex-1 flex flex-col transition-all duration-300 min-h-[calc(100vh-80px)]
+                className={`flex-1 flex flex-col transition-all duration-300 min-h-[calc(100vh-80px)] text-white
                     ${sidebarOpen ? 'md:ml-72' : 'md:ml-20'}`}
             >
                 <div className="flex-1 px-4 md:px-8 pb-8 pt-0 animate-fadeIn relative">

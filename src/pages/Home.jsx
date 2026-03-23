@@ -565,15 +565,15 @@ const HomePage = () => {
                 />
 
                 {/* Mid CTA Strip */}
-                <section className="py-12 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] relative overflow-hidden active-glow" >
+                <section className="py-5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] relative overflow-hidden active-glow" >
                     <div className="container mx-auto px-4 relative z-10">
-                        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                            <h3 className="text-xl md:text-3xl font-serif font-bold text-[#0D0D0D] text-center md:text-left leading-tight">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                            <h3 className="text-base md:text-xl font-serif font-bold text-[#0D0D0D] text-center md:text-left leading-tight">
                                 One of the Fastest Growing <br className="hidden md:block" /> Direct Selling Companies in India
                             </h3>
                             <button
                                 onClick={() => handleNavigation('/contact')}
-                                className="px-10 py-4 bg-[#0D0D0D] text-[#C8A96A] font-bold rounded-full hover:scale-105 transition-all shadow-2xl whitespace-nowrap text-xs uppercase tracking-widest"
+                                className="px-6 py-2.5 bg-[#0D0D0D] text-[#C8A96A] font-bold rounded-full hover:scale-105 transition-all shadow-xl whitespace-nowrap text-[10px] uppercase tracking-widest"
                             >
                                 CONTACT NOW
                             </button>

@@ -80,7 +80,7 @@ const NewsSection = () => {
         );
     }
     return (
-        <section className="py-10 bg-[#121212] relative overflow-hidden" >
+        <section className="pt-2 pb-10 bg-[#121212] relative overflow-hidden" >
             <div className="container mx-auto px-4">
                 <h2 className="text-xl md:text-3xl font-serif font-bold text-center text-[#F5E6C8] mb-2">
                     Latest News & <span className="text-[#C8A96A]">Updates</span>

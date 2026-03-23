@@ -3,19 +3,19 @@ import { ArrowRight, Play } from 'lucide-react';
 
 const TrainingSection = ({ supportItems, trainingImage, handleNavigation }) => {
     return (
-        <section className="py-24 bg-[#121212] relative overflow-hidden" >
+        <section className="py-10 bg-[#121212] relative overflow-hidden" >
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                     <div className="space-y-3 order-2 md:order-1">
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#C8A96A] relative inline-block pb-4 mb-6 tracking-tight">
+                        <h2 className="text-2xl md:text-4xl font-serif font-bold text-[#C8A96A] relative inline-block pb-3 mb-3 tracking-tight">
                             Training & <span className="text-[#F5E6C8]">Support</span> System
                             <span className="absolute bottom-0 left-0 w-24 h-1 bg-gradient-to-r from-[#C8A96A] to-transparent"></span>
                         </h2>
-                        <p className="text-[#F5E6C8]/80 text-base font-light leading-relaxed mb-8">
+                        <p className="text-[#F5E6C8]/80 text-sm font-light leading-relaxed mb-4">
                             We believe success comes with knowledge and guidance. That’s why we provide structured training programs, online resources, offline seminars, and continuous mentorship to help every partner grow confidently.
                         </p>
-                        <h3 className="text-xs font-bold text-[#C8A96A] uppercase tracking-[3px] mt-6 mb-4">Support Includes</h3>
-                        <div className="grid grid-cols-1 gap-3 mb-10">
+                        <h3 className="text-xs font-bold text-[#C8A96A] uppercase tracking-[3px] mt-3 mb-2">Support Includes</h3>
+                        <div className="grid grid-cols-1 gap-2 mb-5">
                             {supportItems.map((item, index) => (
                                 <div key={index} className="flex items-center space-x-3">
                                     <div className="w-1.5 h-1.5 bg-[#C8A96A] rounded-full"></div>
@@ -31,7 +31,7 @@ const TrainingSection = ({ supportItems, trainingImage, handleNavigation }) => {
                         </button>
                     </div>
                     <div className="relative order-1 md:order-2 group">
-                        <img src={trainingImage} alt="Training" className="rounded-3xl shadow-2xl w-full h-[350px] object-cover border border-[#C8A96A]/10" />
+                        <img src={trainingImage} alt="Training" className="rounded-3xl shadow-2xl w-full h-[260px] object-cover border border-[#C8A96A]/10" />
                         <div className="absolute -bottom-6 -left-6 bg-[#1A1A1A] p-5 rounded-2xl shadow-2xl border border-[#C8A96A]/20 glass-morphism">
                             <div className="flex items-center space-x-4">
                                 <div className="w-12 h-12 bg-[#C8A96A]/20 rounded-xl flex items-center justify-center">

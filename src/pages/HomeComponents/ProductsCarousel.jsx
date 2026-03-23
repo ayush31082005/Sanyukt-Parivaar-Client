@@ -16,18 +16,18 @@ const ProductsCarousel = ({
     handleNavigation 
 }) => {
     return (
-        <section className="py-24 bg-[#121212] relative overflow-hidden" >
+        <section className="py-10 bg-[#121212] relative overflow-hidden" >
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header */}
-                <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+                <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
                     <div className="text-center md:text-left max-w-2xl">
-                        <span className="text-[#C8A96A] font-bold text-sm tracking-widest uppercase mb-3 block">
+                        <span className="text-[#C8A96A] font-bold text-xs tracking-widest uppercase mb-2 block">
                             Discover Quality
                         </span>
-                        <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#F5E6C8] mb-4">
+                        <h2 className="text-2xl md:text-4xl font-serif font-bold text-[#F5E6C8] mb-2">
                             Featured <span className="text-[#C8A96A]">Products</span>
                         </h2>
-                        <p className="text-[#F5E6C8]/60 text-lg font-light">
+                        <p className="text-[#F5E6C8]/60 text-sm font-light">
                             Our best-selling products are trusted by customers and partners for their quality and effectiveness.
                         </p>
                     </div>

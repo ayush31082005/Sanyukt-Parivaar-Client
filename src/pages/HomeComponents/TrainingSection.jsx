@@ -4,45 +4,38 @@ import { ArrowRight, Play } from 'lucide-react';
 
 const TrainingSection = ({ supportItems, trainingImage, handleNavigation }) => {
     return (
-        <section className="pt-10 pb-2 bg-[#0D0D0D] relative overflow-hidden" >
-            <div className="container mx-auto px-4">
+        <section className="py-6 bg-[#0D0D0D] relative overflow-hidden" >
+            <div className="container mx-auto px-4 max-w-5xl">
                 <div className="grid md:grid-cols-2 gap-6 items-center">
-                    <div className="space-y-3 order-2 md:order-1">
-                        <h2 className="text-2xl md:text-4xl font-serif font-bold text-[#C8A96A] relative inline-block pb-3 mb-3 tracking-tight">
+                    <div className="space-y-2 order-2 md:order-1 flex flex-col justify-center">
+                        <h2 className="text-xl md:text-3xl font-serif font-bold text-[#C8A96A] relative inline-block pb-1 mb-1 tracking-widest uppercase">
                             Training & <span className="text-[#F5E6C8]">Support</span> System
-                            <span className="absolute bottom-0 left-0 w-24 h-1 bg-gradient-to-r from-[#C8A96A] to-transparent"></span>
+                            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#C8A96A]/40"></span>
                         </h2>
-                        <p className="text-[#F5E6C8]/80 text-sm font-light leading-relaxed mb-4">
-                            We believe success comes with knowledge and guidance. That’s why we provide structured training programs, online resources, offline seminars, and continuous mentorship to help every partner grow confidently.
+                        <p className="text-[#F5E6C8]/70 text-xs font-light leading-relaxed mb-3">
+                            Knowledge and guidance for your success. We provide structured training programs, online resources, and continuous mentorship to help every partner grow confidently.
                         </p>
-                        <h3 className="text-xs font-bold text-[#C8A96A] uppercase tracking-[3px] mt-3 mb-2">Support Includes</h3>
-                        <div className="grid grid-cols-1 gap-2 mb-5">
+                        <h3 className="text-[10px] font-bold text-[#C8A96A] uppercase tracking-[3px] mt-2 mb-2">Support Includes</h3>
+                        <div className="grid grid-cols-1 gap-1.5 mb-4">
                             {supportItems.map((item, index) => (
-                                <div key={index} className="flex items-center space-x-3">
-                                    <div className="w-1.5 h-1.5 bg-[#C8A96A] rounded-full"></div>
-                                    <span className="text-sm text-[#F5E6C8]/70 font-medium">{item}</span>
+                                <div key={index} className="flex items-center space-x-2">
+                                    <div className="w-1 h-1 bg-[#C8A96A] rounded-full"></div>
+                                    <span className="text-[11px] text-[#F5E6C8]/70 font-medium uppercase tracking-tight">{item}</span>
                                 </div>
                             ))}
                         </div>
                         <button
                             onClick={() => handleNavigation('/training')}
-                            className="inline-flex items-center text-[#C8A96A] text-sm font-bold hover:text-[#D4AF37] transition-all group tracking-widest uppercase"
+                            className="luxury-button w-fit"
                         >
-                            Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
+                            Learn More
                         </button>
                     </div>
-                    <div className="relative order-1 md:order-2 group">
-                        <img src={trainingImage} alt="Training" className="rounded-3xl shadow-2xl w-full h-[260px] object-cover border border-[#C8A96A]/10" />
-                        <div className="absolute -bottom-6 -left-6 bg-[#1A1A1A] p-5 rounded-2xl shadow-2xl border border-[#C8A96A]/20 glass-morphism">
-                            <div className="flex items-center space-x-4">
-                                <div className="w-12 h-12 bg-[#C8A96A]/20 rounded-xl flex items-center justify-center">
-                                    <Play className="w-6 h-6 text-[#C8A96A]" fill="currentColor" />
-                                </div>
-                                <div>
-                                    <div className="font-bold text-[#F5E6C8] text-sm">Leadership Programs</div>
-                                    <div className="text-[10px] text-[#C8A96A] font-bold uppercase tracking-widest mt-1">Top 10 in India</div>
-                                </div>
-                            </div>
+                    <div className="relative order-1 md:order-2 luxury-box p-1 h-fit">
+                        <img src={trainingImage} alt="Training" className="w-full h-auto max-h-[220px] object-cover" />
+                        <div className="absolute top-2 left-2 bg-[#0D0D0D]/80 border border-[#C8A96A]/40 p-2 px-3 flex items-center gap-2">
+                            <Play className="w-4 h-4 text-[#C8A96A]" fill="currentColor" />
+                            <div className="text-[10px] font-bold text-[#F5E6C8] uppercase tracking-widest">Leadership</div>
                         </div>
                     </div>
                 </div>

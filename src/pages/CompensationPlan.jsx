@@ -38,7 +38,7 @@ const CompensationPlan = () => {
     ];
 
     return (
-        <div className="bg-[#0D0D0D] min-h-screen font-sans pb-24 pt-20 text-[#F5E6C8]">
+        <div className="bg-[#0D0D0D] min-h-screen font-sans pb-24 text-[#F5E6C8]">
             {/* Professional Header Section */}
             <div className="bg-[#1A1A1A] py-24 px-4 text-white relative overflow-hidden border-b border-[#C8A96A]/20">
                 {/* Subtle Grid Background Pattern */}

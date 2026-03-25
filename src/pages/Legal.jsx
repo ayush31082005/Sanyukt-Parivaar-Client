@@ -838,42 +838,42 @@ const LegalPage = () => {
     ];
 
     return (
-        <div className="bg-[#F8FAF5] font-sans min-h-screen">
+        <div className="bg-[#0D0D0D] font-sans min-h-screen">
             {/* Hero Banner Section */}
-            <header className="relative h-[250px] bg-cover bg-center"
+            <header className="relative h-[250px] bg-cover bg-center border-b border-[#C8A96A]/20"
                 style={{ backgroundImage: "url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')" }}>
-                <div className="absolute inset-0 bg-black/65"></div>
+                <div className="absolute inset-0 bg-[#0D0D0D]/80 backdrop-blur-sm"></div>
                 <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 animate-fade-in">
+                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#C8A96A] mb-3 animate-fade-in drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                         Legal Policies
                     </h1>
-                    <div className="flex items-center text-white/90 text-sm md:text-base flex-wrap justify-center">
-                        <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                    <div className="flex items-center text-[#F5E6C8]/60 text-xs md:text-sm flex-wrap justify-center font-bold tracking-[0.2em] uppercase">
+                        <Link to="/" className="hover:text-[#C8A96A] transition-colors">Home</Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white">Legal</span>
+                        <span className="text-[#C8A96A]">Legal</span>
                     </div>
                 </div>
             </header>
 
             {/* Intro Section */}
             <section className="py-12 px-4 max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#222222] mb-4 animate-slide-up">
-                    Sanyukt Parivaar & Rich Life Pvt.Ltd.
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#F5E6C8] mb-4 animate-slide-up">
+                    Sanyukt Parivaar & Rich Life
                 </h2>
-                <p className="text-lg text-white font-medium mb-6">
+                <p className="text-base text-[#C8A96A] font-bold tracking-[0.2em] uppercase mb-8">
                     Legal Information and Policies
                 </p>
-                <div className="w-[60px] h-[3px] bg-[#0A7A2F] mx-auto"></div>
+                <div className="luxury-divider"></div>
             </section>
 
             {/* Legal Disclaimer */}
             <section className="py-6 px-4 max-w-4xl mx-auto">
-                <div className="bg-[#0A7A2F]/10 border-l-4 border-[#0A7A2F] p-6 rounded-r-lg animate-slide-right">
+                <div className="luxury-box p-6 border-l-4 border-l-[#C8A96A] animate-slide-right bg-[#1A1A1A]">
                     <div className="flex items-start gap-4">
-                        <Lock className="w-6 h-6 text-[#0A7A2F] flex-shrink-0 mt-1" />
+                        <Lock className="w-6 h-6 text-[#C8A96A] flex-shrink-0 mt-1" />
                         <div>
-                            <h3 className="font-bold text-[#0A7A2F] mb-2">Legal Disclaimer</h3>
-                            <p className="text-[#222222] text-sm">
+                            <h3 className="font-bold text-[#C8A96A] mb-2 tracking-widest uppercase text-sm">Legal Disclaimer</h3>
+                            <p className="text-[#F5E6C8]/80 text-sm leading-relaxed">
                                 Sanyukt Parivaar & Rich Life Pvt.Ltd. follows applicable Direct Selling Guidelines.
                                 Income depends on individual effort and performance. No guaranteed earnings.
                             </p>
@@ -889,17 +889,17 @@ const LegalPage = () => {
                         <button
                             key={policy.id}
                             onClick={() => togglePolicy(policy.id)}
-                            className={`w-40 p-4 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 animate-fade-in text-center group ${expandedPolicy === policy.id
-                                ? 'bg-[#0A7A2F] text-white'
-                                : 'bg-white hover:shadow-lg text-[#222222]'
+                            className={`w-40 p-4 rounded-none transition-all duration-300 transform hover:-translate-y-1 animate-fade-in text-center group border ${expandedPolicy === policy.id
+                                ? 'bg-[#C8A96A] text-[#0D0D0D] border-[#C8A96A] shadow-[0_0_15px_rgba(200,169,106,0.3)]'
+                                : 'bg-[#1A1A1A] hover:bg-[#252525] border-[#C8A96A]/20 text-[#C8A96A]'
                                 }`}
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
-                            <div className={`flex justify-center mb-2 transition-colors ${expandedPolicy === policy.id ? 'text-white' : 'text-[#0A7A2F] group-hover:text-[#0A7A2F]'
+                            <div className={`flex justify-center mb-2 transition-colors ${expandedPolicy === policy.id ? 'text-[#0D0D0D]' : 'text-[#C8A96A] group-hover:text-[#D4AF37]'
                                 }`}>
                                 {policy.icon}
                             </div>
-                            <span className={`text-xs sm:text-sm font-medium ${expandedPolicy === policy.id ? 'text-white' : 'text-[#222222]'
+                            <span className={`text-xs sm:text-sm font-bold uppercase tracking-widest ${expandedPolicy === policy.id ? 'text-[#0D0D0D]' : 'text-[#F5E6C8]'
                                 }`}>
                                 {policy.title}
                             </span>
@@ -910,12 +910,12 @@ const LegalPage = () => {
                     {policies.length > 4 && (
                         <button
                             onClick={() => setShowAllPolicies(!showAllPolicies)}
-                            className="w-40 p-4 rounded-lg shadow-sm border border-[#0A7A2F]/20 hover:border-[#0A7A2F]/50 bg-[#F8FAF5] hover:bg-[#E8F5E9] transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center justify-center animate-fade-in"
+                            className="w-40 p-4 rounded-none border border-[#C8A96A]/20 hover:border-[#C8A96A]/50 bg-[#1A1A1A] hover:bg-[#252525] transition-all duration-300 transform hover:-translate-y-1 text-center flex flex-col items-center justify-center animate-fade-in group"
                         >
-                            <div className="flex justify-center mb-2 text-[#0A7A2F]">
+                            <div className="flex justify-center mb-2 text-[#C8A96A] group-hover:scale-110 transition-transform">
                                 {showAllPolicies ? <ChevronUp className="w-6 h-6" /> : <ChevronDown className="w-6 h-6" />}
                             </div>
-                            <span className="text-xs sm:text-sm font-bold text-[#0A7A2F]">
+                            <span className="text-[10px] sm:text-xs font-bold text-[#C8A96A] uppercase tracking-widest">
                                 {showAllPolicies ? "View Less" : "View More"}
                             </span>
                         </button>
@@ -929,32 +929,32 @@ const LegalPage = () => {
                     {policies.filter(p => p.id === expandedPolicy).map((policy) => (
                         <article
                             key={policy.id}
-                            className="bg-white rounded-[14px] shadow-lg overflow-hidden animate-slide-up"
+                            className="luxury-box overflow-hidden animate-slide-up bg-[#1A1A1A]"
                         >
                             {/* Policy Header */}
-                            <div className="bg-[#0A7A2F] p-6 text-white">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                                        {React.cloneElement(policy.icon, { className: "w-6 h-6 text-white" })}
+                            <div className="bg-gradient-to-r from-[#1A1A1A] to-[#252525] p-6 border-b border-[#C8A96A]/20">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 bg-[#0D0D0D] border border-[#C8A96A]/30 flex items-center justify-center shadow-lg">
+                                        {React.cloneElement(policy.icon, { className: "w-6 h-6 text-[#C8A96A]" })}
                                     </div>
-                                    <h2 className="text-2xl md:text-3xl font-bold">{policy.title}</h2>
+                                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#C8A96A] tracking-wide">{policy.title}</h2>
                                 </div>
                             </div>
 
                             {/* Policy Content */}
                             <div className="p-6 md:p-8">
-                                <p className="text-[#222222] mb-8 leading-relaxed text-lg border-l-4 border-[#0A7A2F] pl-4">
+                                <p className="text-[#F5E6C8]/80 mb-8 leading-relaxed text-sm md:text-lg border-l-4 border-[#C8A96A] pl-4">
                                     {policy.content.intro}
                                 </p>
 
                                 {/* Scope Section (for Privacy Policy) */}
                                 {policy.id === 'privacy' && policy.content.scope && (
-                                    <div className="mb-8 bg-[#F8FAF5] p-6 rounded-lg">
-                                        <h3 className="text-xl font-bold text-[#0A7A2F] mb-3 flex items-center gap-2">
+                                    <div className="mb-8 bg-[#0D0D0D] border border-[#C8A96A]/10 p-6 shadow-inner">
+                                        <h3 className="text-lg font-bold text-[#C8A96A] mb-3 flex items-center gap-2 uppercase tracking-widest">
                                             <Globe className="w-5 h-5" />
                                             {policy.content.scope.title}
                                         </h3>
-                                        <p className="text-[#222222] text-sm leading-relaxed">
+                                        <p className="text-[#F5E6C8]/70 text-sm leading-relaxed">
                                             {policy.content.scope.content}
                                         </p>
                                     </div>
@@ -963,7 +963,7 @@ const LegalPage = () => {
                                 {/* Main Sections with Dropdowns */}
                                 {policy.content.sections.map((section, sectionIdx) => (
                                     <div key={sectionIdx} className="mb-8 last:mb-0">
-                                        <h3 className="text-xl font-bold text-[#0A7A2F] mb-4 pb-2 border-b border-gray-200">
+                                        <h3 className="text-lg font-serif font-bold text-[#C8A96A] mb-4 pb-2 border-b border-[#C8A96A]/10 uppercase tracking-widest">
                                             {section.heading}
                                         </h3>
 
@@ -1020,13 +1020,13 @@ const LegalPage = () => {
                                 ))}
 
                                 {/* Link to full policy page */}
-                                <div className="mt-8 pt-6 border-t border-gray-200 flex justify-end">
+                                <div className="mt-8 pt-6 border-t border-[#C8A96A]/10 flex justify-end">
                                     <Link
                                         to={policy.path}
-                                        className="inline-flex items-center gap-2 bg-[#0A7A2F] hover:bg-[#0A7A2F]/90 text-white font-medium px-6 py-3 rounded-lg transition-colors"
+                                        className="luxury-button inline-flex items-center gap-2 px-6 py-3"
                                     >
-                                        Read Full {policy.title}
-                                        <ChevronRight className="w-4 h-4" />
+                                        <span className="font-bold text-[10px] tracking-[0.2em] uppercase">Read Full {policy.title}</span>
+                                        <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>

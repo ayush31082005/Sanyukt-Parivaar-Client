@@ -143,7 +143,7 @@ const FranchiseLogin = () => {
                     ease: "easeInOut"
                 }}
             >
-                <div className="bg-[#1A1A1A]/60 glass-morphism p-3 rounded-2xl shadow-2xl border border-[#C8A96A]/20">
+                <div className="luxury-box glass-morphism p-3 shadow-2xl">
                     <Store className="h-6 w-6 text-[#C8A96A]" />
                 </div>
             </motion.div>
@@ -159,7 +159,7 @@ const FranchiseLogin = () => {
                     ease: "easeInOut"
                 }}
             >
-                <div className="bg-[#1A1A1A]/60 glass-morphism p-3 rounded-2xl shadow-2xl border border-[#C8A96A]/20">
+                <div className="luxury-box glass-morphism p-3 shadow-2xl">
                     <TrendingUp className="h-6 w-6 text-[#C8A96A]" />
                 </div>
             </motion.div>
@@ -177,7 +177,7 @@ const FranchiseLogin = () => {
                             initial={{ scale: 0.9, opacity: 0, y: 20 }}
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                            className="bg-[#1A1A1A] rounded-[2.5rem] shadow-3xl max-w-md w-full overflow-hidden border border-[#C8A96A]/20"
+                            className="luxury-box shadow-3xl max-w-md w-full"
                         >
                             {/* Top Success Bar */}
                             <div className="h-1 bg-gradient-to-r from-transparent via-[#C8A96A] to-transparent w-full" />
@@ -319,7 +319,7 @@ const FranchiseLogin = () => {
                         {/* Stats Cards */}
                         <div className="grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0 mb-8">
                             <motion.div
-                                className="bg-[#1A1A1A]/60 glass-morphism p-4 rounded-2xl shadow-2xl border border-[#C8A96A]/10 hover:border-[#C8A96A]/25 transition-all duration-300"
+                                className="luxury-box glass-morphism p-4 shadow-2xl transition-all duration-300"
                                 whileHover={{ scale: 1.05, y: -5 }}
                             >
                                 <Users className="h-6 w-6 text-[#C8A96A] mb-2" />
@@ -327,7 +327,7 @@ const FranchiseLogin = () => {
                                 <p className="text-sm text-[#F5E6C8]/60 font-medium">Active Franchises</p>
                             </motion.div>
                             <motion.div
-                                className="bg-[#1A1A1A]/60 glass-morphism p-4 rounded-2xl shadow-2xl border border-[#C8A96A]/10 hover:border-[#C8A96A]/25 transition-all duration-300"
+                                className="luxury-box glass-morphism p-4 shadow-2xl transition-all duration-300"
                                 whileHover={{ scale: 1.05, y: -5 }}
                             >
                                 <TrendingUp className="h-6 w-6 text-[#C8A96A] mb-2" />
@@ -367,8 +367,8 @@ const FranchiseLogin = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        <div className="w-full bg-[#1A1A1A] rounded-[3rem] border border-[#C8A96A]/10 shadow-3xl overflow-hidden group hover:border-[#C8A96A]/30 transition-all duration-700">
-                            <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] p-10 border-b border-[#C8A96A]/10 relative overflow-hidden text-center">
+                        <div className="luxury-box w-full group transition-all duration-700">
+                            <div className="bg-[#121212] p-10 border-b border-[#C8A96A]/30 relative overflow-hidden text-center">
                                 <motion.div
                                     className="absolute inset-0 bg-[#C8A96A]/5"
                                     animate={{
@@ -481,7 +481,7 @@ const FranchiseLogin = () => {
                                     <motion.button
                                         type="submit"
                                         disabled={isLoading}
-                                        className="group relative w-full p-6 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-black uppercase tracking-[0.3em] text-xs rounded-2xl overflow-hidden transition-all hover:shadow-2xl hover:shadow-gold-900/30 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="luxury-button w-full relative z-10 flex items-center justify-center p-4 disabled:opacity-50 disabled:cursor-not-allowed"
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
                                     >

@@ -16,35 +16,36 @@ const ProductsCarousel = ({
     handleNavigation 
 }) => {
     return (
-        <section className="py-10 bg-[#121212] relative overflow-hidden" >
+        <section className="py-6 bg-[#121212] relative overflow-hidden" >
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header */}
-                <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+                <div className="flex flex-col md:flex-row justify-between items-center mb-4 gap-4">
                     <div className="text-center md:text-left max-w-2xl">
-                        <span className="text-[#C8A96A] font-bold text-xs tracking-widest uppercase mb-2 block">
+                        <span className="text-[#C8A96A] font-bold text-[10px] tracking-widest uppercase mb-1 block">
                             Discover Quality
                         </span>
-                        <h2 className="text-2xl md:text-4xl font-serif font-bold text-[#F5E6C8] mb-2">
+                        <h2 className="text-xl md:text-3xl font-serif font-bold text-[#F5E6C8] mb-1 uppercase tracking-widest">
                             Featured <span className="text-[#C8A96A]">Products</span>
                         </h2>
-                        <p className="text-[#F5E6C8]/60 text-sm font-light">
-                            Our best-selling products are trusted by customers and partners for their quality and effectiveness.
+                        <div className="w-16 h-[1px] bg-[#C8A96A]/40 mb-2 md:mx-0 mx-auto"></div>
+                        <p className="text-[#F5E6C8]/60 text-xs font-light tracking-tight">
+                            Tested and trusted by our community.
                         </p>
                     </div>
 
                     {/* Custom Navigation - Right Corner */}
-                    <div className="flex gap-3 flex-shrink-0">
+                    <div className="flex gap-2 flex-shrink-0">
                         <button
                             onClick={() => scroll('left')}
-                            className="w-14 h-14 rounded-full border-2 border-[#C8A96A]/20 flex items-center justify-center text-[#C8A96A] hover:border-[#C8A96A] hover:bg-[#C8A96A]/10 transition-all duration-300"
+                            className="w-10 h-10 border border-[#C8A96A]/30 flex items-center justify-center text-[#C8A96A] hover:bg-[#C8A96A]/10 transition-all"
                         >
-                            <ChevronDown className="w-6 h-6 rotate-90" />
+                            <ChevronDown className="w-5 h-5 rotate-90" />
                         </button>
                         <button
                             onClick={() => scroll('right')}
-                            className="w-14 h-14 rounded-full bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] flex items-center justify-center text-[#0D0D0D] shadow-xl shadow-gold-900/20 hover:scale-105 transition-all duration-300"
+                            className="w-10 h-10 bg-[#C8A96A] flex items-center justify-center text-[#0D0D0D] hover:bg-[#D4AF37] transition-all"
                         >
-                            <ChevronRight className="w-6 h-6" />
+                            <ChevronRight className="w-5 h-5" />
                         </button>
                     </div>
                 </div>
@@ -81,14 +82,13 @@ const ProductsCarousel = ({
                             >
                                 <motion.div
                                     whileHover={{ y: -6 }}
-                                    className="bg-[#1A1A1A] rounded-2xl shadow-xl border border-[#C8A96A]/10 overflow-hidden transition-all duration-500 group relative gold-glow-hover"
+                                    className="luxury-box overflow-hidden transition-all duration-500 group relative"
                                 >
                                     {/* Product Image Container */}
                                     <div 
-                                        className="relative h-40 overflow-hidden bg-[#0D0D0D] flex items-center justify-center cursor-pointer"
+                                        className="relative h-32 overflow-hidden bg-[#0D0D0D] flex items-center justify-center cursor-pointer p-2"
                                         onClick={() => onProductClick(product)}
                                     >
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
 
                                         {imageUrl && !imageErrors[product._id || product.name] ? (
                                             <motion.img
@@ -133,10 +133,10 @@ const ProductsCarousel = ({
                                             className="p-3.5 cursor-pointer group/details"
                                             onClick={() => onProductClick(product)}
                                         >
-                                            <div className="flex items-center gap-1 mb-2">
+                                            <div className="flex items-center gap-1 mb-1">
                                                 {renderStars(rating)}
-                                                <span className="text-[9px] font-bold text-[#F5E6C8]/40 uppercase tracking-widest ml-1">
-                                                    {reviews} Reviews
+                                                <span className="text-[8px] font-bold text-[#F5E6C8]/40 uppercase tracking-widest ml-1">
+                                                    {reviews} 
                                                 </span>
                                             </div>
 
@@ -167,22 +167,20 @@ const ProductsCarousel = ({
                                             </div>
                                         </div>
 
-                                        <div className="mt-3 flex flex-col gap-2">
-                                            <motion.button
-                                                whileTap={{ scale: 0.95 }}
+                                        <div className="mt-2 flex flex-col gap-1.5">
+                                            <button
                                                 onClick={() => handleNavigation('/checkout', { state: { product } })}
-                                                className="w-full py-2 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-bold rounded-lg transition-all duration-300 uppercase tracking-widest text-[9px] flex items-center justify-center gap-1.5 group/btn shadow-lg"
+                                                className="luxury-button w-full"
                                             >
-                                                <span>Instant Buy</span>
-                                                <ArrowRight className="w-3 h-3 transform group-hover/btn:translate-x-1 transition-transform" />
-                                            </motion.button>
+                                                Instant Buy
+                                            </button>
                                             
                                             <button
                                                 onClick={(e) => {
                                                     e.stopPropagation();
                                                     onProductClick(product);
                                                 }}
-                                                className="w-full py-2 border border-[#C8A96A]/30 text-[#C8A96A] font-bold rounded-lg hover:bg-[#C8A96A] hover:text-[#0D0D0D] transition-all duration-300 uppercase tracking-widest text-[9px]"
+                                                className="text-[#C8A96A]/60 text-[8px] font-bold uppercase tracking-widest text-center hover:text-[#C8A96A] transition-colors"
                                             >
                                                 View Details
                                             </button>

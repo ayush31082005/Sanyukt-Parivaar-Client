@@ -80,14 +80,14 @@ const NewsSection = () => {
         );
     }
     return (
-        <section className="pt-2 pb-10 bg-[#121212] relative overflow-hidden" >
-            <div className="container mx-auto px-4">
-                <h2 className="text-xl md:text-3xl font-serif font-bold text-center text-[#F5E6C8] mb-2">
+        <section className="pt-2 pb-6 bg-[#121212] relative overflow-hidden" >
+            <div className="container mx-auto px-4 max-w-6xl">
+                <h2 className="text-xl md:text-3xl font-serif font-bold text-center text-[#F5E6C8] mb-1 uppercase tracking-widest">
                     Latest News & <span className="text-[#C8A96A]">Updates</span>
                 </h2>
-                <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-[#C8A96A] to-transparent mx-auto mb-3"></div>
-                <p className="text-center text-[#F5E6C8]/60 mb-5 max-w-2xl mx-auto text-[11px] md:text-sm font-light leading-relaxed">
-                    Stay updated with the latest company announcements, seminar schedules, product launches, and success stories from our growing Sanyukt Parivaar family.
+                <div className="w-16 h-[1px] bg-[#C8A96A]/40 mx-auto mb-4"></div>
+                <p className="text-center text-[#F5E6C8]/60 mb-5 max-w-2xl mx-auto text-[10px] md:text-xs font-light tracking-tight uppercase">
+                    Stay updated with the latest company announcements and success stories.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -95,53 +95,45 @@ const NewsSection = () => {
                         <div
                             key={news._id}
                             onClick={() => handleNewsClick(news)}
-                            className="group bg-[#1A1A1A] rounded-2xl shadow-xl transition-all duration-500 overflow-hidden cursor-pointer flex flex-col border border-[#C8A96A]/10 hover:border-[#C8A96A]/30 gold-glow-hover"
+                            className="luxury-box transition-all duration-500 overflow-hidden cursor-pointer flex flex-col group"
                         >
                             {/* Cover Image */}
-                            <div className="relative h-28 overflow-hidden">
+                            <div className="relative h-24 overflow-hidden p-1">
                                 <img
                                     src={getImageUrl(news.image)}
                                     alt={news.title}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    className="w-full h-full object-cover"
                                 />
                                 <div className="absolute top-2 left-2">
-                                    <span className="px-2 py-0.5 bg-[#C8A96A] text-[#0D0D0D] text-[8px] font-bold tracking-widest uppercase rounded-md shadow-lg">
+                                    <span className="px-2 py-0.5 bg-[#C8A96A] text-[#0D0D0D] text-[7px] font-bold tracking-widest uppercase shadow-lg">
                                         {news.category}
                                     </span>
                                 </div>
                             </div>
 
                             {/* Card Body */}
-                            <div className="p-3 flex flex-col flex-1">
-                                <div className="flex items-center gap-2 mb-2 text-[#F5E6C8]/40 text-[10px] font-medium">
-                                    <div className="flex items-center gap-1">
-                                        <Calendar className="w-3 h-3 text-[#C8A96A]" />
-                                        <span>{formatDate(news.createdAt)}</span>
-                                    </div>
-                                    <span className="text-[#F5E6C8]/20">•</span>
-                                    <div className="flex items-center gap-1">
-                                        <Clock className="w-3 h-3 text-[#C8A96A]" />
-                                        <span>{news.readTime}</span>
-                                    </div>
+                            <div className="p-2.5 flex flex-col flex-1">
+                                <div className="flex items-center gap-2 mb-1.5 text-[#F5E6C8]/40 text-[9px] font-medium uppercase tracking-tight">
+                                    <Calendar className="w-2.5 h-2.5 text-[#C8A96A]" />
+                                    <span>{formatDate(news.createdAt)}</span>
+                                    <span className="text-[#C8A96A] font-bold mx-1">|</span>
+                                    <span>{news.readTime}</span>
                                 </div>
 
-                                <h4 className="font-bold text-[#F5E6C8] text-sm mb-2 leading-snug group-hover:text-[#C8A96A] transition-colors duration-300 line-clamp-2">
+                                <h4 className="font-bold text-[#F5E6C8] text-xs mb-1 leading-snug group-hover:text-[#C8A96A] transition-colors line-clamp-2 uppercase tracking-tight">
                                     {news.title}
                                 </h4>
 
-                                <p className="text-xs text-gray-500 line-clamp-2 mb-3 flex-1">
+                                <p className="text-[10px] text-gray-500 line-clamp-2 mb-2 flex-1 font-light">
                                     {news.content}
                                 </p>
 
                                 <div className="flex items-center justify-between pt-2 border-t border-[#C8A96A]/10">
-                                    <div className="flex items-center gap-1.5">
-                                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] flex items-center justify-center font-bold text-[8px]">
+                                    <span className="text-[9px] font-bold text-[#C8A96A] uppercase tracking-widest">READ MORE</span>
+                                    <div className="flex items-center gap-1">
+                                        <div className="w-4 h-4 bg-[#C8A96A] text-[#0D0D0D] flex items-center justify-center font-bold text-[7px]">
                                             {news.authorAvatar || (news.author ? news.author[0] : 'A')}
                                         </div>
-                                        <span className="text-[10px] font-semibold text-[#F5E6C8]/70">{news.author || 'Admin'}</span>
-                                    </div>
-                                    <div className="flex items-center gap-1 text-[#C8A96A] font-bold text-[10px] group-hover:gap-2 transition-all">
-                                        READ MORE <ArrowRight className="w-3 h-3" />
                                     </div>
                                 </div>
                             </div>

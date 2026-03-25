@@ -73,21 +73,21 @@ const HomePage = () => {
     // Hero slides data
     const heroSlides = [
         {
-            image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80",
+            image: "/hero1.png",
             title: "Welcome to Sanyukt Parivaar & Rich Life Pvt.Ltd.",
-            subtitle: "A Trusted & Fast-Growing Multi-Level Marketing Company",
+            subtitle: "A Trusted & Fast-Growing Multi-Level Marketing Plateform",
             description: "Sanyukt Parivaar & Rich Life Pvt.Ltd. is a people-driven direct selling organization committed to empowering individuals with sustainable income opportunities. Through our transparent MLM business model and high-quality products, we help ordinary people build extraordinary futures."
         },
         {
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80",
+            image: "/hero2.png",
             title: "Welcome to Sanyukt Parivaar & Rich Life Pvt.Ltd.",
-            subtitle: "A Trusted & Fast-Growing Multi-Level Marketing Company",
+            subtitle: "A Trusted & Fast-Growing Multi-Level Marketing Plateform",
             description: "Sanyukt Parivaar & Rich Life Pvt.Ltd. is a people-driven direct selling organization committed to empowering individuals with sustainable income opportunities. Through our transparent MLM business model and high-quality products, we help ordinary people build extraordinary futures."
         },
         {
-            image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80",
+            image: "/hero3.png",
             title: "Welcome to Sanyukt Parivaar & Rich Life Pvt.Ltd.",
-            subtitle: "A Trusted & Fast-Growing Multi-Level Marketing Company",
+            subtitle: "A Trusted & Fast-Growing Multi-Level Marketing Plateform",
             description: "Sanyukt Parivaar & Rich Life Pvt.Ltd. is a people-driven direct selling organization committed to empowering individuals with sustainable income opportunities. Through our transparent MLM business model and high-quality products, we help ordinary people build extraordinary futures."
         }
     ];
@@ -523,27 +523,22 @@ const HomePage = () => {
                     handleNavigation={handleNavigation}
                 />
 
-                {/* <RechargeSection
-                    mobileNumber={mobileNumber}
-                    setMobileNumber={setMobileNumber}
-                    operator={operator}
-                    setOperator={setOperator}
-                    amount={amount}
-                    setAmount={setAmount}
-                    operators={operators}
-                    openPlanPopup={openPlanPopup}
-                    handleRecharge={handleRecharge}
-                    isLoggedIn={isLoggedIn}
-                /> */}
+                {/* </RechargeSection> */}
+
+                <div className="luxury-divider"><span>ESTABLISHED 2024</span></div>
 
                 <AboutSection
                     aboutImage={aboutImage}
                     teamImages={teamImages}
                 />
 
+                <div className="luxury-divider"><span>WHY CHOOSE US</span></div>
+
                 <WhyChooseSection
                     whyChoosePoints={whyChoosePoints}
                 />
+
+                <div className="luxury-divider"><span>OUR PRODUCTS</span></div>
 
                 <ProductsCarousel
                     products={products}
@@ -558,28 +553,32 @@ const HomePage = () => {
                     handleNavigation={handleNavigation}
                 />
 
+                <div className="luxury-divider"><span>OPPORTUNITY</span></div>
+
                 <BusinessOpportunity
                     businessHighlights={businessHighlights}
                     businessImage={businessImage}
                     handleNavigation={handleNavigation}
                 />
 
+                <div className="luxury-divider"><span>SANYUKT PARIVAAR</span></div>
+
                 {/* Mid CTA Strip */}
-                <section className="py-5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] relative overflow-hidden active-glow" >
-                    <div className="container mx-auto px-4 relative z-10">
-                        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                            <h3 className="text-base md:text-xl font-serif font-bold text-[#0D0D0D] text-center md:text-left leading-tight">
-                                One of the Fastest Growing <br className="hidden md:block" /> Direct Selling Companies in India
-                            </h3>
-                            <button
-                                onClick={() => handleNavigation('/contact')}
-                                className="px-6 py-2.5 bg-[#0D0D0D] text-[#C8A96A] font-bold rounded-full hover:scale-105 transition-all shadow-xl whitespace-nowrap text-[10px] uppercase tracking-widest"
-                            >
-                                CONTACT NOW
-                            </button>
-                        </div>
+                <section className="py-4 px-4">
+                    <div className="max-w-5xl mx-auto luxury-box p-4 md:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                        <h3 className="text-sm md:text-lg font-serif font-bold text-[#F5E6C8] text-center md:text-left uppercase tracking-widest">
+                            One of India's Fastest Growing <br /> Direct Selling Companies
+                        </h3>
+                        <button
+                            onClick={() => handleNavigation('/contact')}
+                            className="luxury-button"
+                        >
+                            Contact Now
+                        </button>
                     </div>
                 </section>
+
+                <div className="luxury-divider"><span>ELITE TRAINING</span></div>
 
                 <TrainingSection
                     supportItems={supportItems}
@@ -597,24 +596,25 @@ const HomePage = () => {
                     contactSuccess={contactSuccess}
                 /> */}
 
+                <div className="luxury-divider"><span>OUR VISION</span></div>
+
                 {/* Final Trust Section */}
-                <section className="py-24 bg-[#0D0D0D] relative overflow-hidden" >
+                <section className="py-8 bg-[#0D0D0D] relative overflow-hidden" >
                     <div className="container mx-auto px-4 text-center relative z-10">
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-[#C8A96A]">
+                        <h2 className="text-xl md:text-3xl font-serif font-bold mb-2 text-[#C8A96A] uppercase tracking-widest">
                             Together We Grow, <span className="text-[#F5E6C8]">Together We Prosper</span>
                         </h2>
-                        <p className="text-lg md:text-xl font-light mb-10 max-w-3xl mx-auto text-[#F5E6C8]/60 leading-relaxed">
-                            At Sanyukt Parivaar & Rich Life Pvt.Ltd., we don't just build income - we build people, confidence, and a better future for generations to come.
+                        <div className="w-20 h-[1px] bg-[#C8A96A]/40 mx-auto mb-4"></div>
+                        <p className="text-xs md:text-sm font-light mb-6 max-w-2xl mx-auto text-[#F5E6C8]/60 uppercase tracking-tight">
+                            We don't just build income - we build people, confidence, and a better future.
                         </p>
                         <button
-                            onClick={() => handleNavigation('/register')}
-                            className="inline-block px-12 py-5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-bold rounded-full hover:scale-105 transition-all shadow-2xl shadow-gold-900/20 text-sm uppercase tracking-[2px]"
+                            onClick={() => handleNavigation('/registation')}
+                            className="luxury-button px-10 py-3 text-sm"
                         >
                             Join Sanyukt Parivaar Today
                         </button>
                     </div>
-                    {/* Subtle background decoration */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C8A96A]/5 rounded-full blur-[120px] pointer-events-none"></div>
                 </section>
             </React.Suspense>
 

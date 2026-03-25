@@ -286,7 +286,7 @@ const Recharge = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="relative overflow-hidden rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-[#C8A96A]/10 glass-morphism"
+                        className="luxury-box relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-[#C8A96A]/20"
                     >
                         {/* Complex Gradient Background */}
                         <div className="absolute inset-0 bg-gradient-to-br from-[#1A1A1A] via-[#0D0D0D] to-[#121212]"></div>
@@ -301,7 +301,7 @@ const Recharge = () => {
                                     <motion.div
                                         initial={{ scale: 0.9 }}
                                         whileInView={{ scale: 1 }}
-                                        className="inline-flex items-center gap-2 py-2 px-6 bg-[#C8A96A]/10 backdrop-blur-md rounded-full border border-[#C8A96A]/20 mb-8"
+                                        className="inline-flex items-center gap-2 py-2 px-6 bg-[#C8A96A]/10 backdrop-blur-md border border-[#C8A96A]/20 mb-8"
                                     >
                                         <Heart className="w-4 h-4 text-[#C8A96A]" />
                                         <span className="text-[#C8A96A] font-bold text-[10px] uppercase tracking-[0.4em]">The Spirit of Giving</span>
@@ -325,9 +325,9 @@ const Recharge = () => {
                                         <motion.div
                                             key={i}
                                             whileHover={{ y: -5, backgroundColor: 'rgba(200, 169, 106, 0.05)' }}
-                                            className="bg-[#1A1A1A]/50 backdrop-blur-xl rounded-2xl p-5 border border-[#C8A96A]/5 transition-all duration-500"
+                                            className="bg-[#1A1A1A]/50 backdrop-blur-xl p-5 border border-[#C8A96A]/10 transition-all duration-500"
                                         >
-                                            <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] rounded-xl flex items-center justify-center mb-3 shadow-xl shadow-gold-900/10">
+                                            <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] flex items-center justify-center mb-3 shadow-xl shadow-gold-900/10">
                                                 <feature.icon className="w-6 h-6 text-[#0D0D0D]" />
                                             </div>
                                             <h4 className="text-[#F5E6C8] font-bold text-sm tracking-tight">{feature.title}</h4>
@@ -362,7 +362,7 @@ const Recharge = () => {
                                                             navigator.clipboard.writeText('20260325575843-iservuqrsbrp@cbin');
                                                             toast.success('UPI Copied!');
                                                         }}
-                                                        className="px-6 py-2 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] rounded-xl shadow-xl shadow-gold-900/20 font-bold text-[10px] uppercase tracking-widest flex-shrink-0"
+                                                        className="px-6 py-2 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] shadow-xl shadow-gold-900/20 font-bold text-[10px] uppercase tracking-widest flex-shrink-0"
                                                     >
                                                         Copy
                                                     </motion.button>
@@ -441,12 +441,12 @@ const Recharge = () => {
 
                                     {/* Right: QR Code & Razorpay Button */}
                                     <div className="lg:col-span-2 space-y-4">
-                                        <div className="bg-[#1A1A1A] rounded-[2rem] p-6 shadow-2xl flex flex-col items-center justify-center h-full border border-[#C8A96A]/10 relative overflow-hidden group/card">
+                                        <div className="luxury-box bg-[#1A1A1A] p-6 shadow-2xl flex flex-col items-center justify-center h-full border border-[#C8A96A]/20 relative overflow-hidden group/card">
                                             <div className="absolute inset-0 bg-gradient-to-b from-[#C8A96A]/5 to-transparent"></div>
 
                                             <div className="relative group/qr mb-5">
                                                 <div className="absolute inset-0 bg-[#C8A96A]/20 rounded-3xl blur-2xl opacity-0 group-hover/qr:opacity-100 transition-opacity duration-700"></div>
-                                                <div className="relative bg-[#0D0D0D] p-5 rounded-3xl border border-[#C8A96A]/30 shadow-2xl flex flex-col items-center group-hover/qr:border-[#C8A96A] transition-colors duration-500">
+                                                <div className="relative bg-[#0D0D0D] p-5 border border-[#C8A96A]/40 shadow-2xl flex flex-col items-center group-hover/qr:border-[#C8A96A] transition-colors duration-500">
                                                     <div className="p-2 bg-white rounded-xl">
                                                         <img
                                                             src="/qr.jpeg"
@@ -498,7 +498,7 @@ const Recharge = () => {
 
                 {/* 4. RECHARGE SERVICES SECTION */}
                 <section className="mb-20">
-                    <div className="bg-[#1A1A1A] rounded-[2.5rem] shadow-2xl border border-[#C8A96A]/10 overflow-hidden glass-morphism">
+                    <div className="luxury-box bg-[#1A1A1A] shadow-2xl border border-[#C8A96A]/20 overflow-hidden">
 
                         {/* Tabs Header */}
                         <div className="flex flex-col md:flex-row bg-[#0D0D0D]/50 border-b border-[#C8A96A]/10 p-3 gap-3">
@@ -509,7 +509,7 @@ const Recharge = () => {
                                     <button
                                         key={tab.id}
                                         onClick={() => setActiveTab(tab.id)}
-                                        className={`flex-1 py-6 px-4 flex items-center justify-center gap-4 transition-all duration-500 rounded-2xl relative overflow-hidden group ${isActive
+                                        className={`flex-1 py-6 px-4 flex items-center justify-center gap-4 transition-all duration-500 relative overflow-hidden group ${isActive
                                             ? 'bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] shadow-2xl shadow-gold-900/20'
                                             : 'text-[#F5E6C8]/40 hover:text-[#C8A96A] hover:bg-[#C8A96A]/5'
                                             }`}
@@ -544,11 +544,11 @@ const Recharge = () => {
                                                 <span className="bg-[#C8A96A]/10 text-[#C8A96A] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-[#C8A96A]/20">Premium Benefits Enabled</span>
                                             </div>
 
-                                            <div className="bg-[#1A1A1A] rounded-3xl p-8 border border-[#C8A96A]/10 shadow-2xl relative overflow-hidden group">
+                                            <div className="luxury-box bg-[#1A1A1A] p-8 border border-[#C8A96A]/20 shadow-2xl relative overflow-hidden group">
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A96A]/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
                                                 <div className="flex items-center gap-4 mb-8">
-                                                    <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] rounded-2xl flex items-center justify-center shadow-xl shadow-gold-900/10">
+                                                    <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] flex items-center justify-center shadow-xl shadow-gold-900/10">
                                                         <Zap className="w-6 h-6 text-[#0D0D0D]" />
                                                     </div>
                                                     <div>
@@ -570,7 +570,7 @@ const Recharge = () => {
                                                                     value={mobileNumber}
                                                                     onChange={(e) => setMobileNumber(e.target.value)}
                                                                     placeholder="Enter 10-digit number"
-                                                                    className="w-full pl-6 pr-20 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-mono text-lg"
+                                                                    className="w-full pl-6 pr-20 py-4 bg-[#0D0D0D] border border-[#C8A96A]/30 focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A]/40 text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-mono text-lg"
                                                                     maxLength="10"
                                                                     required
                                                                 />
@@ -589,7 +589,7 @@ const Recharge = () => {
                                                                         key={op.id}
                                                                         type="button"
                                                                         onClick={() => setMobileOperator(op.id)}
-                                                                        className={`group p-3 rounded-xl border-2 transition-all duration-300 flex flex-col items-center justify-center gap-1 ${mobileOperator === op.id
+                                                                        className={`group p-3 border-2 transition-all duration-300 flex flex-col items-center justify-center gap-1 ${mobileOperator === op.id
                                                                             ? `${op.activeClass} shadow-lg shadow-black/20 text-white`
                                                                             : `border-[#C8A96A]/5 bg-[#0D0D0D] ${op.colorClass}`
                                                                             }`}
@@ -626,7 +626,7 @@ const Recharge = () => {
                                                                     value={mobileAmount}
                                                                     onChange={(e) => setMobileAmount(e.target.value)}
                                                                     placeholder="0.00"
-                                                                    className="w-full pl-10 pr-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-bold text-lg"
+                                                                    className="w-full pl-10 pr-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-bold text-lg"
                                                                     required
                                                                 />
                                                             </div>
@@ -637,9 +637,9 @@ const Recharge = () => {
                                                             whileTap={{ scale: 0.99 }}
                                                             type="submit"
                                                             disabled={isProcessingPayment}
-                                                            className="w-full py-5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:shadow-[0_0_30px_rgba(200,169,106,0.3)] shadow-xl shadow-gold-900/20 transition-all disabled:opacity-50"
+                                                            className="w-full py-5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-black text-xs uppercase tracking-[0.3em] hover:shadow-[0_0_30px_rgba(200,169,106,0.3)] shadow-xl shadow-gold-900/20 transition-all disabled:opacity-50"
                                                         >
-                                                            {isProcessingPayment ? 'Securing Gateway...' : 'Authorize Transaction'}
+                                                            {isProcessingPayment ? 'Securing Gateway...' : 'Recharge Now'}
                                                         </motion.button>
                                                     </div>
                                                 </form>
@@ -647,21 +647,21 @@ const Recharge = () => {
                                         </div>
 
                                         <div className="lg:col-span-5 flex flex-col gap-6">
-                                            <div className="bg-[#1A1A1A] rounded-[2rem] p-8 border border-[#C8A96A]/10 flex flex-col items-center justify-center relative overflow-hidden group shadow-xl">
+                                            <div className="bg-[#1A1A1A] p-8 border border-[#C8A96A]/10 flex flex-col items-center justify-center relative overflow-hidden group shadow-xl">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-[#C8A96A]/5 to-transparent"></div>
                                                 <div className="relative text-center">
                                                     <Smartphone className="w-16 h-16 text-[#C8A96A]/20 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500" />
                                                     <h4 className="text-xl font-serif font-bold text-[#F5E6C8] mb-1">Mobile Rewards</h4>
                                                     <p className="text-[#C8A96A]/40 text-[10px] font-black uppercase tracking-widest">Digital Loyalty Program</p>
 
-                                                    <div className="mt-6 p-4 bg-[#0D0D0D] rounded-2xl border border-[#C8A96A]/20 shadow-2xl">
+                                                    <div className="mt-6 p-4 bg-[#0D0D0D] border border-[#C8A96A]/20 shadow-2xl">
                                                         <span className="text-3xl font-serif font-bold text-[#C8A96A]">5%</span>
                                                         <span className="text-[#F5E6C8]/60 text-[10px] ml-2 font-black uppercase tracking-widest">Reward Credits</span>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div className="bg-[#1A1A1A] rounded-[2rem] p-8 border border-[#C8A96A]/10 shadow-xl glass-morphism">
+                                            <div className="luxury-box bg-[#1A1A1A] p-8 border border-[#C8A96A]/20 shadow-xl">
                                                 <h4 className="text-[11px] font-black text-[#C8A96A] mb-6 flex items-center gap-3 uppercase tracking-[0.2em]">
                                                     <div className="w-6 h-px bg-[#C8A96A]/20"></div>
                                                     Privilege Protocol
@@ -699,7 +699,7 @@ const Recharge = () => {
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A96A]/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
                                                 <div className="flex items-center gap-4 mb-8">
-                                                    <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] rounded-2xl flex items-center justify-center shadow-xl shadow-gold-900/10">
+                                                    <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] flex items-center justify-center shadow-xl shadow-gold-900/10">
                                                         <Tv className="w-6 h-6 text-[#0D0D0D]" />
                                                     </div>
                                                     <div>
@@ -720,7 +720,7 @@ const Recharge = () => {
                                                                 value={dthNumber}
                                                                 onChange={(e) => setDthNumber(e.target.value)}
                                                                 placeholder="Enter your registered ID"
-                                                                className="w-full px-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-mono text-lg"
+                                                                className="w-full px-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-mono text-lg"
                                                                 required
                                                             />
                                                         </div>
@@ -736,7 +736,7 @@ const Recharge = () => {
                                                                         key={op.id}
                                                                         type="button"
                                                                         onClick={() => setDthOperator(op.id)}
-                                                                        className={`p-4 rounded-2xl border-2 transition-all duration-300 flex flex-col items-center justify-center gap-2 group ${dthOperator === op.id
+                                                                        className={`p-4 border-2 transition-all duration-300 flex flex-col items-center justify-center gap-2 group ${dthOperator === op.id
                                                                             ? `${op.activeClass} shadow-lg shadow-black/20 text-white`
                                                                             : `border-[#C8A96A]/5 bg-[#0D0D0D] ${op.colorClass}`
                                                                             }`}
@@ -761,7 +761,7 @@ const Recharge = () => {
                                                                     value={dthAmount}
                                                                     onChange={(e) => setDthAmount(e.target.value)}
                                                                     placeholder="0.00"
-                                                                    className="w-full pl-10 pr-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-bold text-lg"
+                                                                    className="w-full pl-10 pr-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-bold text-lg"
                                                                     required
                                                                 />
                                                             </div>
@@ -772,9 +772,9 @@ const Recharge = () => {
                                                             whileTap={{ scale: 0.99 }}
                                                             type="submit"
                                                             disabled={isProcessingPayment}
-                                                            className="w-full py-5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:shadow-[0_0_30px_rgba(200, 169, 106, 0.3)] shadow-xl shadow-gold-900/20 transition-all disabled:opacity-50"
+                                                            className="luxury-button w-full py-5 font-black text-xs uppercase tracking-[0.3em] shadow-xl shadow-gold-900/20 transition-all disabled:opacity-50"
                                                         >
-                                                            {isProcessingPayment ? 'Initializing...' : 'Authorize Recharge'}
+                                                            {isProcessingPayment ? 'Initializing...' : 'Recharge Now'}
                                                         </motion.button>
                                                     </div>
                                                 </form>
@@ -782,10 +782,10 @@ const Recharge = () => {
                                         </div>
 
                                         <div className="lg:col-span-5 flex flex-col gap-6">
-                                            <div className="bg-[#1A1A1A] rounded-[2rem] p-8 border border-[#C8A96A]/10 flex items-center justify-center relative overflow-hidden group shadow-xl">
+                                            <div className="bg-[#1A1A1A] p-8 border border-[#C8A96A]/10 flex items-center justify-center relative overflow-hidden group shadow-xl">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-[#C8A96A]/5 to-transparent"></div>
                                                 <div className="relative text-center">
-                                                    <div className="w-16 h-16 bg-[#0D0D0D] rounded-2xl border border-[#C8A96A]/20 flex items-center justify-center mx-auto mb-4 shadow-2xl">
+                                                    <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/20 flex items-center justify-center mx-auto mb-4 shadow-2xl">
                                                         <Tv className="w-8 h-8 text-[#C8A96A]/30 group-hover:text-[#C8A96A] transition-colors" />
                                                     </div>
                                                     <h4 className="text-xl font-serif font-bold text-[#F5E6C8] mb-1">Premium DTH</h4>
@@ -793,7 +793,7 @@ const Recharge = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="bg-[#1A1A1A] rounded-[2rem] p-8 border border-[#C8A96A]/10 shadow-xl glass-morphism">
+                                            <div className="bg-[#1A1A1A] p-8 border border-[#C8A96A]/10 shadow-xl">
                                                 <h4 className="text-[11px] font-black text-[#C8A96A] mb-6 flex items-center gap-3 uppercase tracking-[0.2em]">
                                                     <div className="w-6 h-px bg-[#C8A96A]/20"></div>
                                                     Service Protocol
@@ -827,11 +827,11 @@ const Recharge = () => {
                                         <div className="lg:col-span-7 flex flex-col gap-6">
                                             <h3 className="text-3xl font-serif font-bold text-[#C8A96A] mb-2">Data Services</h3>
 
-                                            <div className="bg-[#1A1A1A] rounded-3xl p-8 border border-[#C8A96A]/10 shadow-2xl relative overflow-hidden group">
+                                            <div className="luxury-box bg-[#1A1A1A] p-8 border border-[#C8A96A]/20 shadow-2xl relative overflow-hidden group">
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A96A]/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
                                                 <div className="flex items-center gap-4 mb-8">
-                                                    <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] rounded-2xl flex items-center justify-center shadow-xl shadow-gold-900/10">
+                                                    <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] flex items-center justify-center shadow-xl shadow-gold-900/10">
                                                         <Wifi className="w-6 h-6 text-[#0D0D0D]" />
                                                     </div>
                                                     <div>
@@ -852,7 +852,7 @@ const Recharge = () => {
                                                                 value={dataCardNumber}
                                                                 onChange={(e) => setDataCardNumber(e.target.value)}
                                                                 placeholder="Enter data card ID"
-                                                                className="w-full px-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-mono text-lg"
+                                                                className="w-full px-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-mono text-lg"
                                                                 required
                                                             />
                                                         </div>
@@ -868,7 +868,7 @@ const Recharge = () => {
                                                                         key={op.id}
                                                                         type="button"
                                                                         onClick={() => setDataCardOperator(op.id)}
-                                                                        className={`p-4 rounded-2xl border-2 transition-all duration-300 flex flex-col items-center justify-center gap-2 group ${dataCardOperator === op.id
+                                                                        className={`p-4 border-2 transition-all duration-300 flex flex-col items-center justify-center gap-2 group ${dataCardOperator === op.id
                                                                             ? `${op.activeClass} shadow-lg shadow-black/20 text-white`
                                                                             : `border-[#C8A96A]/5 bg-[#0D0D0D] ${op.colorClass}`
                                                                             }`}
@@ -893,7 +893,7 @@ const Recharge = () => {
                                                                     value={dataCardAmount}
                                                                     onChange={(e) => setDataCardAmount(e.target.value)}
                                                                     placeholder="0.00"
-                                                                    className="w-full pl-10 pr-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-bold text-lg"
+                                                                    className="w-full pl-10 pr-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-bold text-lg"
                                                                     required
                                                                 />
                                                             </div>
@@ -904,9 +904,9 @@ const Recharge = () => {
                                                             whileTap={{ scale: 0.99 }}
                                                             type="submit"
                                                             disabled={isProcessingPayment}
-                                                            className="w-full py-5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:shadow-[0_0_30px_rgba(200, 169, 106, 0.3)] shadow-xl shadow-gold-900/20 transition-all disabled:opacity-50"
+                                                            className="luxury-button w-full py-5 font-black text-xs uppercase tracking-[0.3em] shadow-xl shadow-gold-900/20 transition-all disabled:opacity-50"
                                                         >
-                                                            {isProcessingPayment ? 'Connecting...' : 'Synchronize Access'}
+                                                            {isProcessingPayment ? 'Connecting...' : 'Recharge Now'}
                                                         </motion.button>
                                                     </div>
                                                 </form>
@@ -914,10 +914,10 @@ const Recharge = () => {
                                         </div>
 
                                         <div className="lg:col-span-5 flex flex-col gap-6">
-                                            <div className="bg-[#1A1A1A] rounded-[2rem] p-8 border border-[#C8A96A]/10 flex items-center justify-center relative overflow-hidden group shadow-xl">
+                                            <div className="bg-[#1A1A1A] p-8 border border-[#C8A96A]/10 flex items-center justify-center relative overflow-hidden group shadow-xl">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-[#C8A96A]/5 to-transparent"></div>
                                                 <div className="relative text-center">
-                                                    <div className="w-16 h-16 bg-[#0D0D0D] rounded-2xl border border-[#C8A96A]/20 flex items-center justify-center mx-auto mb-4 shadow-2xl">
+                                                    <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/20 flex items-center justify-center mx-auto mb-4 shadow-2xl">
                                                         <Wifi className="w-8 h-8 text-[#C8A96A]/30 group-hover:text-[#C8A96A] transition-colors" />
                                                     </div>
                                                     <h4 className="text-xl font-serif font-bold text-[#F5E6C8] mb-1">Broadband Hub</h4>
@@ -925,7 +925,7 @@ const Recharge = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="bg-[#1A1A1A] rounded-[2rem] p-8 border border-[#C8A96A]/10 shadow-xl glass-morphism">
+                                            <div className="bg-[#1A1A1A] p-8 border border-[#C8A96A]/10 shadow-xl">
                                                 <h4 className="text-[11px] font-black text-[#C8A96A] mb-6 flex items-center gap-3 uppercase tracking-[0.2em]">
                                                     <div className="w-6 h-px bg-[#C8A96A]/20"></div>
                                                     Access Tier
@@ -959,11 +959,11 @@ const Recharge = () => {
                                         <div className="lg:col-span-7 flex flex-col gap-6">
                                             <h3 className="text-3xl font-serif font-bold text-[#C8A96A] mb-2">Device Services</h3>
 
-                                            <div className="bg-[#1A1A1A] rounded-3xl p-8 border border-[#C8A96A]/10 shadow-2xl relative overflow-hidden group">
+                                            <div className="luxury-box bg-[#1A1A1A] p-8 border border-[#C8A96A]/20 shadow-2xl relative overflow-hidden group">
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A96A]/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
                                                 <div className="flex items-center gap-4 mb-8">
-                                                    <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] rounded-2xl flex items-center justify-center shadow-xl shadow-gold-900/10">
+                                                    <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] flex items-center justify-center shadow-xl shadow-gold-900/10">
                                                         <Zap className="w-6 h-6 text-[#0D0D0D]" />
                                                     </div>
                                                     <div>
@@ -984,7 +984,7 @@ const Recharge = () => {
                                                                 value={deviceNumber}
                                                                 onChange={(e) => setDeviceNumber(e.target.value)}
                                                                 placeholder="Enter hardware identifier"
-                                                                className="w-full px-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-mono text-lg"
+                                                                className="w-full px-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-mono text-lg"
                                                                 required
                                                             />
                                                         </div>
@@ -1000,7 +1000,7 @@ const Recharge = () => {
                                                                         key={op.id}
                                                                         type="button"
                                                                         onClick={() => setDeviceOperator(op.id)}
-                                                                        className={`p-4 rounded-2xl border-2 transition-all duration-300 flex flex-col items-center justify-center gap-2 group ${deviceOperator === op.id
+                                                                        className={`p-4 border-2 transition-all duration-300 flex flex-col items-center justify-center gap-2 group ${deviceOperator === op.id
                                                                             ? `${op.activeClass} shadow-lg shadow-black/20 text-[#C8A96A]`
                                                                             : `border-[#C8A96A]/5 bg-[#0D0D0D] ${op.colorClass}`
                                                                             }`}
@@ -1025,7 +1025,7 @@ const Recharge = () => {
                                                                     value={deviceAmount}
                                                                     onChange={(e) => setDeviceAmount(e.target.value)}
                                                                     placeholder="0.00"
-                                                                    className="w-full pl-10 pr-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-bold text-lg"
+                                                                    className="w-full pl-10 pr-6 py-4 bg-[#0D0D0D] border border-[#C8A96A]/20 focus:border-[#C8A96A] focus:ring-1 focus:ring-[#C8A96A] text-[#F5E6C8] outline-none transition-all placeholder:text-[#F5E6C8]/20 font-bold text-lg"
                                                                     required
                                                                 />
                                                             </div>
@@ -1036,9 +1036,9 @@ const Recharge = () => {
                                                             whileTap={{ scale: 0.99 }}
                                                             type="submit"
                                                             disabled={isProcessingPayment}
-                                                            className="w-full py-5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:shadow-[0_0_30px_rgba(200, 169, 106, 0.3)] shadow-xl shadow-gold-900/20 transition-all disabled:opacity-50"
+                                                            className="luxury-button w-full py-5 font-black text-xs uppercase tracking-[0.3em] shadow-xl shadow-gold-900/20 transition-all disabled:opacity-50"
                                                         >
-                                                            {isProcessingPayment ? 'Validating...' : 'Authorize Component'}
+                                                            {isProcessingPayment ? 'Validating...' : 'Recharge Now'}
                                                         </motion.button>
                                                     </div>
                                                 </form>
@@ -1046,7 +1046,7 @@ const Recharge = () => {
                                         </div>
 
                                         <div className="lg:col-span-5 flex flex-col gap-6">
-                                            <div className="bg-[#1A1A1A] rounded-[2rem] p-8 border border-[#C8A96A]/10 flex flex-col items-center justify-center relative overflow-hidden group shadow-xl">
+                                            <div className="bg-[#1A1A1A] p-8 border border-[#C8A96A]/10 flex flex-col items-center justify-center relative overflow-hidden group shadow-xl">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-[#C8A96A]/5 to-transparent"></div>
                                                 <div className="relative text-center">
                                                     <Zap className="w-16 h-16 text-[#C8A96A]/20 mx-auto mb-4 group-hover:text-[#C8A96A] transition-colors duration-500" />
@@ -1055,7 +1055,7 @@ const Recharge = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="bg-[#1A1A1A] rounded-[2rem] p-8 border border-[#C8A96A]/10 shadow-xl glass-morphism">
+                                            <div className="bg-[#1A1A1A] p-8 border border-[#C8A96A]/10 shadow-xl">
                                                 <h4 className="text-[11px] font-black text-[#C8A96A] mb-6 flex items-center gap-3 uppercase tracking-[0.2em]">
                                                     <div className="w-6 h-px bg-[#C8A96A]/20"></div>
                                                     Node Protection
@@ -1083,7 +1083,7 @@ const Recharge = () => {
                 </section>
 
                 {/* 5. HOW IT WORKS SECTION */}
-                <section className="bg-[#1A1A1A] rounded-[3rem] p-10 md:p-20 relative overflow-hidden shadow-2xl border border-[#C8A96A]/10 mt-20">
+                <section className="luxury-box bg-[#1A1A1A] p-10 md:p-20 relative overflow-hidden shadow-2xl border border-[#C8A96A]/20 mt-20">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C8A96A]/30 to-transparent"></div>
 
                     <div className="relative z-10">
@@ -1106,7 +1106,7 @@ const Recharge = () => {
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex gap-8 group">
                                         <div className="flex flex-col items-center">
-                                            <div className="w-16 h-16 rounded-[1.5rem] bg-[#0D0D0D] border border-[#C8A96A]/20 flex items-center justify-center text-2xl font-serif font-bold text-[#C8A96A] group-hover:border-[#C8A96A] group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500 shadow-xl">
+                                            <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/20 flex items-center justify-center text-2xl font-serif font-bold text-[#C8A96A] group-hover:border-[#C8A96A] group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500 shadow-xl">
                                                 {item.step}
                                             </div>
                                             {idx < 4 && <div className="w-[1px] h-full bg-gradient-to-b from-[#C8A96A]/20 to-transparent mt-4"></div>}
@@ -1120,13 +1120,13 @@ const Recharge = () => {
                             </div>
 
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#C8A96A]/10 to-transparent rounded-[3rem] blur-3xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#C8A96A]/10 to-transparent blur-3xl"></div>
 
-                                <div className="relative bg-[#0D0D0D] rounded-[3rem] p-12 border border-[#C8A96A]/20 shadow-3xl overflow-hidden group">
+                                <div className="relative bg-[#0D0D0D] p-12 border border-[#C8A96A]/20 shadow-3xl overflow-hidden group">
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#C8A96A]/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
 
                                     <div className="text-center relative z-10">
-                                        <div className="w-24 h-24 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-700">
+                                        <div className="w-24 h-24 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] flex items-center justify-center mx-auto mb-8 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-700">
                                             <ShieldCheck className="w-12 h-12" />
                                         </div>
                                         <h3 className="font-serif font-extrabold text-3xl text-[#F5E6C8] tracking-tight mb-4">Fortified Gateway</h3>
@@ -1139,7 +1139,7 @@ const Recharge = () => {
                                                 { icon: CheckCircle2, label: 'Verified', color: '#C8A96A' },
                                                 { icon: Lock, label: 'Encrypted', color: '#C8A96A' }
                                             ].map((feature, i) => (
-                                                <div key={i} className="p-5 bg-[#1A1A1A] rounded-2xl border border-[#C8A96A]/5 hover:border-[#C8A96A]/20 transition-colors">
+                                                <div key={i} className="p-5 bg-[#1A1A1A] border border-[#C8A96A]/10 hover:border-[#C8A96A]/20 transition-colors shadow-lg">
                                                     <feature.icon className="w-6 h-6 mx-auto mb-3" style={{ color: feature.color }} />
                                                     <span className="text-[10px] font-black uppercase tracking-widest text-[#F5E6C8]/60">{feature.label}</span>
                                                 </div>

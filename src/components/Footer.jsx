@@ -18,7 +18,7 @@ const FooterContainer = styled(Box)({
     color: '#F5E6C8',
     fontFamily: '"Inter", sans-serif',
     width: '100%',
-    borderTop: '1px solid rgba(200, 169, 106, 0.2)',
+    borderTop: '1px solid rgba(200, 169, 106, 0.4)',
 });
 
 const FooterContent = styled(Container)(({ theme }) => ({
@@ -141,7 +141,7 @@ const SocialButton = styled('a')({
     justifyContent: 'center',
     width: '38px',
     height: '38px',
-    borderRadius: '8px',
+    borderRadius: '2px',
     backgroundColor: 'rgba(200, 169, 106, 0.1)',
     transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
     '&:hover': {

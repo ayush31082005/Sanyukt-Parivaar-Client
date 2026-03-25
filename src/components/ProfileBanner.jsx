@@ -86,8 +86,8 @@ const ProfileBanner = ({ userData }) => {
 
                     {/* Tier 2: Official Identification */}
                     <div className="flex flex-col items-center md:items-end gap-2">
-                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-1">
-                            <Shield size={14} className="fill-emerald-500/20" />
+                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#C8A96A]/10 text-[#C8A96A] border border-[#C8A96A]/20 mb-1">
+                            <Shield size={14} className="fill-[#C8A96A]/10" />
                             <span className="text-[11px] font-black uppercase tracking-widest">{userData.status || 'Verified Active'}</span>
                         </div>
                         <span className="text-[12px] font-black text-gray-500 uppercase tracking-[0.25em]">Member ID</span>

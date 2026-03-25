@@ -38,16 +38,16 @@ import { useNavigate } from 'react-router-dom';
 // Main Header Styling (Sticky, Full width, 80px desktop, 60px mobile)
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
     backgroundColor: '#0D0D0D',
-    backdropFilter: 'blur(12px)',
-    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.5)',
-    borderBottom: '1px solid rgba(200, 169, 106, 0.2)',
+    backdropFilter: 'blur(20px)',
+    boxShadow: '0 10px 40px rgba(0, 0, 0, 0.6)',
+    borderBottom: '1px solid rgba(200, 169, 106, 0.4)',
     height: '60px',
     justifyContent: 'center',
     position: 'fixed',
     top: 0,
     zIndex: 1100,
     [theme.breakpoints.up('md')]: {
-        height: '70px',
+        height: '80px',
     },
 }));
 
@@ -121,145 +121,104 @@ const LogoTagline = styled('span')(({ theme }) => ({
 // NavButton with exact styling
 const NavButton = styled(Button)(({ theme }) => ({
     fontFamily: '"Inter", sans-serif',
-    fontSize: '15px',
+    fontSize: '11px',
     fontWeight: 700,
     color: '#F5E6C8',
-    textTransform: 'none',
-    padding: '6px 16px',
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
+    padding: '4px 8px',
     minWidth: 'auto',
     whiteSpace: 'nowrap',
+    borderRadius: '2px',
     '&:hover': {
         color: '#C8A96A',
         backgroundColor: 'rgba(200, 169, 106, 0.05)',
     },
     '&.active': {
         color: '#C8A96A',
+        borderBottom: '1px solid #C8A96A',
     },
     transition: 'all 0.3s ease',
-    [theme.breakpoints.up('lg')]: {
-        fontSize: '12px',
-        padding: '2px 6px',
-    },
-    [theme.breakpoints.up('xl')]: {
-        fontSize: '15px',
-        padding: '6px 12px',
-    },
 }));
 
 // Register Button (#C9A84C, White text)
 const RegisterButton = styled(Button)(({ theme }) => ({
+    className: 'luxury-button',
     fontFamily: '"Inter", sans-serif',
-    fontSize: '15px',
+    fontSize: '11px',
     fontWeight: 700,
-    background: 'linear-gradient(135deg, #C8A96A 0%, #D4AF37 100%)',
+    border: '1px solid #C8A96A',
     color: '#0D0D0D',
-    padding: '8px 20px',
-    borderRadius: '6px',
-    textTransform: 'none',
-    whiteSpace: 'nowrap',
-    boxShadow: '0 2px 10px rgba(200, 169, 106, 0.2)',
+    background: '#C8A96A',
+    padding: '6px 12px',
+    borderRadius: '2px',
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
     '&:hover': {
-        background: 'linear-gradient(135deg, #D4AF37 0%, #C8A96A 100%)',
-        boxShadow: '0 4px 15px rgba(200, 169, 106, 0.4)',
-        transform: 'translateY(-1px)',
+        background: '#F5E6C8',
+        borderColor: '#F5E6C8',
     },
     transition: 'all 0.3s ease',
-    [theme.breakpoints.up('lg')]: {
-        fontSize: '14px',
-        padding: '6px 16px',
-    },
-    [theme.breakpoints.up('xl')]: {
-        fontSize: '16px',
-        padding: '10px 28px',
-    },
 }));
 
-// Login Button (Transparent, #C9A84C Border)
 const LoginButton = styled(Button)(({ theme }) => ({
     fontFamily: '"Inter", sans-serif',
-    fontSize: '15px',
+    fontSize: '11px',
     fontWeight: 700,
     backgroundColor: 'transparent',
-    border: '1px solid #C8A96A',
+    border: '1px solid rgba(200, 169, 106, 0.5)',
     color: '#C8A96A',
-    padding: '8px 20px',
-    borderRadius: '6px',
-    textTransform: 'none',
-    whiteSpace: 'nowrap',
+    padding: '6px 12px',
+    borderRadius: '2px',
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
     '&:hover': {
-        backgroundColor: 'rgba(200, 169, 106, 0.05)',
-        borderColor: '#D4AF37',
-        boxShadow: '0 0 10px rgba(200, 169, 106, 0.2)',
+        backgroundColor: 'rgba(200, 169, 106, 0.1)',
+        borderColor: '#C8A96A',
     },
     transition: 'all 0.3s ease',
-    [theme.breakpoints.up('lg')]: {
-        fontSize: '14px',
-        padding: '6px 16px',
-    },
-    [theme.breakpoints.up('xl')]: {
-        fontSize: '16px',
-        padding: '10px 28px',
-    },
 }));
 
 // My Account Button (Yellow/Orange theme color)
 const MyAccountButton = styled(Button)(({ theme }) => ({
     fontFamily: '"Inter", sans-serif',
-    fontSize: '15px',
+    fontSize: '11px',
     fontWeight: 700,
-    background: 'linear-gradient(135deg, #C8A96A 0%, #D4AF37 100%)',
+    background: '#C8A96A',
     color: '#0D0D0D',
-    padding: '6px 20px',
-    borderRadius: '8px',
-    textTransform: 'none',
+    padding: '6px 12px',
+    borderRadius: '2px',
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
     whiteSpace: 'nowrap',
     display: 'flex',
     alignItems: 'center',
     gap: '8px',
-    boxShadow: '0 2px 10px rgba(200, 169, 106, 0.2)',
     '&:hover': {
-        background: 'linear-gradient(135deg, #D4AF37 0%, #C8A96A 100%)',
-        boxShadow: '0 4px 15px rgba(200, 169, 106, 0.4)',
+        background: '#F5E6C8',
     },
     transition: 'all 0.3s ease',
-    [theme.breakpoints.up('lg')]: {
-        fontSize: '14px',
-        padding: '6px 16px',
-    },
-    [theme.breakpoints.up('xl')]: {
-        fontSize: '16px',
-        padding: '10px 28px',
-    },
 }));
 
 // Admin Dashboard Button (Orange/Different color - for admins)
 const AdminDashboardButton = styled(Button)(({ theme }) => ({
     fontFamily: '"Inter", sans-serif',
-    fontSize: '15px',
+    fontSize: '11px',
     fontWeight: 700,
-    background: 'linear-gradient(135deg, #C8A96A 0%, #D4AF37 100%)',
+    background: '#C8A96A',
     color: '#0D0D0D',
-    padding: '6px 20px',
-    borderRadius: '8px',
-    textTransform: 'none',
+    padding: '6px 12px',
+    borderRadius: '2px',
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
     whiteSpace: 'nowrap',
     display: 'flex',
     alignItems: 'center',
     gap: '8px',
-    boxShadow: '0 2px 10px rgba(200, 169, 106, 0.2)',
     '&:hover': {
-        background: 'linear-gradient(135deg, #D4AF37 0%, #C8A96A 100%)',
-        boxShadow: '0 4px 15px rgba(200, 169, 106, 0.4)',
+        background: '#F5E6C8',
     },
     transition: 'all 0.3s ease',
-    [theme.breakpoints.up('lg')]: {
-        fontSize: '14px',
-        padding: '6px 16px',
-    },
-    [theme.breakpoints.up('xl')]: {
-        fontSize: '16px',
-        padding: '10px 28px',
-    },
 }));
 
 // Logout Menu Item

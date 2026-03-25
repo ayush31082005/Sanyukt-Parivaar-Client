@@ -64,7 +64,7 @@ const AboutUsPage = () => {
     return (
         <div className="min-h-screen bg-[#0D0D0D] font-sans text-[#F5E6C8]">
             {/* Hero Banner Section */}
-            <header className="relative w-full h-[320px] bg-cover bg-center"
+            <header className="relative w-full h-[200px] bg-cover bg-center"
                 style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')" }}>
                 {/* Solid overlay to dim the image, just like Legal Policies page */}
                 <div className="absolute inset-0 bg-black/70"></div>
@@ -72,14 +72,14 @@ const AboutUsPage = () => {
                 {/* Content Container */}
                 <div className="relative h-full flex flex-col items-center justify-center text-center px-4 pt-16">
                     <h1 className="text-5xl md:text-6xl font-serif font-bold text-[#C8A96A] mb-4 drop-shadow-lg animate-fade-in">
-                        Our Legacy
+                        ABOUT US
                     </h1>
 
                     {/* Breadcrumbs matching the aesthetic */}
                     <div className="flex items-center text-[#F5E6C8]/90 text-sm md:text-base font-medium tracking-widest uppercase">
                         <span onClick={() => navigate('/')} className="cursor-pointer hover:text-[#C8A96A] transition-colors">Vision</span>
                         <ChevronRight className="w-4 h-4 mx-3 text-[#C8A96A]" />
-                        <span className="text-[#C8A96A]">Our Story</span>
+                        <span className="text-[#C8A96A]">Our About</span>
                     </div>
                 </div>
             </header>
@@ -170,9 +170,9 @@ const AboutUsPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     {/* Mission Card */}
                     <article className="group relative">
-                        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] rounded-[2.5rem] opacity-0 group-hover:opacity-20 transition duration-500 blur"></div>
-                        <div className="relative bg-[#1A1A1A] rounded-[2.5rem] border border-[#C8A96A]/10 p-12 h-full flex flex-col transition-all duration-500 group-hover:border-[#C8A96A]/30">
-                            <div className="w-20 h-20 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] rounded-3xl flex items-center justify-center mb-8 shadow-xl shadow-gold-900/20 transform group-hover:rotate-6 transition-transform">
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] opacity-0 group-hover:opacity-20 transition duration-500 blur"></div>
+                        <div className="luxury-box p-12 h-full flex flex-col transition-all duration-500">
+                            <div className="w-20 h-20 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] aspect-square flex items-center justify-center mb-8 shadow-xl shadow-gold-900/20 transform group-hover:rotate-6 transition-transform">
                                 <Target className="w-10 h-10 text-[#0D0D0D]" />
                             </div>
                             <h3 className="text-3xl font-serif font-bold text-[#C8A96A] mb-6">Ambition</h3>
@@ -184,9 +184,9 @@ const AboutUsPage = () => {
 
                     {/* Vision Card */}
                     <article className="group relative">
-                        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] rounded-[2.5rem] opacity-0 group-hover:opacity-20 transition duration-500 blur"></div>
-                        <div className="relative bg-[#1A1A1A] rounded-[2.5rem] border border-[#C8A96A]/10 p-12 h-full flex flex-col transition-all duration-500 group-hover:border-[#C8A96A]/30">
-                            <div className="w-20 h-20 bg-[#0D0D0D] border border-[#C8A96A]/30 rounded-3xl flex items-center justify-center mb-8 shadow-xl transform group-hover:-rotate-6 transition-transform">
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] opacity-0 group-hover:opacity-20 transition duration-500 blur"></div>
+                        <div className="luxury-box p-12 h-full flex flex-col transition-all duration-500">
+                            <div className="w-20 h-20 bg-[#0D0D0D] border border-[#C8A96A]/30 aspect-square flex items-center justify-center mb-8 shadow-xl transform group-hover:-rotate-6 transition-transform">
                                 <Eye className="w-10 h-10 text-[#C8A96A]" />
                             </div>
                             <h3 className="text-3xl font-serif font-bold text-[#F5E6C8] mb-6">Future</h3>
@@ -210,13 +210,13 @@ const AboutUsPage = () => {
                     {coreValues.map((value, index) => (
                         <div
                             key={index}
-                            className="group bg-[#1A1A1A]/40 backdrop-blur-md rounded-[2.5rem] border border-[#C8A96A]/10 p-8 hover:border-[#C8A96A]/30 transition-all duration-500 shadow-xl overflow-hidden relative"
+                            className="group luxury-box p-8 transition-all duration-500 shadow-xl"
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
                             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#C8A96A]/5 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
 
                             <div className="relative mb-6">
-                                <div className="w-14 h-14 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500 shadow-lg">
+                                <div className="w-14 h-14 bg-[#121212] border border-[#C8A96A]/30 rounded-sm flex items-center justify-center mb-6 group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500 shadow-lg">
                                     <CheckCircle className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-serif font-bold text-[#F5E6C8] group-hover:text-[#C8A96A] transition-colors">{value.title}</h3>
@@ -243,7 +243,7 @@ const AboutUsPage = () => {
                         <div className="space-y-10 animate-slide-right">
                             <div className="space-y-6">
                                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#C8A96A] leading-tight">
-                                    Why Choose the <br /> Elite Collective?
+                                    Why Choose the <br />  Sanyukt Parivaar?
                                 </h2>
                                 <p className="text-[#F5E6C8]/60 leading-relaxed text-lg">
                                     We are more than a company - we are an ecosystem committed to high-performance empowerment. Our model focuses on stability, recurring prosperity, and leadership-driven legacy.
@@ -274,22 +274,22 @@ const AboutUsPage = () => {
 
                         {/* Right Content - Stats View */}
                         <div className="grid grid-cols-2 gap-4 animate-slide-left">
-                            <div className="p-8 bg-[#1A1A1A] rounded-[2.5rem] border border-[#C8A96A]/10 hover:border-[#C8A96A]/30 transition-all duration-500 text-center">
+                            <div className="luxury-box p-8 text-center transition-all duration-500">
                                 <Users className="w-10 h-10 text-[#C8A96A] mx-auto mb-4 opacity-60" />
                                 <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Empowered</h4>
                                 <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">5,000+ Partners</p>
                             </div>
-                            <div className="p-8 bg-[#0D0D0D] rounded-[2.5rem] border border-[#C8A96A]/20 hover:border-[#C8A96A] transition-all duration-500 text-center transform translate-y-8">
+                            <div className="luxury-box p-8 text-center transform translate-y-8 transition-all duration-500">
                                 <Star className="w-10 h-10 text-[#C8A96A] mx-auto mb-4" />
                                 <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Pure</h4>
                                 <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">Natural Line</p>
                             </div>
-                            <div className="p-8 bg-[#0D0D0D] rounded-[2.5rem] border border-[#C8A96A]/20 hover:border-[#C8A96A] transition-all duration-500 text-center">
+                            <div className="luxury-box p-8 text-center transition-all duration-500">
                                 <TrendingUp className="w-10 h-10 text-[#C8A96A] mx-auto mb-4" />
                                 <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Growth</h4>
                                 <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">Success Legacy</p>
                             </div>
-                            <div className="p-8 bg-[#1A1A1A] rounded-[2.5rem] border border-[#C8A96A]/10 hover:border-[#C8A96A]/30 transition-all duration-500 text-center transform translate-y-8">
+                            <div className="luxury-box p-8 text-center transform translate-y-8 transition-all duration-500">
                                 <Shield className="w-10 h-10 text-[#C8A96A] mx-auto mb-4 opacity-60" />
                                 <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Ethical</h4>
                                 <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">Transparent Vision</p>
@@ -307,7 +307,7 @@ const AboutUsPage = () => {
                 <div className="max-w-4xl mx-auto text-center relative z-10">
                     <div className="w-20 h-px bg-[#C8A96A]/40 mx-auto mb-12"></div>
                     <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#F5E6C8] mb-12 leading-tight">
-                        Begin Your <span className="text-[#C8A96A]">Elite Legacy</span> Today
+                        <span className="text-[#C8A96A]">Join a Growing Community That Believes in Shared Success</span>
                     </h2>
 
                     <motion.button
@@ -316,7 +316,7 @@ const AboutUsPage = () => {
                         onClick={() => navigate('/register')}
                         className="group relative inline-flex items-center justify-center px-12 py-5 font-bold text-[#0D0D0D] transition-all duration-300 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] rounded-full hover:shadow-[0_0_40px_rgba(200,169,106,0.4)]"
                     >
-                        <span className="relative z-10 uppercase tracking-[0.2em] text-sm">Join the Collective</span>
+                        <span className="relative z-10 uppercase tracking-[0.2em] text-sm">Join Sanyukt Parivaar Today</span>
                         <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
                     </motion.button>
                 </div>

@@ -66,30 +66,36 @@ const OpportunitiesPage = () => {
     ];
 
     return (
-        <div className="bg-[#F8FAF5] font-sans min-h-screen">
+        <div className="bg-[#0D0D0D] font-sans min-h-screen text-[#F5E6C8] selection:bg-[#C8A96A]/30 pb-16 relative overflow-hidden">
+            {/* Elegant Background Elements */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#C8A96A]/5 rounded-full blur-[140px] animate-pulse"></div>
+                <div className="absolute bottom-[-5%] left-[-5%] w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[120px] animate-pulse delay-700"></div>
+            </div>
+
             {/* Hero Banner */}
-            <header className="relative h-[250px] bg-cover bg-center"
+            <header className="relative h-[250px] bg-cover bg-center border-b border-[#C8A96A]/20"
                 style={{ backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')" }}>
-                <div className="absolute inset-0 bg-black/65"></div>
-                <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 animate-slide-up">
+                <div className="absolute inset-0 bg-[#0D0D0D]/80"></div>
+                <div className="relative h-full flex flex-col items-center justify-center text-center px-4 z-10">
+                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#C8A96A] mb-3 animate-slide-up">
                         OPPORTUNITIES
                     </h1>
-                    <div className="flex items-center text-white/90 text-sm md:text-base flex-wrap justify-center">
-                        <Link to="/" className="hover:text-white transition-colors">Home</Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white">OPPORTUNITIES</span>
+                    <div className="flex items-center text-[#F5E6C8]/60 text-[10px] uppercase font-black tracking-widest flex-wrap justify-center">
+                        <Link to="/" className="hover:text-[#C8A96A] transition-colors">Home</Link>
+                        <ChevronRight className="w-4 h-4 mx-2 text-[#C8A96A]/40" />
+                        <span className="text-[#C8A96A]">OPPORTUNITIES</span>
                     </div>
                 </div>
             </header>
 
             {/* Main Content */}
-            <section className="py-12 px-4 max-w-7xl mx-auto">
+            <section className="py-12 px-4 max-w-7xl mx-auto relative z-10">
                 {/* Benefits of Direct Selling */}
                 <div className="mb-12 animate-slide-up">
-                    <div className="bg-white rounded-[14px] shadow-lg overflow-hidden">
-                        <div className="bg-[#B59410] p-6 text-white">
-                            <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-3">
+                    <div className="luxury-box">
+                        <div className="bg-[#121212] p-6 text-[#C8A96A] border-b border-[#C8A96A]/30">
+                            <h2 className="text-2xl md:text-3xl font-serif font-bold flex items-center gap-3">
                                 <Award className="w-8 h-8" />
                                 BENEFITS OF DIRECT SELLING
                             </h2>
@@ -99,24 +105,24 @@ const OpportunitiesPage = () => {
                                 {benefits.map((benefit, index) => (
                                     <div
                                         key={index}
-                                        className="flex items-start gap-3 p-4 bg-[#F8FAF5] rounded-lg hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
+                                        className="flex items-start gap-3 p-4 bg-[#1A1A1A] border border-[#C8A96A]/10 hover:border-[#C8A96A]/40 transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
                                         style={{ animationDelay: `${index * 100}ms` }}
                                     >
-                                        <CheckCircle className="w-6 h-6 text-[#0A7A2F] flex-shrink-0 mt-0.5" />
-                                        <p className="text-[#222222]">{benefit}</p>
+                                        <CheckCircle className="w-6 h-6 text-[#C8A96A] flex-shrink-0 mt-0.5" />
+                                        <p className="text-[#F5E6C8]/80 text-sm">{benefit}</p>
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-xs text-gray-500 mt-4">*Terms and conditions apply</p>
+                            <p className="text-[10px] uppercase tracking-widest text-[#C8A96A]/40 mt-6">*Terms and conditions apply</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Why Sayukt Parivar Global Marketing? */}
                 <div className="mb-12 animate-slide-up animation-delay-200">
-                    <div className="bg-white rounded-[14px] shadow-lg overflow-hidden">
-                        <div className="bg-[#B59410] p-6 text-white">
-                            <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-3">
+                    <div className="luxury-box">
+                        <div className="bg-[#121212] p-6 text-[#C8A96A] border-b border-[#C8A96A]/30">
+                            <h2 className="text-2xl md:text-3xl font-serif font-bold flex items-center gap-3">
                                 <Heart className="w-8 h-8" />
                                 WHY Sanyukt Parivaar & Rich Life Pvt.Ltd.?
                             </h2>
@@ -126,11 +132,11 @@ const OpportunitiesPage = () => {
                                 {whySayuktParivar.map((reason, index) => (
                                     <div
                                         key={index}
-                                        className="flex items-start gap-3 p-4 bg-[#F8FAF5] rounded-lg hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
+                                        className="flex items-start gap-3 p-4 bg-[#1A1A1A] border border-[#C8A96A]/10 hover:border-[#C8A96A]/40 transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
                                         style={{ animationDelay: `${index * 100}ms` }}
                                     >
-                                        <Star className="w-6 h-6 text-[#F7931E] flex-shrink-0 mt-0.5" />
-                                        <p className="text-[#222222]">{reason}</p>
+                                        <Star className="w-6 h-6 text-[#C8A96A] flex-shrink-0 mt-0.5" />
+                                        <p className="text-[#F5E6C8]/80 text-sm">{reason}</p>
                                     </div>
                                 ))}
                             </div>
@@ -140,16 +146,16 @@ const OpportunitiesPage = () => {
 
                 {/* Compensation Plan */}
                 <div className="mb-12 animate-slide-up animation-delay-400">
-                    <div className="bg-white rounded-[14px] shadow-lg overflow-hidden">
-                        <div className="bg-[#B59410] p-6 text-white">
-                            <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-3">
-                                <TrendingUp className="w-8 h-8" />
-                                WHY Sanyukt Parivaar & Rich Life HAS BEST COMPENSATION PLAN?
+                    <div className="luxury-box">
+                        <div className="bg-[#121212] p-6 text-[#C8A96A] border-b border-[#C8A96A]/30">
+                            <h2 className="text-2xl md:text-3xl font-serif font-bold flex items-center gap-3 w-full">
+                                <TrendingUp className="w-8 h-8 flex-shrink-0" />
+                                BEST COMPENSATION PLAN
                             </h2>
                         </div>
                         <div className="p-8">
-                            <h3 className="text-xl font-bold text-[#0A7A2F] mb-6 flex items-center gap-2">
-                                <Gift className="w-6 h-6" />
+                            <h3 className="text-[10px] font-black tracking-widest uppercase text-[#C8A96A] mb-8 flex items-center gap-2">
+                                <Gift className="w-5 h-5" />
                                 6 Powerful Benefits of Our Compensation Plan
                             </h3>
 
@@ -157,123 +163,104 @@ const OpportunitiesPage = () => {
                                 {compensationBenefits.map((benefit, index) => (
                                     <div
                                         key={index}
-                                        className="bg-[#F8FAF5] p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in group"
+                                        className="bg-[#1A1A1A] border border-[#C8A96A]/10 p-6 hover:border-[#C8A96A]/40 transition-all duration-300 transform hover:-translate-y-2 animate-fade-in group"
                                         style={{ animationDelay: `${index * 150}ms` }}
                                     >
-                                        <div className="w-12 h-12 bg-[#0A7A2F] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                            {index === 0 && <Crown className="w-6 h-6 text-white" />}
-                                            {index === 1 && <Heart className="w-6 h-6 text-white" />}
-                                            {index === 2 && <Globe className="w-6 h-6 text-white" />}
-                                            {index === 3 && <Zap className="w-6 h-6 text-white" />}
-                                            {index === 4 && <Award className="w-6 h-6 text-white" />}
-                                            {index === 5 && <BarChart3 className="w-6 h-6 text-white" />}
+                                        <div className="w-12 h-12 bg-[#C8A96A]/10 border border-[#C8A96A]/30 rounded-none flex items-center justify-center mb-4 group-hover:bg-[#C8A96A]/20 transition-all">
+                                            {index === 0 && <Crown className="w-6 h-6 text-[#C8A96A]" />}
+                                            {index === 1 && <Heart className="w-6 h-6 text-[#C8A96A]" />}
+                                            {index === 2 && <Globe className="w-6 h-6 text-[#C8A96A]" />}
+                                            {index === 3 && <Zap className="w-6 h-6 text-[#C8A96A]" />}
+                                            {index === 4 && <Award className="w-6 h-6 text-[#C8A96A]" />}
+                                            {index === 5 && <BarChart3 className="w-6 h-6 text-[#C8A96A]" />}
                                         </div>
-                                        <h4 className="font-bold text-[#0A7A2F] mb-2">{benefit.title}</h4>
-                                        <p className="text-sm text-[#222222]">{benefit.description}</p>
+                                        <h4 className="font-bold text-[#C8A96A] tracking-wider mb-2 text-sm uppercase">{benefit.title}</h4>
+                                        <p className="text-sm text-[#F5E6C8]/60 leading-relaxed">{benefit.description}</p>
                                     </div>
                                 ))}
                             </div>
 
                             {/* View Compensation Plan Button */}
-                            <div className="flex justify-center mt-8">
-                                <Link to="/compensation-plan" className="inline-flex items-center gap-2 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-black uppercase tracking-[0.3em] text-xs py-5 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-gold-900/30 active:scale-[0.98] group">
+                            <div className="flex justify-center mt-12">
+                                <Link to="/compensation-plan" className="luxury-button inline-flex items-center gap-2 group">
                                     VIEW COMPENSATION PLAN
-                                    <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Additional Benefits Section - Expanded Content */}
+                {/* Additional Benefits Section */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in">
-                        <div className="w-14 h-14 bg-[#0A7A2F]/10 rounded-full flex items-center justify-center mb-4">
-                            <Briefcase className="w-7 h-7 text-[#0A7A2F]" />
+                    <div className="luxury-box p-6 hover:-translate-y-2 transition-transform duration-300">
+                        <div className="w-14 h-14 bg-[#C8A96A]/10 border border-[#C8A96A]/30 flex items-center justify-center mb-4">
+                            <Briefcase className="w-7 h-7 text-[#C8A96A]" />
                         </div>
-                        <h3 className="font-bold text-[#0A7A2F] mb-2">Flexible Working Hours</h3>
-                        <p className="text-sm text-[#222222]">Work full-time or part-time based on your schedule. Complete freedom to manage your time and achieve work-life balance.</p>
+                        <h3 className="font-bold text-[#C8A96A] text-sm uppercase tracking-wider mb-2">Flexible Hours</h3>
+                        <p className="text-sm text-[#F5E6C8]/60">Work full-time or part-time based on your schedule. Complete freedom to manage your time and achieve work-life balance.</p>
                     </div>
 
-                    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in animation-delay-200">
-                        <div className="w-14 h-14 bg-[#0A7A2F]/10 rounded-full flex items-center justify-center mb-4">
-                            <Globe className="w-7 h-7 text-[#0A7A2F]" />
+                    <div className="luxury-box p-6 hover:-translate-y-2 transition-transform duration-300 animation-delay-200">
+                        <div className="w-14 h-14 bg-[#C8A96A]/10 border border-[#C8A96A]/30 flex items-center justify-center mb-4">
+                            <Globe className="w-7 h-7 text-[#C8A96A]" />
                         </div>
-                        <h3 className="font-bold text-[#0A7A2F] mb-2">Pan-India Expansion</h3>
-                        <p className="text-sm text-[#222222]">Expand your business across different states, cities, and towns. Build a nationwide network with unlimited growth potential.</p>
+                        <h3 className="font-bold text-[#C8A96A] text-sm uppercase tracking-wider mb-2">Pan-India Expansion</h3>
+                        <p className="text-sm text-[#F5E6C8]/60">Expand your business across different states, cities, and towns. Build a nationwide network with unlimited growth potential.</p>
                     </div>
 
-                    <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in animation-delay-400">
-                        <div className="w-14 h-14 bg-[#0A7A2F]/10 rounded-full flex items-center justify-center mb-4">
-                            <Rocket className="w-7 h-7 text-[#0A7A2F]" />
+                    <div className="luxury-box p-6 hover:-translate-y-2 transition-transform duration-300 animation-delay-400">
+                        <div className="w-14 h-14 bg-[#C8A96A]/10 border border-[#C8A96A]/30 flex items-center justify-center mb-4">
+                            <Rocket className="w-7 h-7 text-[#C8A96A]" />
                         </div>
-                        <h3 className="font-bold text-[#0A7A2F] mb-2">Rapid Growth Potential</h3>
-                        <p className="text-sm text-[#222222]">One of the fastest income plans in the industry with accelerated growth opportunities and quick returns on your efforts.</p>
+                        <h3 className="font-bold text-[#C8A96A] text-sm uppercase tracking-wider mb-2">Rapid Growth</h3>
+                        <p className="text-sm text-[#F5E6C8]/60">One of the fastest income plans in the industry with accelerated growth opportunities and quick returns on your efforts.</p>
                     </div>
                 </div>
 
                 {/* Success Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                    <div className="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-xl transition-all duration-300">
-                        <div className="text-3xl font-bold text-[#0A7A2F] mb-2">10K+</div>
-                        <p className="text-sm text-gray-600">Active Distributors</p>
+                    <div className="luxury-box p-6 text-center hover:bg-[#1A1A1A] transition-all">
+                        <div className="text-3xl font-serif font-bold text-[#C8A96A] mb-2">10K+</div>
+                        <p className="text-[10px] uppercase font-black tracking-widest text-[#F5E6C8]/50">Active Distributors</p>
                     </div>
-                    <div className="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-xl transition-all duration-300">
-                        <div className="text-3xl font-bold text-[#0A7A2F] mb-2">500+</div>
-                        <p className="text-sm text-gray-600">Cities Covered</p>
+                    <div className="luxury-box p-6 text-center hover:bg-[#1A1A1A] transition-all">
+                        <div className="text-3xl font-serif font-bold text-[#C8A96A] mb-2">500+</div>
+                        <p className="text-[10px] uppercase font-black tracking-widest text-[#F5E6C8]/50">Cities Covered</p>
                     </div>
-                    <div className="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-xl transition-all duration-300">
-                        <div className="text-3xl font-bold text-[#0A7A2F] mb-2">₹50Cr+</div>
-                        <p className="text-sm text-gray-600">Commission Paid</p>
+                    <div className="luxury-box p-6 text-center hover:bg-[#1A1A1A] transition-all">
+                        <div className="text-3xl font-serif font-bold text-[#C8A96A] mb-2">₹50Cr+</div>
+                        <p className="text-[10px] uppercase font-black tracking-widest text-[#F5E6C8]/50">Commission Paid</p>
                     </div>
-                    <div className="bg-white p-6 rounded-lg text-center shadow-md hover:shadow-xl transition-all duration-300">
-                        <div className="text-3xl font-bold text-[#0A7A2F] mb-2">15+</div>
-                        <p className="text-sm text-gray-600">Years of Excellence</p>
+                    <div className="luxury-box p-6 text-center hover:bg-[#1A1A1A] transition-all">
+                        <div className="text-3xl font-serif font-bold text-[#C8A96A] mb-2">15+</div>
+                        <p className="text-[10px] uppercase font-black tracking-widest text-[#F5E6C8]/50">Years of Excellence</p>
                     </div>
                 </div>
             </section>
 
             {/* CTA Section - Dark Theme */}
-            <section className="py-16 px-4 bg-[#1A1A1A] mt-12 relative overflow-hidden border-t border-b border-[#C8A96A]/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-                {/* Decorative background effects */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C8A96A]/30 to-transparent"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#C8A96A]/5 rounded-full blur-[100px] pointer-events-none"></div>
-                
-                <div className="max-w-4xl mx-auto text-center relative z-10">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#C8A96A] mb-6 font-serif tracking-tight">
+            <section className="py-16 px-4 luxury-box mt-12 relative overflow-hidden text-center mx-auto max-w-7xl">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A96A]/10 blur-[50px] pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#C8A96A]/10 blur-[50px] pointer-events-none"></div>
+                <div className="max-w-4xl mx-auto relative z-10">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#C8A96A] mb-6 font-serif">
                         Start Your Entrepreneurial Journey Today!
                     </h2>
                     <p className="text-[#F5E6C8]/60 mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
                         Join Sanyukt Parivaar & Rich Life Pvt.Ltd. and unlock unlimited earning potential with the industry's best compensation plan.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            to="/register"
-                            className="bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-black uppercase tracking-[0.3em] text-xs py-5 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-gold-900/30 active:scale-[0.98] group flex items-center justify-center"
-                        >
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                        <Link to="/register" className="luxury-button flex items-center justify-center">
                             Register Now
                         </Link>
-                        <Link
-                            to="/contact"
-                            className="bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-black uppercase tracking-[0.3em] text-xs py-5 px-8 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-gold-900/30 active:scale-[0.98] group flex items-center justify-center"
-                        >
-                            Contact Sales
+                        <Link to="/contact" className="px-8 py-4 font-black text-[10px] tracking-[0.3em] uppercase text-[#F5E6C8] border border-[#F5E6C8]/20 hover:border-[#C8A96A] hover:text-[#C8A96A] transition-all flex items-center justify-center bg-transparent relative overflow-hidden group">
+                           Contact Sales
+                           <div className="absolute inset-0 bg-[#C8A96A]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                         </Link>
                     </div>
                 </div>
             </section>
-
-
-
-            {/* Search Bar - Bottom */}
-            <div className="fixed bottom-20 right-4 bg-white rounded-full shadow-lg p-2 animate-bounce-subtle">
-                <button className="bg-[#0A7A2F] text-white p-3 rounded-full hover:bg-[#0A7A2F]/90 transition-colors">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </button>
-            </div>
-
         </div>
     );
 };

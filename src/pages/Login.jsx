@@ -86,10 +86,10 @@ const UserLogin = () => {
             {successData && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md">
                     <div
-                        className="bg-[#1A1A1A] rounded-[2.5rem] shadow-3xl w-full max-w-sm mx-4 overflow-hidden border border-[#C8A96A]/20"
+                        className="luxury-box w-full max-w-sm mx-4"
                         style={{ animation: 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1)' }}
                     >
-                        {/* Elite top gold accent */}
+                        {/*  Sanyukt Parivaar top gold accent */}
                         <div className="h-1 bg-gradient-to-r from-transparent via-[#C8A96A] to-transparent w-full" />
 
                         <div className="p-10 text-center">
@@ -114,7 +114,7 @@ const UserLogin = () => {
                                     ? 'bg-[#D4AF37]/10 text-[#D4AF37] border-[#D4AF37]/30'
                                     : 'bg-[#C8A96A]/10 text-[#C8A96A] border-[#C8A96A]/30'
                                     }`}>
-                                    {successData.role === 'admin' ? 'Architect' : 'Elite Member'}
+                                    {successData.role === 'admin' ? 'Architect' : ' Sanyukt Parivaar Member'}
                                 </span>
                             </div>
 
@@ -155,7 +155,7 @@ const UserLogin = () => {
                     {/* Left Side - Welcome Message */}
                     <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left animate-slide-right">
                         <div className="inline-block mb-6 px-6 py-1.5 rounded-full border border-[#C8A96A]/20 bg-[#C8A96A]/5">
-                            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#C8A96A]">Elite Portal</span>
+                            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#C8A96A]"> Sanyukt Parivaar Portal</span>
                         </div>
                         <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#F5E6C8] mb-8 tracking-tight drop-shadow-2xl">
                             Welcome <span className="text-[#C8A96A]">Back</span>
@@ -171,8 +171,7 @@ const UserLogin = () => {
                             </div>
                         )}
 
-                        {/* Security Notice */}
-                        <div className="p-6 bg-[#1A1A1A] border border-[#C8A96A]/10 rounded-[2rem] max-w-md w-full shadow-2xl flex items-start gap-5 group hover:border-[#C8A96A]/30 transition-all duration-500">
+                        <div className="luxury-box p-6 max-w-md w-full shadow-2xl flex items-start gap-5 group transition-all duration-500">
                             <div className="bg-[#0D0D0D] p-3 rounded-2xl text-[#C8A96A] border border-[#C8A96A]/20 group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500">
                                 <Lock className="w-6 h-6" />
                             </div>
@@ -187,10 +186,10 @@ const UserLogin = () => {
                         {/* Decorative Stats */}
                         <div className="mt-12 grid grid-cols-2 gap-8 max-w-md w-full">
                             {[
-                                { val: '10K+', label: 'Elite Estates' },
+                                { val: '10K+', label: ' Sanyukt Parivaar Estates' },
                                 { val: '50+', label: 'Global Regions' }
                             ].map((stat, i) => (
-                                <div key={i} className="bg-[#1A1A1A] border border-[#C8A96A]/5 p-8 rounded-[2rem] shadow-3xl hover:border-[#C8A96A]/20 transition-all duration-500 group">
+                                <div key={i} className="luxury-box p-8 shadow-3xl transition-all duration-500 group">
                                     <p className="text-4xl font-serif font-bold text-[#C8A96A] mb-2 group-hover:scale-110 transition-transform">{stat.val}</p>
                                     <p className="text-[10px] font-black text-[#F5E6C8]/30 uppercase tracking-[0.2em]">{stat.label}</p>
                                 </div>
@@ -200,13 +199,13 @@ const UserLogin = () => {
 
                     {/* Right Side - Login Form */}
                     <div className="w-full lg:w-1/2 flex justify-center lg:justify-end animate-slide-left">
-                        <div className="w-full max-w-[460px] bg-[#1A1A1A] rounded-[3rem] border border-[#C8A96A]/10 shadow-3xl overflow-hidden group hover:border-[#C8A96A]/30 transition-all duration-700">
-                            {/* Header - Elite Gold */}
-                            <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] p-10 border-b border-[#C8A96A]/10 relative overflow-hidden text-center">
+                        <div className="luxury-box w-full max-w-[460px] group transition-all duration-700">
+                            {/* Header -  Sanyukt Parivaar Gold */}
+                            <div className="bg-[#121212] p-10 border-b border-[#C8A96A]/30 relative overflow-hidden text-center">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A96A]/5 rounded-full blur-3xl"></div>
-                                
+
                                 <h2 className="text-3xl font-serif font-bold text-[#F5E6C8] mb-4 tracking-tight">
-                                    Identity <span className="text-[#C8A96A]">Login</span>
+                                    User <span className="text-[#C8A96A]">Login</span>
                                 </h2>
                                 <div className="flex items-center justify-center space-x-3 text-[#C8A96A]/40">
                                     <Home className="h-3 w-3" />
@@ -221,7 +220,7 @@ const UserLogin = () => {
                                 <div className="space-y-10">
                                     {/* Email Input */}
                                     <div className="space-y-3">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Credential Identity</label>
+                                        <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Email / Sponser ID</label>
                                         <div className="relative group/input">
                                             <User className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#C8A96A]/40 group-hover/input:text-[#C8A96A] transition-colors" />
                                             <input
@@ -238,7 +237,7 @@ const UserLogin = () => {
 
                                     {/* Password */}
                                     <div className="space-y-3">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Secured Key</label>
+                                        <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Password</label>
                                         <div className="relative group/input">
                                             <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#C8A96A]/40 group-hover/input:text-[#C8A96A] transition-colors" />
                                             <input
@@ -274,14 +273,14 @@ const UserLogin = () => {
                                                     {rememberMe && <CheckCircle className="w-full h-full text-[#0D0D0D] p-0.5" />}
                                                 </div>
                                             </div>
-                                            <span className="text-[#F5E6C8]/40 group-hover/check:text-[#C8A96A] transition-colors">Persistent</span>
+                                            <span className="text-[#F5E6C8]/40 group-hover/check:text-[#C8A96A] transition-colors">Remamber</span>
                                         </label>
 
                                         <Link
                                             to="/forgot-password"
                                             className="text-[#C8A96A]/40 hover:text-[#C8A96A] transition-colors italic"
                                         >
-                                            Lost Key?
+                                            Forget Password
                                         </Link>
                                     </div>
 
@@ -290,10 +289,10 @@ const UserLogin = () => {
                                         <button
                                             type="submit"
                                             disabled={isLoading}
-                                            className="group relative w-full p-6 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-black uppercase tracking-[0.3em] text-xs rounded-2xl overflow-hidden transition-all hover:shadow-2xl hover:shadow-gold-900/30 active:scale-[0.98] disabled:opacity-50"
+                                            className="luxury-button w-full relative z-10 flex items-center justify-center gap-3 p-4 disabled:opacity-50"
                                         >
                                             <span className="relative z-10 flex items-center justify-center gap-3">
-                                                {isLoading ? 'Verifying...' : 'Authenticate'}
+                                                {isLoading ? 'Verifying...' : 'LOGIN'}
                                             </span>
                                         </button>
                                     </div>
@@ -306,7 +305,7 @@ const UserLogin = () => {
                                                 to="/register"
                                                 className="text-[#C8A96A] hover:underline transition-all"
                                             >
-                                                Request Entry
+                                                Sign up
                                             </Link>
                                         </p>
                                     </div>

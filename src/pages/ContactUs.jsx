@@ -89,7 +89,7 @@ const ContactUs = () => {
                         <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#C8A96A]">Seamless Connection</span>
                     </div>
                     <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#F5E6C8] mb-8 tracking-tight drop-shadow-2xl">
-                        Contact <span className="text-[#C8A96A]">Concierge</span>
+                        Contact <span className="text-[#C8A96A]">US</span>
                     </h1>
                     <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#C8A96A] to-transparent mx-auto"></div>
                 </div>
@@ -99,11 +99,11 @@ const ContactUs = () => {
                     {/* Left Column - Contact Form */}
                     {/* Left Column - Contact Form */}
                     <div className="animate-slide-left">
-                        <div className="bg-[#1A1A1A] rounded-[2.5rem] border border-[#C8A96A]/10 shadow-3xl overflow-hidden flex flex-col h-full group hover:border-[#C8A96A]/30 transition-all duration-700">
+                        <div className="luxury-box flex flex-col h-full group transition-all duration-700">
                             {/* Form Header */}
-                            <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] p-10 border-b border-[#C8A96A]/10">
+                            <div className="bg-[#121212] p-10 border-b border-[#C8A96A]/30">
                                 <h2 className="text-3xl font-serif font-bold text-[#F5E6C8]">
-                                    Direct Inquiry
+                                    Get in Touch
                                 </h2>
                                 <p className="text-[#C8A96A]/60 mt-3 text-xs font-bold uppercase tracking-widest italic">
                                     Your message, our priority.
@@ -115,7 +115,7 @@ const ContactUs = () => {
                                 {submitSuccess && (
                                     <div className="p-5 bg-[#C8A96A]/10 border border-[#C8A96A]/30 text-[#C8A96A] rounded-2xl animate-slide-down flex items-center space-x-3 text-sm font-bold">
                                         <Send className="h-5 w-5" />
-                                        <span>Concierge notified. Expect a response shortly.</span>
+                                        <span>Message sent successfully! We'll get back to you soon.</span>
                                     </div>
                                 )}
 
@@ -160,7 +160,7 @@ const ContactUs = () => {
 
                                     {/* Email */}
                                     <div className="space-y-3">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Digital Mail</label>
+                                        <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Email ID</label>
                                         <div className="relative group/input">
                                             <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#C8A96A]/40 group-hover/input:text-[#C8A96A] transition-colors" />
                                             <input
@@ -194,16 +194,14 @@ const ContactUs = () => {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="group relative w-full p-5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] font-black uppercase tracking-widest text-xs rounded-2xl overflow-hidden transition-all hover:shadow-2xl hover:shadow-gold-900/30 active:scale-[0.98] disabled:opacity-50"
+                                    className="luxury-button w-full relative z-10 flex items-center justify-center gap-3 disabled:opacity-50"
                                 >
-                                    <span className="relative z-10 flex items-center justify-center gap-3">
-                                        {isSubmitting ? 'Transmitting...' : (
-                                            <>
-                                                Relay Message
-                                                <Send className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                            </>
-                                        )}
-                                    </span>
+                                    {isSubmitting ? 'Transmitting...' : (
+                                        <>
+                                            Relay Message
+                                            <Send className="w-4 h-4" />
+                                        </>
+                                    )}
                                 </button>
                             </form>
                         </div>
@@ -211,11 +209,11 @@ const ContactUs = () => {
 
                     {/* Right Column - Contact Information */}
                     <div className="animate-slide-right">
-                        <div className="bg-[#1A1A1A] rounded-[2.5rem] border border-[#C8A96A]/10 shadow-3xl overflow-hidden flex flex-col h-full group hover:border-[#C8A96A]/30 transition-all duration-700">
+                        <div className="luxury-box flex flex-col h-full group transition-all duration-700">
                             {/* Info Header */}
-                            <div className="bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] p-10 border-b border-[#C8A96A]/10">
+                            <div className="bg-[#121212] p-10 border-b border-[#C8A96A]/30">
                                 <h2 className="text-3xl font-serif font-bold text-[#F5E6C8]">
-                                    Global Presence
+                                    Contact Information
                                 </h2>
                                 <p className="text-[#C8A96A]/60 mt-3 text-xs font-bold uppercase tracking-widest italic">
                                     Our doors are open to your vision.
@@ -224,14 +222,14 @@ const ContactUs = () => {
 
                             <div className="p-10 space-y-12">
                                 {[
-                                    { icon: MapPin, title: 'Elite Headquarters', content: 'Sanyukt Parivaar & Rich Life Pvt.Ltd.,\nBhatiniya, Gopinathpur, Harraiya,\nBasti - 272130, Uttar Pradesh', link: null },
-                                    { icon: Phone, title: 'Private Line', content: '+91 78803 70057', link: 'tel:+917880370057' },
-                                    { icon: Mail, title: 'Secured Email', content: 'info@sanyuktparivaar.com', link: 'mailto:info@sanyuktparivaar.com' }
+                                    { icon: MapPin, title: 'Head Office', content: 'Sanyukt Parivaar & Rich Life Pvt.Ltd.,\nBhatiniya, Gopinathpur, Harraiya,\nBasti - 272130, Uttar Pradesh', link: null },
+                                    { icon: Phone, title: 'Phone Number', content: '+91 78803 70057', link: 'tel:+917880370057' },
+                                    { icon: Mail, title: 'Email', content: 'info@sanyuktparivaar.com', link: 'mailto:info@sanyuktparivaar.com' }
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-start gap-6 group/item">
-                                        <div className="w-14 h-14 rounded-2xl bg-[#0D0D0D] border border-[#C8A96A]/20 flex items-center justify-center text-[#C8A96A] group-hover/item:bg-[#C8A96A] group-hover/item:text-[#0D0D0D] transition-all duration-500 shadow-lg">
-                                            <item.icon className="w-6 h-6" />
-                                        </div>
+                                            <div className="w-14 h-14 bg-[#121212] border border-[#C8A96A]/30 flex items-center justify-center text-[#C8A96A] transition-all duration-500 rounded-sm">
+                                                <item.icon className="w-6 h-6" />
+                                            </div>
                                         <div>
                                             <h4 className="text-lg font-serif font-bold text-[#F5E6C8] mb-2 uppercase tracking-wide group-hover/item:text-[#C8A96A] transition-colors">{item.title}</h4>
                                             {item.link ? (
@@ -249,7 +247,7 @@ const ContactUs = () => {
 
                                 {/* Map Integration */}
                                 <div className="pt-6">
-                                    <div className="relative h-64 rounded-[2rem] overflow-hidden border border-[#C8A96A]/20 group/map">
+                                    <div className="relative h-64 overflow-hidden luxury-box group/map">
                                         <iframe
                                             src={mapUrl}
                                             className="absolute inset-0 w-full h-full grayscale opacity-40 group-hover/map:grayscale-0 group-hover/map:opacity-80 transition-all duration-1000"
@@ -258,12 +256,11 @@ const ContactUs = () => {
                                             loading="lazy"
                                             title="Location"
                                         ></iframe>
-                                        <div className="absolute inset-0 pointer-events-none border border-[#C8A96A]/10 rounded-[2rem]"></div>
                                         <a
                                             href="https://maps.google.com/?q=Tukum+Chandrapur+Maharashtra"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-[#0D0D0D]/80 backdrop-blur-md border border-[#C8A96A]/30 px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest text-[#C8A96A] hover:bg-[#C8A96A] hover:text-[#0D0D0D] transition-all duration-500 pointer-events-auto"
+                                            className="luxury-button absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-auto bg-[#121212]"
                                         >
                                             Expand Domain Map
                                         </a>

@@ -31,6 +31,53 @@ h1, h2, h3, h4, h5, h6, .font-serif {
   border: 1px solid var(--glass-border);
 }
 
+.luxury-box {
+  background-color: #121212;
+  border: 1px solid rgba(200, 169, 106, 0.3);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-button {
+  background: transparent;
+  border: 1px solid #C8A96A;
+  color: #C8A96A;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.75rem;
+  border-radius: 2px;
+}
+
+.luxury-button:hover {
+  background: #C8A96A;
+  color: #0D0D0D;
+}
+
+.luxury-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  color: #C8A96A;
+}
+
+.luxury-divider::before,
+.luxury-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200, 169, 106, 0.4), transparent);
+}
+
+.luxury-divider span {
+  padding: 0 1rem;
+  font-size: 0.75rem;
+}
+
 .gold-gradient {
   background: linear-gradient(135deg, #C8A96A 0%, #D4AF37 50%, #B8860B 100%);
 }

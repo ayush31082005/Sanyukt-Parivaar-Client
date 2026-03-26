@@ -1177,15 +1177,25 @@ const Header = () => {
                         </Box>
 
                         {/* RIGHT - HAMBURGER (MOBILE/TABLET) */}
-                        <Box sx={{ display: { xs: 'flex', lg: 'none' }, ml: 'auto' }}>
+                        <Box sx={{ 
+                            display: { xs: 'flex', lg: 'none' }, 
+                            flex: 1, 
+                            justifyContent: 'flex-end',
+                            alignItems: 'center',
+                            zIndex: 10 
+                        }}>
                             <IconButton
                                 color="inherit"
                                 aria-label="open drawer"
                                 edge="start"
                                 onClick={handleDrawerToggle}
-                                sx={{ color: '#C9A84C' }}
+                                sx={{ 
+                                    color: '#C9A84C',
+                                    p: 1.5, // Increase touch target
+                                    mr: -1 // Adjust margin to edge
+                                }}
                             >
-                                <MenuIcon fontSize="large" />
+                                <MenuIcon sx={{ fontSize: '32px' }} />
                             </IconButton>
                         </Box>
 

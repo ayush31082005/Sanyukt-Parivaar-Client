@@ -525,17 +525,17 @@ const HomePage = () => {
 
                 {/* </RechargeSection> */}
 
-                <div className="w-full flex items-center justify-center gap-5 my-12 px-5">
-                    <div className="flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+                <div className="w-full flex items-center justify-center gap-2 sm:gap-5 my-8 sm:my-12 px-4 sm:px-5">
+                    <div className="hidden sm:block flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
 
                     <span
-                        className="text-center text-[32px] md:text-[38px] italic font-medium text-[#d4a64a] leading-tight whitespace-nowrap"
+                        className="text-center text-xl sm:text-2xl md:text-[38px] italic font-medium text-[#d4a64a] leading-tight"
                         style={{ fontFamily: '"Cormorant Garamond", serif' }}
                     >
                         Create a Life You Love with Your Family!
                     </span>
 
-                    <div className="flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+                    <div className="hidden sm:block flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
                 </div>
 
                 <AboutSection
@@ -549,17 +549,17 @@ const HomePage = () => {
                     whyChoosePoints={whyChoosePoints}
                 />
 
-                <div className="w-full flex items-center justify-center gap-5 my-12 px-5">
-                    <div className="flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+                <div className="w-full flex items-center justify-center gap-2 sm:gap-5 my-8 sm:my-12 px-4 sm:px-5">
+                    <div className="hidden sm:block flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
 
                     <span
-                        className="text-center text-[32px] md:text-[38px] italic font-medium text-[#d4a64a] leading-tight whitespace-nowrap"
+                        className="text-center text-xl sm:text-2xl md:text-[38px] italic font-medium text-[#d4a64a] leading-tight"
                         style={{ fontFamily: '"Cormorant Garamond", serif' }}
                     >
                         Join Our Community!
                     </span>
 
-                    <div className="flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+                    <div className="hidden sm:block flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
                 </div>
                 <div className="luxury-divider"><span>OUR PRODUCTS</span></div>
 

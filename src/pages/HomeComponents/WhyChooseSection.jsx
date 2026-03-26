@@ -9,7 +9,7 @@ const WhyChooseSection = ({ whyChoosePoints }) => {
                 </h2>
                 <div className="w-16 h-[1px] bg-[#C8A96A]/40 mx-auto mb-4"></div>
                 
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
                     {whyChoosePoints.map((point, index) => (
                         <div
                             key={index}

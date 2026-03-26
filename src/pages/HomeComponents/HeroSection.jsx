@@ -16,7 +16,7 @@ const HeroSection = ({ currentSlide, setCurrentSlide, heroSlides, isLoggedIn, us
                     transition={{ duration: 1 }}
                     className="flex-1 flex flex-col"
                 >
-                    <div className="container mx-auto px-6 relative z-20 py-12 md:py-20">
+                    <div className="container mx-auto px-4 sm:px-6 relative z-20 py-8 md:py-20">
                         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center w-full">
                             
                             {/* Content Side */}
@@ -26,13 +26,13 @@ const HeroSection = ({ currentSlide, setCurrentSlide, heroSlides, isLoggedIn, us
                                 transition={{ delay: 0.3, duration: 0.8 }}
                                 className="space-y-4 text-center md:text-left flex flex-col justify-center"
                             >
-                                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight text-[#F5E6C8] tracking-tight">
+                                <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight text-[#F5E6C8] tracking-tight">
                                     {heroSlides[currentSlide].title}
                                 </h1>
-                                <h2 className="text-sm sm:text-lg md:text-xl text-[#C8A96A] font-bold uppercase tracking-[0.4em] mt-2">
+                                <h2 className="text-[10px] sm:text-base md:text-xl text-[#C8A96A] font-bold uppercase tracking-[0.2em] sm:tracking-[0.4em] mt-2">
                                     {heroSlides[currentSlide].subtitle}
                                 </h2>
-                                <p className="text-xs sm:text-sm md:text-base text-[#F5E6C8]/60 leading-relaxed font-light max-w-xl mx-auto md:mx-0">
+                                <p className="text-[10px] sm:text-sm md:text-base text-[#F5E6C8]/60 leading-relaxed font-light max-w-xl mx-auto md:mx-0">
                                     {heroSlides[currentSlide].description}
                                 </p>
                                 <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">

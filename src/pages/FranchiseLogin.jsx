@@ -89,7 +89,7 @@ const FranchiseLogin = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30 p-4 md:p-6 lg:p-8 relative overflow-hidden">
+        <div className="bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30 p-4 md:p-6 lg:py-4 lg:px-8 relative overflow-hidden">
 
             {/* Animated Background Elements */}
             <div className="absolute inset-0 overflow-hidden">
@@ -278,7 +278,7 @@ const FranchiseLogin = () => {
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Breadcrumb */}
                 <motion.div
-                    className="flex items-center space-x-2 text-[#F5E6C8]/50 mb-8"
+                    className="flex items-center space-x-2 text-[#F5E6C8]/50 mb-4"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
@@ -299,40 +299,40 @@ const FranchiseLogin = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <motion.div
-                            className="inline-flex items-center gap-2 bg-[#C8A96A]/10 border border-[#C8A96A]/20 px-4 py-2 rounded-full mb-6"
+                            className="inline-flex items-center gap-2 bg-[#C8A96A]/10 border border-[#C8A96A]/20 px-4 py-1.5 rounded-full mb-3"
                             whileHover={{ scale: 1.05 }}
                         >
                             <Store className="h-4 w-4 text-[#C8A96A]" />
                             <span className="text-sm font-bold text-[#C8A96A]">Franchise Partner Portal</span>
                         </motion.div>
 
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#F5E6C8] mb-4 tracking-tight">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#F5E6C8] mb-3 tracking-tight uppercase">
                             <span className="text-[#C8A96A]">Welcome Back,</span>
                             <br />
-                            Franchise Partner!
+                            Partner!
                         </h1>
 
-                        <p className="text-[#F5E6C8]/60 text-lg max-w-md mx-auto lg:mx-0 mb-8 font-light leading-relaxed">
+                        <p className="text-[#F5E6C8]/60 text-base max-w-md mx-auto lg:mx-0 mb-4 font-bold leading-relaxed italic">
                             Access your franchise dashboard to manage orders, track performance, and grow your business.
                         </p>
 
                         {/* Stats Cards */}
-                        <div className="grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0 mb-8">
+                        <div className="grid grid-cols-2 gap-3 max-w-[280px] mx-auto lg:mx-0 mb-6">
                             <motion.div
-                                className="luxury-box glass-morphism p-4 shadow-2xl transition-all duration-300"
+                                className="luxury-box glass-morphism p-3 shadow-2xl transition-all duration-300"
                                 whileHover={{ scale: 1.05, y: -5 }}
                             >
-                                <Users className="h-6 w-6 text-[#C8A96A] mb-2" />
-                                <p className="text-2xl font-black text-[#F5E6C8] tracking-tight">500+</p>
-                                <p className="text-sm text-[#F5E6C8]/60 font-medium">Active Franchises</p>
+                                <Users className="h-5 w-5 text-[#C8A96A] mb-1" />
+                                <p className="text-xl font-black text-[#F5E6C8] tracking-tight">500+</p>
+                                <p className="text-[10px] text-[#F5E6C8] font-black uppercase tracking-widest">Active Franchises</p>
                             </motion.div>
                             <motion.div
-                                className="luxury-box glass-morphism p-4 shadow-2xl transition-all duration-300"
+                                className="luxury-box glass-morphism p-3 shadow-2xl transition-all duration-300"
                                 whileHover={{ scale: 1.05, y: -5 }}
                             >
-                                <TrendingUp className="h-6 w-6 text-[#C8A96A] mb-2" />
-                                <p className="text-2xl font-black text-[#F5E6C8] tracking-tight">₹50K+</p>
-                                <p className="text-sm text-[#F5E6C8]/60 font-medium">Avg. Monthly</p>
+                                <TrendingUp className="h-5 w-5 text-[#C8A96A] mb-1" />
+                                <p className="text-xl font-black text-[#F5E6C8] tracking-tight">₹50K+</p>
+                                <p className="text-[10px] text-[#F5E6C8] font-black uppercase tracking-widest">Avg. Monthly</p>
                             </motion.div>
                         </div>
 
@@ -351,10 +351,10 @@ const FranchiseLogin = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.3 + index * 0.1 }}
                                 >
-                                    <div className="h-5 w-5 rounded-full bg-[#C8A96A]/10 border border-[#C8A96A]/20 flex items-center justify-center">
-                                        <CheckCircle className="h-3 w-3 text-[#C8A96A]" />
+                                    <div className="h-4 w-4 rounded-full bg-[#C8A96A]/10 border border-[#C8A96A]/20 flex items-center justify-center">
+                                        <CheckCircle className="h-2.5 w-2.5 text-[#C8A96A]" />
                                     </div>
-                                    <span className="text-[#F5E6C8]/80 font-medium">{feature}</span>
+                                    <span className="text-[#F5E6C8] font-black text-[11px] uppercase tracking-wide">{feature}</span>
                                 </motion.div>
                             ))}
                         </div>
@@ -362,13 +362,13 @@ const FranchiseLogin = () => {
 
                     {/* Right Side - Login Form */}
                     <motion.div
-                        className="w-full max-w-md mx-auto lg:mx-0"
+                        className="w-full max-w-sm mx-auto lg:mx-0 shadow-2xl"
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
                         <div className="luxury-box w-full group transition-all duration-700">
-                            <div className="bg-[#121212] p-10 border-b border-[#C8A96A]/30 relative overflow-hidden text-center">
+                            <div className="bg-[#121212] p-5 md:p-6 border-b border-[#C8A96A]/30 relative overflow-hidden text-center">
                                 <motion.div
                                     className="absolute inset-0 bg-[#C8A96A]/5"
                                     animate={{
@@ -381,8 +381,8 @@ const FranchiseLogin = () => {
                                     }}
                                 />
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A96A]/5 rounded-full blur-3xl"></div>
-                                <Store className="h-12 w-12 text-[#C8A96A] mx-auto mb-3 relative" />
-                                <h2 className="text-3xl font-serif font-bold text-[#F5E6C8] mb-2 tracking-tight relative">
+                                <Store className="h-10 w-10 text-[#C8A96A] mx-auto mb-2 relative" />
+                                <h2 className="text-2xl font-serif font-bold text-[#F5E6C8] mb-1 tracking-tight relative">
                                     Franchise <span className="text-[#C8A96A]">Login</span>
                                 </h2>
                                 <p className="text-[#F5E6C8]/40 text-xs font-bold uppercase tracking-widest relative">
@@ -391,7 +391,7 @@ const FranchiseLogin = () => {
                             </div>
 
                             {/* Form */}
-                            <form onSubmit={handleSubmit} className="p-10 space-y-10">
+                            <form onSubmit={handleSubmit} className="p-5 md:p-8 space-y-4">
                                 <div className="space-y-6">
                                     {/* Error Message */}
                                     <AnimatePresence>
@@ -421,8 +421,8 @@ const FranchiseLogin = () => {
                                                 name="franchiseId"
                                                 value={formData.franchiseId}
                                                 onChange={handleChange}
-                                                placeholder="Enter your franchise ID (e.g., FRANCHISE123)"
-                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl pl-12 pr-4 py-5 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium text-sm"
+                                                placeholder="Enter Franchise ID"
+                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-xl pl-10 pr-4 py-3.5 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-black text-xs"
                                                 required
                                             />
                                         </div>
@@ -442,8 +442,8 @@ const FranchiseLogin = () => {
                                                 name="password"
                                                 value={formData.password}
                                                 onChange={handleChange}
-                                                placeholder="Enter your password"
-                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl pl-12 pr-14 py-5 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium text-sm"
+                                                placeholder="Enter password"
+                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-xl pl-10 pr-12 py-3.5 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-black text-xs"
                                                 required
                                             />
                                             <button

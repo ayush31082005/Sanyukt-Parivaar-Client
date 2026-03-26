@@ -210,11 +210,11 @@ const ProductsPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#0D0D0D] text-[#F5E6C8]">
+        <div className="bg-[#0D0D0D] text-[#F5E6C8]">
             {/* Header with Cart */}
             {/* Premium Header Container */}
             <div className="bg-[#0D0D0D]/80 backdrop-blur-xl border-b border-[#C8A96A]/20 sticky top-0 z-20">
-                <div className="max-w-7xl mx-auto px-4 py-4 md:py-6">
+                <div className="max-w-7xl mx-auto px-4 py-2 md:py-3">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
                         <div className="flex items-center gap-3">
                             <div className="hidden sm:flex w-10 h-10 bg-[#1A1A1A] border border-[#C8A96A]/30 items-center justify-center shadow-lg">
@@ -262,7 +262,7 @@ const ProductsPage = () => {
 
             {/* Categories Navigation */}
             <div className="bg-[#0D0D0D] border-b border-[#C8A96A]/10 sticky top-[60px] md:top-[80px] z-10 overflow-x-auto no-scrollbar">
-                <div className="max-w-7xl mx-auto px-4 py-2 flex gap-2 whitespace-nowrap">
+                <div className="max-w-7xl mx-auto px-4 py-1.5 flex gap-1.5 whitespace-nowrap">
                     {categories.map((cat) => (
                         <button
                             key={cat}
@@ -279,20 +279,20 @@ const ProductsPage = () => {
             </div>
 
             {/* Products Grid */}
-            <div className="max-w-7xl mx-auto px-4 py-8">
+            <div className="max-w-7xl mx-auto px-4 py-4">
                 {loading ? (
-                    <div className="text-center py-20">
+                    <div className="text-center py-10">
                         <div className="inline-block animate-spin w-12 h-12 border-4 border-[#C8A96A] border-t-transparent shadow-[0_0_15px_rgba(200,169,106,0.3)]"></div>
                         <p className="mt-4 text-[#C8A96A] font-medium tracking-widest uppercase text-xs">Loading Excellence...</p>
                     </div>
                 ) : filteredProducts.length === 0 ? (
-                    <div className="text-center py-20 luxury-box bg-[#1A1A1A]">
+                    <div className="text-center py-10 luxury-box bg-[#1A1A1A]">
                         <div className="text-6xl mb-4">✨</div>
                         <h3 className="text-xl font-serif font-bold text-[#C8A96A] mb-2">No items discovered</h3>
                         <p className="text-[#F5E6C8]/60">Try exploring our other premium categories</p>
                     </div>
                 ) : (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 font-bold">
                         {filteredProducts.map((product, index) => {
                             const discount = calculateDiscount(product.price, product.oldPrice);
                             const hasImageError = imageErrors[product._id];
@@ -305,7 +305,7 @@ const ProductsPage = () => {
                                     style={{ animationDelay: `${index * 0.05}s` }}
                                 >
                                     {/* Product Image */}
-                                    <div className="relative h-44 bg-[#0D0D0D] overflow-hidden">
+                                    <div className="relative h-32 md:h-44 bg-[#0D0D0D] overflow-hidden">
                                         {product.image && !hasImageError ? (
                                             <img
                                                 src={imageUrl}
@@ -341,9 +341,9 @@ const ProductsPage = () => {
                                     </div>
 
                                     {/* Product Details */}
-                                    <div className="p-3.5">
+                                    <div className="p-2 md:p-3">
                                         {/* Rating & BV */}
-                                        <div className="flex items-center justify-between mb-2">
+                                        <div className="flex items-center justify-between mb-1">
                                             <div className="flex items-center gap-0.5">
                                                 {[1, 2, 3, 4, 5].map((star) => (
                                                     <Star
@@ -363,7 +363,7 @@ const ProductsPage = () => {
                                         </div>
 
                                         {/* Product Name & Category */}
-                                        <div className="mb-3">
+                                        <div className="mb-1.5">
                                             <span className="text-[8px] font-black text-[#C8A96A]/40 uppercase tracking-[0.25em] mb-1 block">
                                                 {product.category === "Beauty and cosmetic home based products" ? "Cosmetics" : (product.category?.split(' ')[0] || "General")}
                                             </span>
@@ -373,7 +373,7 @@ const ProductsPage = () => {
                                         </div>
 
                                         {/* Price Section */}
-                                        <div className="flex items-baseline gap-2 mb-4">
+                                        <div className="flex items-baseline gap-1.5 md:gap-2 mb-2 md:mb-4">
                                             <span className="text-base font-black text-[#C8A96A]">
                                                 ₹{formatCurrency(product.price)}
                                             </span>
@@ -385,7 +385,7 @@ const ProductsPage = () => {
                                         </div>
 
                                         {/* Action Buttons */}
-                                        <div className="grid grid-cols-2 gap-2">
+                                        <div className="grid grid-cols-2 gap-1.5 font-bold">
                                             {isInCart(product._id) ? (
                                                 <button
                                                     onClick={() => handleRemoveFromCart(product._id, product.name)}
@@ -409,7 +409,7 @@ const ProductsPage = () => {
                                                 onClick={() => buyNow(product)}
                                                 disabled={product.stock === 0}
                                                 className={`py-2.5 text-[9px] font-black uppercase tracking-widest transition-all shadow-xl ${product.stock > 0
-                                                    ? 'bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] hover:shadow-[#C8A96A]/20 hover:-translate-y-0.5'
+                                                    ? 'bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] hover:shadow-[#C8A96A]/20'
                                                     : 'bg-[#1A1A1A] text-[#C8A96A]/20 cursor-not-allowed border border-[#C8A96A]/5'
                                                     }`}
                                             >
@@ -417,9 +417,9 @@ const ProductsPage = () => {
                                             </button>
                                             <button
                                                 onClick={() => openProductModal(product)}
-                                                className="col-span-2 py-2 text-[8px] font-black text-[#C8A96A]/30 hover:text-[#C8A96A] border border-[#C8A96A]/5 hover:border-[#C8A96A]/20 transition-all mt-1 uppercase tracking-[0.2em]"
+                                                className="col-span-2 py-1.5 text-[8px] font-black text-[#C8A96A]/30 hover:text-[#C8A96A] border border-[#C8A96A]/5 hover:border-[#C8A96A]/20 transition-all mt-0.5 uppercase tracking-[0.2em]"
                                             >
-                                                Specifications
+                                                Details
                                             </button>
                                         </div>
                                     </div>

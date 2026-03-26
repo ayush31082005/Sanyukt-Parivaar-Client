@@ -60,9 +60,9 @@ function Gallery() {
     }
 
     return (
-        <div className="min-h-screen bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30">
+        <div className="bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30">
             {/* Hero Header */}
-            <div className="relative py-24 px-6 text-center border-b border-[#C8A96A]/10 bg-[#121212] overflow-hidden">
+            <div className="relative py-10 md:py-12 px-6 text-center border-b border-[#C8A96A]/10 bg-[#121212] overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(200,169,106,0.05)_0%,transparent_70%)] pointer-events-none"></div>
                 <div className="absolute top-0 right-0 w-96 h-96 bg-[#C8A96A]/5 rounded-full blur-[120px] pointer-events-none"></div>
                 <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#C8A96A]/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -73,13 +73,13 @@ function Gallery() {
                         Our Memories
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#F5E6C8] mb-6 tracking-tight">
+                    <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#F5E6C8] mb-3 tracking-tight uppercase">
                         Beautiful <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C8A96A] to-[#D4AF37]">Moments</span>
                     </h1>
 
-                    <div className="w-16 h-1 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] mx-auto rounded-full mb-6"></div>
+                    <div className="w-12 h-1 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] mx-auto rounded-full mb-3"></div>
 
-                    <p className="text-[#F5E6C8]/60 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-8">
+                    <p className="text-[#F5E6C8] text-[11px] md:text-xs font-black uppercase tracking-widest max-w-xl mx-auto leading-relaxed mb-4 italic opacity-60">
                         Explore our curated collection of cherished memories, milestones, and prestigious events
                     </p>
 
@@ -93,12 +93,12 @@ function Gallery() {
             </div>
 
             {/* Gallery Grid */}
-            <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
+            <div className="max-w-7xl mx-auto px-6 py-6 relative z-10">
                 {gallery.length === 0 ? (
-                    <div className="text-center py-24 bg-[#121212] rounded-2xl border border-[#C8A96A]/10">
-                        <Camera size={48} strokeWidth={1} className="text-[#C8A96A]/30 mx-auto mb-4" />
-                        <h3 className="text-xl font-serif text-[#F5E6C8] mb-2">No Images Yet</h3>
-                        <p className="text-[#F5E6C8]/40 text-sm">Our gallery is currently being curated. Check back soon.</p>
+                    <div className="text-center py-12 bg-[#121212] rounded-2xl border border-[#C8A96A]/10">
+                        <Camera size={32} strokeWidth={1} className="text-[#C8A96A]/30 mx-auto mb-2" />
+                        <h3 className="text-lg font-serif text-[#F5E6C8] mb-1">No Images Yet</h3>
+                        <p className="text-[#F5E6C8]/40 text-xs">Our gallery is currently being curated. Check back soon.</p>
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

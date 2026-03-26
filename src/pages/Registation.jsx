@@ -177,34 +177,34 @@ const RegistrationForm = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30 pb-16 pt-8 px-4 relative overflow-hidden">
+        <div className="bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30 py-6 md:py-10 px-4 relative overflow-hidden">
             {/* Elegant Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#C8A96A]/5 rounded-full blur-[140px] animate-pulse"></div>
                 <div className="absolute bottom-[-5%] left-[-5%] w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[120px] animate-pulse delay-700"></div>
             </div>
 
-            <div className="max-w-4xl mx-auto luxury-box z-10 relative mt-8">
+            <div className="max-w-4xl mx-auto luxury-box z-10 relative mt-4">
                 {/* Header built with Elite luxury styling */}
-                <div className="bg-[#121212] py-12 px-8 text-center border-b border-[#C8A96A]/30">
-                    <h2 className="text-4xl font-serif font-bold mb-3 text-[#C8A96A]">Registration <span className="text-[#F5E6C8]">Form</span></h2>
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#C8A96A]/60">Join our Sanyukt Parivaar today</p>
+                <div className="bg-[#121212] py-6 md:py-8 px-8 text-center border-b border-[#C8A96A]/30">
+                    <h2 className="text-2xl md:text-3xl font-serif font-bold mb-1 text-[#C8A96A] uppercase tracking-tight">Registration <span className="text-[#F5E6C8]">Form</span></h2>
+                    <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#C8A96A]/60">Join our Sanyukt Parivaar today</p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="p-8 md:p-12 space-y-8">
+                <form onSubmit={handleSubmit} className="p-6 md:p-10 space-y-5">
                     {error && (
-                        <div className="p-4 bg-red-50 text-red-600 rounded-xl text-sm border border-red-200 font-medium">
+                        <div className="p-3 bg-red-900/20 border border-red-500/30 text-red-500 rounded-xl text-xs font-bold animate-slide-down">
                             {error}
                         </div>
                     )}
                     {success && (
-                        <div className="p-4 bg-green-50 text-green-600 rounded-xl text-sm border border-green-200 font-medium">
+                        <div className="p-3 bg-[#C8A96A]/10 border border-[#C8A96A]/30 text-[#C8A96A] rounded-xl text-xs font-bold animate-slide-down">
                             {success}
                         </div>
                     )}
 
                     {/* Standard Inputs */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         {/* Sponsor Id */}
                         <div className="flex flex-col gap-2 relative group/input">
                             <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Sponsor Id <span className="text-red-500">*</span></label>
@@ -423,7 +423,7 @@ const RegistrationForm = () => {
                                 value={formData.village}
                                 onChange={handleChange}
                                 placeholder="Enter Village"
-                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl px-5 py-4 text-sm text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium"
+                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl px-5 py-3.5 text-sm text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium"
                             />
                         </div>
                     </div>
@@ -443,13 +443,13 @@ const RegistrationForm = () => {
                     </div>
 
                     {/* Submit */}
-                    <div className="pt-6">
+                    <div className="pt-2">
                         <button
                             type="submit"
                             disabled={loading || !agreed}
-                            className={`luxury-button w-full relative z-10 flex items-center justify-center p-4 ${loading || !agreed ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            className={`luxury-button w-full relative z-10 flex items-center justify-center p-3.5 font-black tracking-widest text-xs ${loading || !agreed ? 'opacity-50 cursor-not-allowed' : ''}`}
                         >
-                            {loading ? 'Processing...' : 'CREATE ACCOUNT'}
+                            {loading ? 'PROCESSING...' : 'CREATE ACCOUNT'}
                         </button>
 
                         <p className="mt-8 text-center text-[10px] font-black uppercase tracking-widest text-[#F5E6C8]/40">

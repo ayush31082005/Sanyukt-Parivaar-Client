@@ -85,19 +85,19 @@ const AboutUsPage = () => {
             </header>
 
             {/* Intro Heading Section */}
-            <section className="py-20 md:py-32 px-4 max-w-7xl mx-auto text-center relative">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-[#C8A96A] to-transparent opacity-30"></div>
+            <section className="py-4 md:py-6 px-4 max-w-7xl mx-auto text-center relative">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-gradient-to-b from-[#C8A96A] to-transparent opacity-30"></div>
 
                 {/* <div className="inline-block mb-6 px-6 py-2 rounded-full border border-[#C8A96A]/20 bg-[#C8A96A]/5">
                     <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#C8A96A]">Architects of Abundance</span>
                 </div> */}
 
-                <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#C8A96A] mb-8 leading-tight animate-slide-up">
+                <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#C8A96A] mb-3 leading-tight animate-slide-up">
                     Welcome to the <br />
                     <span className="text-[#F5E6C8]">Sanyukt Parivaar & Rich Life</span>
                 </h2>
 
-                <p className="text-xl md:text-2xl text-[#F5E6C8]/40 font-serif italic max-w-3xl mx-auto leading-relaxed mb-12">
+                <p className="text-xl md:text-2xl text-[#F5E6C8]/40 font-serif italic max-w-3xl mx-auto leading-relaxed mb-4">
                     "A People-Centric Multi-Level Marketing Organization."
                 </p>
 
@@ -109,13 +109,13 @@ const AboutUsPage = () => {
             </section>
 
             {/* ABOUT US - CONTENT + IMAGE */}
-            <section className="py-24 px-4 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <section className="py-8 px-4 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     {/* Left Content */}
-                    <div className="space-y-8 animate-slide-right">
-                        <div className="space-y-6">
+                    <div className="space-y-4 animate-slide-right">
+                        <div className="space-y-3">
                             <p className="text-[#F5E6C8]/80 leading-relaxed text-lg">
-                                <span className="text-[#C8A96A] font-serif font-bold text-2xl italic mr-2">S</span>anyukt Parivaar & Rich Life Pvt.Ltd. is a rapidly growing direct selling and multi-level marketing organization built on the foundation of trust, transparency, and teamwork.
+                                <span className="text-[#C8A96A] font-serif font-bold text-2xl italic mr-2"></span>Sanyukt Parivaar & Rich Life Pvt.Ltd. is a rapidly growing direct selling and multi-level marketing organization built on the foundation of trust, transparency, and teamwork.
                             </p>
                             <p className="text-[#F5E6C8]/60 leading-relaxed">
                                 At Sanyukt Parivaar, we believe success is best achieved together. Our "Parivaar" culture encourages mutual support, ethical business practices, and long-term relationships. We offer high-quality lifestyle, wellness, personal care, and daily-use products that create real value for customers.
@@ -125,7 +125,7 @@ const AboutUsPage = () => {
                             </p>
                         </div>
 
-                        <div className="pt-8 border-t border-[#C8A96A]/10 flex flex-wrap gap-8">
+                        <div className="pt-4 border-t border-[#C8A96A]/10 flex flex-wrap gap-8">
                             <div className="flex flex-col">
                                 <span className="text-3xl font-serif font-bold text-[#C8A96A]">5k+</span>
                                 <span className="text-[10px] uppercase tracking-widest text-[#F5E6C8]/40 font-bold">Partners</span>
@@ -166,16 +166,16 @@ const AboutUsPage = () => {
             </section>
 
             {/* MISSION & VISION SECTION */}
-            <section className="py-24 px-4 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <section className="py-8 px-4 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Mission Card */}
                     <article className="group relative">
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] opacity-0 group-hover:opacity-20 transition duration-500 blur"></div>
-                        <div className="luxury-box p-12 h-full flex flex-col transition-all duration-500">
-                            <div className="w-20 h-20 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] aspect-square flex items-center justify-center mb-8 shadow-xl shadow-gold-900/20 transform group-hover:rotate-6 transition-transform">
+                        <div className="luxury-box p-6 h-full flex flex-col transition-all duration-500">
+                            <div className="w-16 h-16 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] aspect-square flex items-center justify-center mb-4 shadow-xl shadow-gold-900/20 transform group-hover:rotate-6 transition-transform">
                                 <Target className="w-10 h-10 text-[#0D0D0D]" />
                             </div>
-                            <h3 className="text-3xl font-serif font-bold text-[#C8A96A] mb-6">Ambition</h3>
+                            <h3 className="text-3xl font-serif font-bold text-[#C8A96A] mb-3">Ambition</h3>
                             <p className="text-[#F5E6C8]/60 leading-relaxed text-lg font-medium">
                                 Our mission is to architect a reliable platform for financial independence and personal development. We nurture our elite community through sophisticated training and leadership, maintaining absolute integrity in every transaction.
                             </p>
@@ -185,11 +185,11 @@ const AboutUsPage = () => {
                     {/* Vision Card */}
                     <article className="group relative">
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] opacity-0 group-hover:opacity-20 transition duration-500 blur"></div>
-                        <div className="luxury-box p-12 h-full flex flex-col transition-all duration-500">
-                            <div className="w-20 h-20 bg-[#0D0D0D] border border-[#C8A96A]/30 aspect-square flex items-center justify-center mb-8 shadow-xl transform group-hover:-rotate-6 transition-transform">
+                        <div className="luxury-box p-6 h-full flex flex-col transition-all duration-500">
+                            <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/30 aspect-square flex items-center justify-center mb-4 shadow-xl transform group-hover:-rotate-6 transition-transform">
                                 <Eye className="w-10 h-10 text-[#C8A96A]" />
                             </div>
-                            <h3 className="text-3xl font-serif font-bold text-[#F5E6C8] mb-6">Future</h3>
+                            <h3 className="text-3xl font-serif font-bold text-[#F5E6C8] mb-3">Future</h3>
                             <p className="text-[#F5E6C8]/60 leading-relaxed text-lg font-medium">
                                 To lead the global direct selling landscape by defining a sustainable lifestyle model. We inspire positive transformation and encourage high-performance entrepreneurship through innovation and responsible legacy-building.
                             </p>
@@ -199,34 +199,34 @@ const AboutUsPage = () => {
             </section>
 
             {/* CORE VALUES SECTION */}
-            <section className="py-24 px-4 max-w-7xl mx-auto relative overflow-hidden">
+            <section className="py-8 px-4 max-w-7xl mx-auto relative overflow-hidden">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C8A96A]/5 rounded-full blur-[120px] -z-10"></div>
 
-                <h2 className="text-4xl md:text-5xl font-serif font-bold text-center text-[#C8A96A] mb-20 animate-slide-up">
+                <h2 className="text-2xl md:text-4xl font-serif font-bold text-center text-[#C8A96A] mb-4 animate-slide-up">
                     Our Core Principles
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 max-w-5xl mx-auto">
                     {coreValues.map((value, index) => (
                         <div
                             key={index}
-                            className="group luxury-box p-8 transition-all duration-500 shadow-xl"
+                            className="group luxury-box p-2 md:p-3 transition-all duration-500 shadow-xl"
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
                             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#C8A96A]/5 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
 
-                            <div className="relative mb-6">
-                                <div className="w-14 h-14 bg-[#121212] border border-[#C8A96A]/30 rounded-sm flex items-center justify-center mb-6 group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500 shadow-lg">
-                                    <CheckCircle className="w-6 h-6" />
+                            <div className="relative mb-1">
+                                <div className="w-7 h-7 md:w-9 md:h-9 bg-[#121212] border border-[#C8A96A]/30 rounded-sm flex items-center justify-center mb-1 group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500 shadow-lg">
+                                    <CheckCircle className="w-3 h-3 md:w-4 md:h-4" />
                                 </div>
-                                <h3 className="text-2xl font-serif font-bold text-[#F5E6C8] group-hover:text-[#C8A96A] transition-colors">{value.title}</h3>
+                                <h3 className="text-xs md:text-sm font-serif font-bold text-[#F5E6C8] group-hover:text-[#C8A96A] transition-colors">{value.title}</h3>
                             </div>
 
-                            <ul className="space-y-3 relative">
+                            <ul className="space-y-1 relative">
                                 {value.traits.map((trait, traitIndex) => (
                                     <li key={traitIndex} className="flex items-center gap-3 text-[#F5E6C8]/60 group/trait">
                                         <div className="w-1 h-1 bg-[#C8A96A] rounded-full opacity-40 group-hover/trait:opacity-100 group-hover/trait:scale-150 transition-all"></div>
-                                        <span className="text-sm font-medium">{trait}</span>
+                                        <span className="text-[10px] md:text-xs font-medium">{trait}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -236,11 +236,11 @@ const AboutUsPage = () => {
             </section>
 
             {/* Why Sanyukt Parivaar Section */}
-            <section className="py-24 px-4">
+            <section className="py-8 px-4">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         {/* Left Content */}
-                        <div className="space-y-10 animate-slide-right">
+                        <div className="space-y-4 animate-slide-right">
                             <div className="space-y-6">
                                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#C8A96A] leading-tight">
                                     Why Choose the <br />  Sanyukt Parivaar?
@@ -250,7 +250,7 @@ const AboutUsPage = () => {
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="flex items-start gap-4 group">
                                     <div className="w-12 h-12 rounded-2xl bg-[#C8A96A]/10 flex items-center justify-center text-[#C8A96A] group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500">
                                         <Award className="w-6 h-6" />
@@ -273,26 +273,26 @@ const AboutUsPage = () => {
                         </div>
 
                         {/* Right Content - Stats View */}
-                        <div className="grid grid-cols-2 gap-4 animate-slide-left">
-                            <div className="luxury-box p-8 text-center transition-all duration-500">
-                                <Users className="w-10 h-10 text-[#C8A96A] mx-auto mb-4 opacity-60" />
-                                <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Empowered</h4>
-                                <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">5,000+ Partners</p>
+                        <div className="grid grid-cols-2 gap-2 animate-slide-left">
+                            <div className="luxury-box p-3 text-center transition-all duration-500">
+                                <Users className="w-7 h-7 text-[#C8A96A] mx-auto mb-2 opacity-60" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-lg mb-0.5">Empowered</h4>
+                                <p className="text-[9px] text-[#C8A96A] font-black uppercase tracking-widest">5,000+ Partners</p>
                             </div>
-                            <div className="luxury-box p-8 text-center transform translate-y-8 transition-all duration-500">
-                                <Star className="w-10 h-10 text-[#C8A96A] mx-auto mb-4" />
-                                <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Pure</h4>
-                                <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">Natural Line</p>
+                            <div className="luxury-box p-3 text-center transition-all duration-500">
+                                <Star className="w-7 h-7 text-[#C8A96A] mx-auto mb-2" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-lg mb-0.5">Pure</h4>
+                                <p className="text-[9px] text-[#C8A96A] font-black uppercase tracking-widest">Natural Line</p>
                             </div>
-                            <div className="luxury-box p-8 text-center transition-all duration-500">
-                                <TrendingUp className="w-10 h-10 text-[#C8A96A] mx-auto mb-4" />
-                                <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Growth</h4>
-                                <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">Success Legacy</p>
+                            <div className="luxury-box p-3 text-center transition-all duration-500">
+                                <TrendingUp className="w-7 h-7 text-[#C8A96A] mx-auto mb-2" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-lg mb-0.5">Growth</h4>
+                                <p className="text-[9px] text-[#C8A96A] font-black uppercase tracking-widest">Success Legacy</p>
                             </div>
-                            <div className="luxury-box p-8 text-center transform translate-y-8 transition-all duration-500">
-                                <Shield className="w-10 h-10 text-[#C8A96A] mx-auto mb-4 opacity-60" />
-                                <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Ethical</h4>
-                                <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">Transparent Vision</p>
+                            <div className="luxury-box p-3 text-center transition-all duration-500">
+                                <Shield className="w-7 h-7 text-[#C8A96A] mx-auto mb-2 opacity-60" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-lg mb-0.5">Ethical</h4>
+                                <p className="text-[9px] text-[#C8A96A] font-black uppercase tracking-widest">Transparent Vision</p>
                             </div>
                         </div>
                     </div>
@@ -300,13 +300,13 @@ const AboutUsPage = () => {
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-32 px-4 relative overflow-hidden">
+            <section className="py-12 px-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[#C8A96A] opacity-5"></div>
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#C8A96A]/30 to-transparent"></div>
 
                 <div className="max-w-4xl mx-auto text-center relative z-10">
-                    <div className="w-20 h-px bg-[#C8A96A]/40 mx-auto mb-12"></div>
-                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#F5E6C8] mb-12 leading-tight">
+                    <div className="w-20 h-px bg-[#C8A96A]/40 mx-auto mb-4"></div>
+                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#F5E6C8] mb-6 leading-tight">
                         <span className="text-[#C8A96A]">Join a Growing Community That Believes in Shared Success</span>
                     </h2>
 

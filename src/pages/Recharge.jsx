@@ -236,7 +236,7 @@ const Recharge = () => {
     return (
         <div className="min-h-screen bg-[#0D0D0D] flex flex-col font-sans text-[#F5E6C8]">
             {/* 1. PAGE BANNER / HEADER SECTION */}
-            <section className="relative h-[300px] flex items-center justify-center overflow-hidden bg-[#0D0D0D]">
+            <section className="relative h-[80px] md:h-[120px] flex items-center justify-center overflow-hidden bg-[#0D0D0D] pt-[60px] md:pt-[80px]">
                 <div
                     className="absolute inset-0 bg-cover bg-center opacity-100"
                     style={{ backgroundImage: "url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070')" }}
@@ -261,14 +261,14 @@ const Recharge = () => {
                 </div>
             </section>
 
-            <main className="flex-grow container mx-auto px-4 py-16 max-w-7xl">
+            <main className="flex-grow container mx-auto px-4 py-2 max-w-7xl">
 
                 {/* 2. INTRODUCTION SECTION */}
-                <section className="text-center max-w-4xl mx-auto mb-20">
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#C8A96A] mb-8 tracking-tight">
+                <section className="text-center max-w-4xl mx-auto mb-4">
+                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#C8A96A] mb-2 tracking-tight">
                         Excellence in Every Transaction
                     </h2>
-                    <div className="space-y-6 text-[#F5E6C8]/70 text-lg leading-relaxed font-light">
+                    <div className="space-y-2 text-[#F5E6C8]/70 text-sm md:text-base leading-relaxed font-light">
                         <p>
                             Experience the pinnacle of convenience with our curated digital services.
                             From seamless recharges to impactful contributions, we empower your lifestyle while fostering community growth.
@@ -277,7 +277,7 @@ const Recharge = () => {
                 </section>
 
                 {/* 3. DONATION SECTION - PREMIUM REDESIGN */}
-                <section className="mb-16 relative text-balance">
+                <section className="mb-8 relative text-balance">
                     {/* Decorative Background Elements */}
                     <div className="absolute -top-12 -right-12 w-96 h-96 bg-[#C8A96A]/5 rounded-full blur-[120px] pointer-events-none"></div>
                     <div className="absolute -bottom-12 -left-12 w-96 h-96 bg-[#3B2F2F]/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -294,28 +294,28 @@ const Recharge = () => {
                         {/* Pattern Overlay */}
                         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8A96A' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}></div>
 
-                        <div className="relative z-10 p-6 lg:p-12">
+                        <div className="relative z-10 p-3 lg:p-6">
                             <div className="max-w-5xl mx-auto">
                                 {/* Header */}
-                                <div className="text-center mb-10">
+                                <div className="text-center mb-4">
                                     <motion.div
                                         initial={{ scale: 0.9 }}
                                         whileInView={{ scale: 1 }}
-                                        className="inline-flex items-center gap-2 py-2 px-6 bg-[#C8A96A]/10 backdrop-blur-md border border-[#C8A96A]/20 mb-8"
+                                        className="inline-flex items-center gap-2 py-1 px-4 bg-[#C8A96A]/10 backdrop-blur-md border border-[#C8A96A]/20 mb-3"
                                     >
                                         <Heart className="w-4 h-4 text-[#C8A96A]" />
                                         <span className="text-[#C8A96A] font-bold text-[10px] uppercase tracking-[0.4em]">The Spirit of Giving</span>
                                     </motion.div>
-                                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#F5E6C8] mb-4 tracking-tight leading-tight">
+                                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#F5E6C8] mb-2 tracking-tight leading-tight">
                                         Empower <span className="text-[#C8A96A]">Generations</span>
                                     </h2>
-                                    <p className="text-[#F5E6C8]/60 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto font-light">
+                                    <p className="text-[#F5E6C8]/60 text-xs md:text-sm leading-relaxed max-w-2xl mx-auto font-light mb-2">
                                         Your generosity fuels our mission of collective growth. Together, we build a legacy of empowerment within the <span className="text-[#C8A96A] font-bold">Sanyukt Parivaar</span> ecosystem.
                                     </p>
                                 </div>
 
                                 {/* Features / Trust Badges */}
-                                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-4">
                                     {[
                                         { title: 'Secure Vault', icon: Shield, subtitle: 'ENCRYPTED' },
                                         { title: 'Tax Benefits', icon: Receipt, subtitle: 'CERTIFIED' },
@@ -325,9 +325,9 @@ const Recharge = () => {
                                         <motion.div
                                             key={i}
                                             whileHover={{ y: -5, backgroundColor: 'rgba(200, 169, 106, 0.05)' }}
-                                            className="bg-[#1A1A1A]/50 backdrop-blur-xl p-5 border border-[#C8A96A]/10 transition-all duration-500"
+                                            className="bg-[#1A1A1A]/50 backdrop-blur-xl p-3 border border-[#C8A96A]/10 transition-all duration-500"
                                         >
-                                            <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] flex items-center justify-center mb-3 shadow-xl shadow-gold-900/10">
+                                            <div className="w-10 h-10 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] flex items-center justify-center mb-2 shadow-xl shadow-gold-900/10">
                                                 <feature.icon className="w-6 h-6 text-[#0D0D0D]" />
                                             </div>
                                             <h4 className="text-[#F5E6C8] font-bold text-sm tracking-tight">{feature.title}</h4>
@@ -337,11 +337,11 @@ const Recharge = () => {
                                 </div>
 
                                 {/* Transaction Core */}
-                                <div className="grid lg:grid-cols-5 gap-6">
+                                <div className="grid lg:grid-cols-5 gap-3">
                                     {/* Left: UPI ID & Personal Link */}
                                     <div className="lg:col-span-3 space-y-4">
-                                        <div className="bg-[#1A1A1A]/80 backdrop-blur-3xl rounded-3xl p-6 border border-[#C8A96A]/10 h-full flex flex-col justify-center shadow-2xl">
-                                            <div className="mb-6 flex items-center justify-between">
+                                        <div className="bg-[#1A1A1A]/80 backdrop-blur-3xl rounded-2xl p-4 border border-[#C8A96A]/10 h-full flex flex-col justify-center shadow-2xl">
+                                            <div className="mb-3 flex items-center justify-between">
                                                 <div>
                                                     <span className="inline-block px-3 py-1 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] text-[9px] font-black uppercase tracking-widest rounded-md mb-2">Exclusive</span>
                                                     <h3 className="text-xl font-serif font-bold text-[#F5E6C8]">Direct Contributions</h3>
@@ -350,7 +350,7 @@ const Recharge = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="bg-[#0D0D0D] rounded-2xl p-4 border border-[#C8A96A]/20 mb-4 group/upi relative overflow-hidden">
+                                            <div className="bg-[#0D0D0D] rounded-xl p-3 border border-[#C8A96A]/20 mb-2 group/upi relative overflow-hidden">
                                                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#C8A96A]/5 rounded-full -mr-8 -mt-8"></div>
                                                 <p className="text-[#C8A96A] text-[9px] font-black uppercase tracking-[0.3em] mb-2 font-mono">DIGITAL UPI ADDRESS</p>
                                                 <div className="flex items-center justify-between gap-4 relative z-10">
@@ -369,7 +369,7 @@ const Recharge = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="flex items-center gap-6 text-[#F5E6C8]/40">
+                                            <div className="flex items-center gap-4 text-[#F5E6C8]/40">
                                                 <div className="flex items-center gap-2">
                                                     <ShieldCheck className="w-4 h-4 text-[#C8A96A]/60" />
                                                     <span className="text-[10px] font-bold uppercase tracking-widest font-mono">End-to-End Secure</span>
@@ -386,7 +386,7 @@ const Recharge = () => {
                                             <motion.div
                                                 initial={{ opacity: 0 }}
                                                 whileInView={{ opacity: 1 }}
-                                                className="bg-[#C8A96A]/5 backdrop-blur-3xl rounded-3xl p-6 border border-[#C8A96A]/10 shadow-xl"
+                                                className="bg-[#C8A96A]/5 backdrop-blur-3xl rounded-2xl p-4 border border-[#C8A96A]/10 shadow-xl"
                                             >
                                                 <div className="flex items-center justify-between mb-4">
                                                     <div className="flex items-center gap-3">
@@ -441,21 +441,21 @@ const Recharge = () => {
 
                                     {/* Right: QR Code & Razorpay Button */}
                                     <div className="lg:col-span-2 space-y-4">
-                                        <div className="luxury-box bg-[#1A1A1A] p-6 shadow-2xl flex flex-col items-center justify-center h-full border border-[#C8A96A]/20 relative overflow-hidden group/card">
+                                        <div className="luxury-box bg-[#1A1A1A] p-3 shadow-2xl flex flex-col items-center justify-center h-full border border-[#C8A96A]/20 relative overflow-hidden group/card">
                                             <div className="absolute inset-0 bg-gradient-to-b from-[#C8A96A]/5 to-transparent"></div>
 
-                                            <div className="relative group/qr mb-5">
+                                            <div className="relative group/qr mb-3">
                                                 <div className="absolute inset-0 bg-[#C8A96A]/20 rounded-3xl blur-2xl opacity-0 group-hover/qr:opacity-100 transition-opacity duration-700"></div>
-                                                <div className="relative bg-[#0D0D0D] p-5 border border-[#C8A96A]/40 shadow-2xl flex flex-col items-center group-hover/qr:border-[#C8A96A] transition-colors duration-500">
+                                                <div className="relative bg-[#0D0D0D] p-3 border border-[#C8A96A]/40 shadow-2xl flex flex-col items-center group-hover/qr:border-[#C8A96A] transition-colors duration-500">
                                                     <div className="p-2 bg-white rounded-xl">
                                                         <img
                                                             src="/qr.jpeg"
                                                             alt="Donation QR Code"
-                                                            className="w-40 h-40 object-contain rounded-lg shadow-inner"
+                                                            className="w-32 h-32 object-contain rounded-lg shadow-inner"
                                                             onError={(e) => { e.target.src = "https://via.placeholder.com/150x150?text=SCAN+PAY"; }}
                                                         />
                                                     </div>
-                                                    <div className="mt-4 flex flex-col items-center gap-2">
+                                                    <div className="mt-2 flex flex-col items-center gap-1">
                                                         <div className="flex items-center gap-2">
                                                             <Smartphone className="w-4 h-4 text-[#C8A96A]" />
                                                             <span className="text-[10px] font-black text-[#F5E6C8] uppercase tracking-[0.3em]">Secure Scan</span>
@@ -465,7 +465,7 @@ const Recharge = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="w-full h-px bg-[#C8A96A]/10 mb-5"></div>
+                                            <div className="w-full h-px bg-[#C8A96A]/10 mb-3"></div>
 
                                             <div className="w-full flex justify-center scale-110">
                                                 <div className="relative group/razor transition-transform hover:scale-105 active:scale-95">
@@ -473,7 +473,7 @@ const Recharge = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="mt-6 text-[9px] text-[#F5E6C8]/40 font-bold uppercase tracking-[0.2em] flex flex-col items-center gap-2">
+                                            <div className="mt-3 text-[9px] text-[#F5E6C8]/40 font-bold uppercase tracking-[0.2em] flex flex-col items-center gap-1">
                                                 <div className="flex items-center gap-2">
                                                     <ShieldCheck className="w-3.5 h-3.5 text-[#C8A96A]" />
                                                     <span>Verified by Razorpay & NPCI</span>
@@ -484,8 +484,8 @@ const Recharge = () => {
                                 </div>
 
                                 {/* Footer Note */}
-                                <div className="mt-12 text-center">
-                                    <p className="text-[#C8A96A]/30 text-[10px] font-black uppercase tracking-[0.6em] flex items-center justify-center gap-4">
+                                <div className="mt-6 text-center">
+                                    <p className="text-[#C8A96A]/30 text-[9px] font-black uppercase tracking-[0.4em] flex items-center justify-center gap-4">
                                         <div className="h-px w-10 bg-[#C8A96A]/10"></div>
                                         A CULTIVATED CO-OPERATIVE SYSTEM
                                         <div className="h-px w-10 bg-[#C8A96A]/10"></div>
@@ -497,7 +497,7 @@ const Recharge = () => {
                 </section>
 
                 {/* 4. RECHARGE SERVICES SECTION */}
-                <section className="mb-20">
+                <section className="mb-8">
                     <div className="luxury-box bg-[#1A1A1A] shadow-2xl border border-[#C8A96A]/20 overflow-hidden">
 
                         {/* Tabs Header */}
@@ -528,7 +528,7 @@ const Recharge = () => {
                         </div>
 
                         {/* Tab Content Area */}
-                        <div className="p-4 md:p-8">
+                        <div className="p-3 md:p-6">
                             <AnimatePresence mode="wait">
                                 {activeTab === 'mobile' && (
                                     <motion.div
@@ -538,16 +538,16 @@ const Recharge = () => {
                                         exit={{ opacity: 0, y: -10 }}
                                         className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start"
                                     >
-                                        <div className="lg:col-span-7 flex flex-col gap-6">
-                                            <div className="flex items-center justify-between mb-2">
+                                        <div className="lg:col-span-7 flex flex-col gap-3">
+                                            <div className="flex items-center justify-between mb-0">
                                                 <h3 className="text-3xl font-serif font-bold text-[#C8A96A]">Mobile Recharge</h3>
                                                 <span className="bg-[#C8A96A]/10 text-[#C8A96A] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-[#C8A96A]/20">Premium Benefits Enabled</span>
                                             </div>
 
-                                            <div className="luxury-box bg-[#1A1A1A] p-8 border border-[#C8A96A]/20 shadow-2xl relative overflow-hidden group">
+                                            <div className="luxury-box bg-[#1A1A1A] p-2.5 md:p-4 border border-[#C8A96A]/20 shadow-2xl relative overflow-hidden group">
                                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A96A]/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
-                                                <div className="flex items-center gap-4 mb-8">
+                                                <div className="flex items-center gap-3 mb-2">
                                                     <div className="w-12 h-12 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] flex items-center justify-center shadow-xl shadow-gold-900/10">
                                                         <Zap className="w-6 h-6 text-[#0D0D0D]" />
                                                     </div>
@@ -557,10 +557,10 @@ const Recharge = () => {
                                                     </div>
                                                 </div>
 
-                                                <form onSubmit={(e) => handleRecharge(e, 'mobile')} className="space-y-6">
-                                                    <div className="space-y-6">
+                                                <form onSubmit={(e) => handleRecharge(e, 'mobile')} className="space-y-2">
+                                                    <div className="space-y-2">
                                                         <div className="group/field">
-                                                            <label className="text-xs font-black text-[#C8A96A] uppercase tracking-[0.2em] flex items-center gap-2 mb-3">
+                                                            <label className="text-xs font-black text-[#C8A96A] uppercase tracking-[0.2em] flex items-center gap-2 mb-1.5">
                                                                 <Smartphone className="w-4 h-4" />
                                                                 Recipient Number
                                                             </label>
@@ -579,7 +579,7 @@ const Recharge = () => {
                                                         </div>
 
                                                         <div className="group/field">
-                                                            <label className="text-xs font-black text-[#C8A96A] uppercase tracking-[0.2em] flex items-center gap-2 mb-3">
+                                                            <label className="text-xs font-black text-[#C8A96A] uppercase tracking-[0.2em] flex items-center gap-2 mb-1.5">
                                                                 <CircleUser className="w-4 h-4" />
                                                                 Choose Network
                                                             </label>
@@ -603,7 +603,7 @@ const Recharge = () => {
                                                         </div>
 
                                                         <div className="group/field">
-                                                            <div className="flex items-center justify-between mb-3">
+                                                            <div className="flex items-center justify-between mb-1.5">
                                                                 <label className="text-xs font-black text-[#C8A96A] uppercase tracking-[0.2em] flex items-center gap-2">
                                                                     <Wallet className="w-4 h-4" />
                                                                     Recharge Amount
@@ -646,8 +646,8 @@ const Recharge = () => {
                                             </div>
                                         </div>
 
-                                        <div className="lg:col-span-5 flex flex-col gap-6">
-                                            <div className="bg-[#1A1A1A] p-8 border border-[#C8A96A]/10 flex flex-col items-center justify-center relative overflow-hidden group shadow-xl">
+                                        <div className="lg:col-span-5 flex flex-col gap-3">
+                                            <div className="flex-1 luxury-box bg-[#1A1A1A] p-3 border border-[#C8A96A]/20 shadow-xl flex flex-col items-center">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-[#C8A96A]/5 to-transparent"></div>
                                                 <div className="relative text-center">
                                                     <Smartphone className="w-16 h-16 text-[#C8A96A]/20 mx-auto mb-4 group-hover:scale-110 transition-transform duration-500" />
@@ -661,12 +661,12 @@ const Recharge = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="luxury-box bg-[#1A1A1A] p-8 border border-[#C8A96A]/20 shadow-xl">
+                                            <div className="flex-1 luxury-box bg-[#1A1A1A] p-3 border border-[#C8A96A]/20 shadow-xl">
                                                 <h4 className="text-[11px] font-black text-[#C8A96A] mb-6 flex items-center gap-3 uppercase tracking-[0.2em]">
                                                     <div className="w-6 h-px bg-[#C8A96A]/20"></div>
                                                     Privilege Protocol
                                                 </h4>
-                                                <ul className="space-y-4">
+                                                <ul className="space-y-2">
                                                     {[
                                                         'Universal Prefix Recognition',
                                                         'Instantaneous Credit Relays',
@@ -1083,20 +1083,20 @@ const Recharge = () => {
                 </section>
 
                 {/* 5. HOW IT WORKS SECTION */}
-                <section className="luxury-box bg-[#1A1A1A] p-10 md:p-20 relative overflow-hidden shadow-2xl border border-[#C8A96A]/20 mt-20">
+                <section className="luxury-box bg-[#1A1A1A] p-6 md:p-10 relative overflow-hidden shadow-2xl border border-[#C8A96A]/20 mt-10">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C8A96A]/30 to-transparent"></div>
 
                     <div className="relative z-10">
-                        <div className="text-center mb-20">
-                            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 tracking-tight text-[#C8A96A]">The Ritual of Recharge</h2>
+                        <div className="text-center mb-10">
+                            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4 tracking-tight text-[#C8A96A]">The Ritual of Recharge</h2>
                             <p className="text-[#F5E6C8]/60 text-lg max-w-2xl mx-auto font-medium leading-relaxed">
                                 A seamless, elite experience designed for the modern family.
                                 Every transaction, a step towards financial freedom.
                             </p>
                         </div>
 
-                        <div className="grid lg:grid-cols-2 gap-20 items-center">
-                            <div className="space-y-12">
+                        <div className="grid lg:grid-cols-2 gap-10 items-center">
+                            <div className="space-y-4">
                                 {[
                                     { step: 1, title: 'Identity Verification', desc: 'Step into your private sanctuary with high-level authentication.' },
                                     { step: 2, title: 'Service Selection', desc: 'Choose from our curated list of elite digital services.' },
@@ -1104,16 +1104,16 @@ const Recharge = () => {
                                     { step: 4, title: 'Secure Authorization', desc: 'Confirm via our military-grade E-Payment gateway.' },
                                     { step: 5, title: 'Instant Activation', desc: 'Immediate gratification with real-time confirmation.' }
                                 ].map((item, idx) => (
-                                    <div key={idx} className="flex gap-8 group">
+                                    <div key={idx} className="flex gap-4 group">
                                         <div className="flex flex-col items-center">
-                                            <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/20 flex items-center justify-center text-2xl font-serif font-bold text-[#C8A96A] group-hover:border-[#C8A96A] group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500 shadow-xl">
+                                            <div className="w-12 h-12 bg-[#0D0D0D] border border-[#C8A96A]/20 flex items-center justify-center text-xl font-serif font-bold text-[#C8A96A] group-hover:border-[#C8A96A] group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500 shadow-xl">
                                                 {item.step}
                                             </div>
                                             {idx < 4 && <div className="w-[1px] h-full bg-gradient-to-b from-[#C8A96A]/20 to-transparent mt-4"></div>}
                                         </div>
                                         <div className="pb-4">
-                                            <h4 className="text-2xl font-serif font-bold text-[#F5E6C8] mb-3 group-hover:text-[#C8A96A] transition-colors">{item.title}</h4>
-                                            <p className="text-[#F5E6C8]/40 leading-relaxed font-medium">{item.desc}</p>
+                                            <h4 className="text-xl font-serif font-bold text-[#F5E6C8] mb-1 group-hover:text-[#C8A96A] transition-colors">{item.title}</h4>
+                                            <p className="text-[#F5E6C8]/40 text-xs md:text-sm leading-relaxed font-medium">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -1122,24 +1122,24 @@ const Recharge = () => {
                             <div className="relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#C8A96A]/10 to-transparent blur-3xl"></div>
 
-                                <div className="relative bg-[#0D0D0D] p-12 border border-[#C8A96A]/20 shadow-3xl overflow-hidden group">
+                                <div className="relative bg-[#0D0D0D] p-3 md:p-6 border border-[#C8A96A]/20 shadow-3xl overflow-hidden group">
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#C8A96A]/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
 
                                     <div className="text-center relative z-10">
-                                        <div className="w-24 h-24 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] flex items-center justify-center mx-auto mb-8 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-700">
+                                        <div className="w-16 h-16 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] text-[#0D0D0D] flex items-center justify-center mx-auto mb-6 shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-700">
                                             <ShieldCheck className="w-12 h-12" />
                                         </div>
-                                        <h3 className="font-serif font-extrabold text-3xl text-[#F5E6C8] tracking-tight mb-4">Fortified Gateway</h3>
-                                        <p className="text-[#C8A96A]/60 font-black uppercase tracking-[0.3em] text-[10px] mb-10">RSA-4096 Encryption Protocol</p>
+                                        <h3 className="font-serif font-extrabold text-2xl text-[#F5E6C8] tracking-tight mb-2">Fortified Gateway</h3>
+                                        <p className="text-[#C8A96A]/60 font-black uppercase tracking-[0.3em] text-[10px] mb-4">RSA-4096 Encryption Protocol</p>
 
-                                        <div className="grid grid-cols-2 gap-6 mt-12">
+                                        <div className="grid grid-cols-2 gap-2 mt-4">
                                             {[
                                                 { icon: Shield, label: 'Protected', color: '#C8A96A' },
                                                 { icon: Zap, label: 'Instant', color: '#C8A96A' },
                                                 { icon: CheckCircle2, label: 'Verified', color: '#C8A96A' },
                                                 { icon: Lock, label: 'Encrypted', color: '#C8A96A' }
                                             ].map((feature, i) => (
-                                                <div key={i} className="p-5 bg-[#1A1A1A] border border-[#C8A96A]/10 hover:border-[#C8A96A]/20 transition-colors shadow-lg">
+                                                <div key={i} className="p-3 bg-[#1A1A1A] border border-[#C8A96A]/10 hover:border-[#C8A96A]/20 transition-colors shadow-lg">
                                                     <feature.icon className="w-6 h-6 mx-auto mb-3" style={{ color: feature.color }} />
                                                     <span className="text-[10px] font-black uppercase tracking-widest text-[#F5E6C8]/60">{feature.label}</span>
                                                 </div>

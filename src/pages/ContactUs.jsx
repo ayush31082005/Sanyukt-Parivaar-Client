@@ -82,16 +82,16 @@ const ContactUs = () => {
                 <div className="absolute bottom-[10%] right-[5%] w-[400px] h-[400px] bg-[#D4AF37]/5 rounded-full blur-[100px] animate-pulse delay-1000"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto relative z-10 px-4 py-16 md:py-24">
+            <div className="max-w-7xl mx-auto relative z-10 px-4 py-6 md:py-10">
                 {/* Main Heading */}
-                <div className="text-center mb-20 animate-slide-down">
-                    <div className="inline-block mb-4 px-6 py-1.5 rounded-full border border-[#C8A96A]/20 bg-[#C8A96A]/5">
-                        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#C8A96A]">Seamless Connection</span>
+                <div className="text-center mb-6 animate-slide-down">
+                    <div className="inline-block mb-2 px-6 py-1 rounded-full border border-[#C8A96A]/20 bg-[#C8A96A]/5">
+                        <span className="text-[9px] font-black uppercase tracking-[0.4em] text-[#C8A96A]">Seamless Connection</span>
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#F5E6C8] mb-8 tracking-tight drop-shadow-2xl">
+                    <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#F5E6C8] mb-3 tracking-tight drop-shadow-2xl uppercase">
                         Contact <span className="text-[#C8A96A]">US</span>
                     </h1>
-                    <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#C8A96A] to-transparent mx-auto"></div>
+                    <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#C8A96A] to-transparent mx-auto"></div>
                 </div>
 
                 {/* Main Content Grid */}
@@ -101,11 +101,11 @@ const ContactUs = () => {
                     <div className="animate-slide-left">
                         <div className="luxury-box flex flex-col h-full group transition-all duration-700">
                             {/* Form Header */}
-                            <div className="bg-[#121212] p-10 border-b border-[#C8A96A]/30">
-                                <h2 className="text-3xl font-serif font-bold text-[#F5E6C8]">
+                            <div className="bg-[#121212] p-5 md:p-6 border-b border-[#C8A96A]/30">
+                                <h2 className="text-2xl font-serif font-bold text-[#F5E6C8]">
                                     Get in Touch
                                 </h2>
-                                <p className="text-[#C8A96A]/60 mt-3 text-xs font-bold uppercase tracking-widest italic">
+                                <p className="text-[#C8A96A] mt-1 text-[10px] font-black uppercase tracking-widest italic">
                                     Your message, our priority.
                                 </p>
                             </div>
@@ -125,66 +125,66 @@ const ContactUs = () => {
                                     </div>
                                 )}
 
-                                <div className="space-y-8 flex-1">
-                                    <div className="grid md:grid-cols-2 gap-8">
+                                <div className="space-y-4 flex-1">
+                                    <div className="grid md:grid-cols-2 gap-4">
                                         {/* Name */}
-                                        <div className="space-y-3">
-                                            <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Legal Name</label>
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase tracking-widest text-[#C8A96A]">Legal Name</label>
                                             <input
                                                 type="text"
                                                 name="name"
                                                 value={formData.name}
                                                 onChange={handleChange}
                                                 placeholder="Enter Full Name"
-                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl p-4 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium text-sm"
+                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-xl p-3 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-black text-xs"
                                                 required
                                             />
                                         </div>
 
                                         {/* Phone */}
-                                        <div className="space-y-3">
-                                            <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Access Number</label>
+                                        <div className="space-y-1.5">
+                                            <label className="text-[9px] font-black uppercase tracking-widest text-[#C8A96A]">Access Number</label>
                                             <div className="relative group/input">
-                                                <Phone className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#C8A96A]/40 group-hover/input:text-[#C8A96A] transition-colors" />
+                                                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-[#C8A96A]/40 group-hover/input:text-[#C8A96A] transition-colors" />
                                                 <input
                                                     type="tel"
                                                     name="phone"
                                                     value={formData.phone}
                                                     onChange={handleChange}
                                                     placeholder="Phone (Optional)"
-                                                    className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl pl-12 pr-4 py-4 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium text-sm"
+                                                    className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-xl pl-10 pr-3 py-3 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-black text-xs"
                                                 />
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* Email */}
-                                    <div className="space-y-3">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Email ID</label>
+                                    <div className="space-y-1.5">
+                                        <label className="text-[9px] font-black uppercase tracking-widest text-[#C8A96A]">Email ID</label>
                                         <div className="relative group/input">
-                                            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#C8A96A]/40 group-hover/input:text-[#C8A96A] transition-colors" />
+                                            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-[#C8A96A]/40 group-hover/input:text-[#C8A96A] transition-colors" />
                                             <input
                                                 type="email"
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 placeholder="Enter Email Address"
-                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl pl-12 pr-4 py-4 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium text-sm"
+                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-xl pl-10 pr-3 py-3 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-black text-xs"
                                                 required
                                             />
                                         </div>
                                     </div>
 
                                     {/* Message */}
-                                    <div className="space-y-3">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Inquiry Details</label>
+                                    <div className="space-y-1.5">
+                                        <label className="text-[9px] font-black uppercase tracking-widest text-[#C8A96A]">Inquiry Details</label>
                                         <textarea
                                             name="message"
                                             value={formData.message}
                                             onChange={handleChange}
                                             placeholder="Compose your message here..."
-                                            rows="4"
-                                            className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl p-4 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium text-sm resize-none"
+                                            rows="3"
+                                            className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-xl p-3 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-black text-xs resize-none"
                                             required
                                         />
                                     </div>
@@ -211,24 +211,24 @@ const ContactUs = () => {
                     <div className="animate-slide-right">
                         <div className="luxury-box flex flex-col h-full group transition-all duration-700">
                             {/* Info Header */}
-                            <div className="bg-[#121212] p-10 border-b border-[#C8A96A]/30">
-                                <h2 className="text-3xl font-serif font-bold text-[#F5E6C8]">
+                            <div className="bg-[#121212] p-5 md:p-6 border-b border-[#C8A96A]/30">
+                                <h2 className="text-2xl font-serif font-bold text-[#F5E6C8]">
                                     Contact Information
                                 </h2>
-                                <p className="text-[#C8A96A]/60 mt-3 text-xs font-bold uppercase tracking-widest italic">
+                                <p className="text-[#C8A96A] mt-1 text-[10px] font-black uppercase tracking-widest italic">
                                     Our doors are open to your vision.
                                 </p>
                             </div>
 
-                            <div className="p-10 space-y-12">
+                            <div className="p-5 md:p-6 space-y-6">
                                 {[
-                                    { icon: MapPin, title: 'Head Office', content: 'Sanyukt Parivaar & Rich Life Pvt.Ltd.,\nBhatiniya, Gopinathpur, Harraiya,\nBasti - 272130, Uttar Pradesh', link: null },
-                                    { icon: Phone, title: 'Phone Number', content: '+91 78803 70057', link: 'tel:+917880370057' },
+                                    { icon: MapPin, title: 'Head Office', content: 'Sanyukt Parivaar & Rich Life \nBhatiniya, Gopinathpur, Harraiya,\nBasti - 272130, UP', link: null },
+                                    { icon: Phone, title: 'Phone', content: '+91 78803 70057', link: 'tel:+917880370057' },
                                     { icon: Mail, title: 'Email', content: 'info@sanyuktparivaar.com', link: 'mailto:info@sanyuktparivaar.com' }
                                 ].map((item, i) => (
-                                    <div key={i} className="flex items-start gap-6 group/item">
-                                            <div className="w-14 h-14 bg-[#121212] border border-[#C8A96A]/30 flex items-center justify-center text-[#C8A96A] transition-all duration-500 rounded-sm">
-                                                <item.icon className="w-6 h-6" />
+                                    <div key={i} className="flex items-start gap-4 group/item">
+                                            <div className="w-10 h-10 bg-[#121212] border border-[#C8A96A]/30 flex items-center justify-center text-[#C8A96A] transition-all duration-500 rounded-sm">
+                                                <item.icon className="w-4 h-4" />
                                             </div>
                                         <div>
                                             <h4 className="text-lg font-serif font-bold text-[#F5E6C8] mb-2 uppercase tracking-wide group-hover/item:text-[#C8A96A] transition-colors">{item.title}</h4>
@@ -246,8 +246,8 @@ const ContactUs = () => {
                                 ))}
 
                                 {/* Map Integration */}
-                                <div className="pt-6">
-                                    <div className="relative h-64 overflow-hidden luxury-box group/map">
+                                <div className="pt-2">
+                                    <div className="relative h-44 overflow-hidden luxury-box group/map">
                                         <iframe
                                             src={mapUrl}
                                             className="absolute inset-0 w-full h-full grayscale opacity-40 group-hover/map:grayscale-0 group-hover/map:opacity-80 transition-all duration-1000"
@@ -260,9 +260,9 @@ const ContactUs = () => {
                                             href="https://maps.google.com/?q=Tukum+Chandrapur+Maharashtra"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="luxury-button absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-auto bg-[#121212]"
+                                            className="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest bg-[#121212] border border-[#C8A96A]/20 absolute bottom-3 left-1/2 -translate-x-1/2 pointer-events-auto hover:bg-[#C8A96A]/10 transition-all"
                                         >
-                                            Expand Domain Map
+                                            View Domain Map
                                         </a>
                                     </div>
                                 </div>

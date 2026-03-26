@@ -150,28 +150,28 @@ const UserLogin = () => {
 
             <div className="max-w-6xl mx-auto relative z-10 px-4">
                 {/* Main Content Grid */}
-                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center justify-center min-h-[80vh] py-12">
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center justify-center py-6 md:py-10">
                     {/* Left Side - Welcome Message */}
                     {/* Left Side - Welcome Message */}
                     <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left animate-slide-right">
                         <div className="inline-block mb-6 px-6 py-1.5 rounded-full border border-[#C8A96A]/20 bg-[#C8A96A]/5">
                             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#C8A96A]"> Sanyukt Parivaar Portal</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#F5E6C8] mb-8 tracking-tight drop-shadow-2xl">
+                        <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#F5E6C8] mb-4 tracking-tight uppercase">
                             Welcome <span className="text-[#C8A96A]">Back</span>
                         </h1>
-                        <p className="text-[#F5E6C8]/60 text-lg max-w-md leading-relaxed font-medium mb-12">
+                        <p className="text-[#F5E6C8]/60 text-sm max-w-sm leading-relaxed font-black uppercase tracking-widest mb-8">
                             Secure access to your high-performance business ecosystem and legacy dashboard.
                         </p>
 
                         {/* Error Message */}
                         {error && (
-                            <div className="p-5 bg-red-900/20 border border-red-500/30 text-red-400 rounded-2xl animate-slide-down text-sm font-bold max-w-md w-full mb-10">
+                            <div className="p-4 bg-red-900/20 border border-red-500/30 text-red-400 rounded-2xl animate-slide-down text-xs font-bold max-w-md w-full mb-6">
                                 {error}
                             </div>
                         )}
 
-                        <div className="luxury-box p-6 max-w-md w-full shadow-2xl flex items-start gap-5 group transition-all duration-500">
+                        <div className="luxury-box p-4 max-w-md w-full shadow-2xl flex items-start gap-4 group transition-all duration-500">
                             <div className="bg-[#0D0D0D] p-3 rounded-2xl text-[#C8A96A] border border-[#C8A96A]/20 group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500">
                                 <Lock className="w-6 h-6" />
                             </div>
@@ -184,14 +184,14 @@ const UserLogin = () => {
                         </div>
 
                         {/* Decorative Stats */}
-                        <div className="mt-12 grid grid-cols-2 gap-8 max-w-md w-full">
+                        <div className="mt-8 grid grid-cols-2 gap-6 max-w-md w-full">
                             {[
                                 { val: '10K+', label: ' Sanyukt Parivaar Estates' },
                                 { val: '50+', label: 'Global Regions' }
                             ].map((stat, i) => (
-                                <div key={i} className="luxury-box p-8 shadow-3xl transition-all duration-500 group">
-                                    <p className="text-4xl font-serif font-bold text-[#C8A96A] mb-2 group-hover:scale-110 transition-transform">{stat.val}</p>
-                                    <p className="text-[10px] font-black text-[#F5E6C8]/30 uppercase tracking-[0.2em]">{stat.label}</p>
+                                <div key={i} className="luxury-box p-4 md:p-6 shadow-3xl transition-all duration-500 group text-center">
+                                    <p className="text-3xl font-serif font-bold text-[#C8A96A] mb-1 group-hover:scale-110 transition-transform">{stat.val}</p>
+                                    <p className="text-[8px] font-black text-[#F5E6C8]/30 uppercase tracking-[0.2em]">{stat.label}</p>
                                 </div>
                             ))}
                         </div>
@@ -201,7 +201,7 @@ const UserLogin = () => {
                     <div className="w-full lg:w-1/2 flex justify-center lg:justify-end animate-slide-left">
                         <div className="luxury-box w-full max-w-[460px] group transition-all duration-700">
                             {/* Header -  Sanyukt Parivaar Gold */}
-                            <div className="bg-[#121212] p-10 border-b border-[#C8A96A]/30 relative overflow-hidden text-center">
+                            <div className="bg-[#121212] p-6 md:p-8 border-b border-[#C8A96A]/30 relative overflow-hidden text-center">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C8A96A]/5 rounded-full blur-3xl"></div>
 
                                 <h2 className="text-3xl font-serif font-bold text-[#F5E6C8] mb-4 tracking-tight">
@@ -216,10 +216,10 @@ const UserLogin = () => {
                             </div>
 
                             {/* Form Body */}
-                            <form onSubmit={handleSubmit} className="p-10 space-y-10">
-                                <div className="space-y-10">
+                            <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-6">
+                                <div className="space-y-5">
                                     {/* Email Input */}
-                                    <div className="space-y-3">
+                                    <div className="space-y-2">
                                         <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Email / Sponser ID</label>
                                         <div className="relative group/input">
                                             <User className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#C8A96A]/40 group-hover/input:text-[#C8A96A] transition-colors" />
@@ -229,14 +229,14 @@ const UserLogin = () => {
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 placeholder="Email / Sponsor ID"
-                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl pl-12 pr-4 py-5 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium text-sm"
+                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl pl-12 pr-4 py-4 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium text-sm"
                                                 required
                                             />
                                         </div>
                                     </div>
 
                                     {/* Password */}
-                                    <div className="space-y-3">
+                                    <div className="space-y-2">
                                         <label className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]">Password</label>
                                         <div className="relative group/input">
                                             <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-[#C8A96A]/40 group-hover/input:text-[#C8A96A] transition-colors" />
@@ -246,7 +246,7 @@ const UserLogin = () => {
                                                 value={formData.password}
                                                 onChange={handleChange}
                                                 placeholder="Enter Secured Key"
-                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl pl-12 pr-14 py-5 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium text-sm"
+                                                className="w-full bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl pl-12 pr-14 py-4 text-[#F5E6C8] placeholder:text-[#F5E6C8]/20 focus:border-[#C8A96A] outline-none transition-all font-medium text-sm"
                                                 required
                                             />
                                             <button
@@ -285,7 +285,7 @@ const UserLogin = () => {
                                     </div>
 
                                     {/* Sign In Button */}
-                                    <div className="pt-4">
+                                    <div className="pt-2">
                                         <button
                                             type="submit"
                                             disabled={isLoading}
@@ -311,7 +311,7 @@ const UserLogin = () => {
                                     </div>
 
                                     {/* Demo Credentials */}
-                                    <div className="mt-4 p-5 bg-[#0D0D0D] rounded-2xl border border-[#C8A96A]/10">
+                                    <div className="mt-2 p-4 bg-[#0D0D0D] rounded-2xl border border-[#C8A96A]/10">
                                         <p className="text-[10px] text-[#F5E6C8]/20 text-center leading-relaxed">
                                             <span className="font-black text-[#C8A96A] block mb-2 tracking-widest uppercase">System Defaults</span>
                                             <span className="font-bold">Architect:</span> admin@example.com / admin123<br />

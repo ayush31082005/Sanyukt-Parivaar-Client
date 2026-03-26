@@ -33,7 +33,7 @@ const PublicFranchise = () => {
     const cities = [...new Set(franchises.map(f => f.address?.split(',').pop()?.trim() || 'Unknown'))];
 
     return (
-        <div className="min-h-screen bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30 pb-16 relative overflow-hidden">
+        <div className="bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30 pb-4 relative overflow-hidden">
             {/* Elegant Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#C8A96A]/5 rounded-full blur-[140px] animate-pulse"></div>
@@ -41,7 +41,7 @@ const PublicFranchise = () => {
             </div>
 
             {/* Hero Section */}
-            <div className="bg-[#121212] border-b border-[#C8A96A]/30 text-[#C8A96A] py-16 px-4 relative overflow-hidden">
+            <div className="bg-[#121212] border-b border-[#C8A96A]/30 text-[#C8A96A] py-6 md:py-8 px-4 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-[#C8A96A]/5 pointer-events-none"></div>
 
                 <motion.div
@@ -49,7 +49,7 @@ const PublicFranchise = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="max-w-7xl mx-auto text-center relative z-10"
                 >
-                    <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-[#C8A96A]">Our Franchise Network</h1>
+                    <h1 className="text-3xl md:text-4xl font-serif font-bold mb-2 text-[#C8A96A] uppercase tracking-tight">Our Franchise Network</h1>
                     <p className="text-[10px] md:text-xs tracking-[0.2em] font-black uppercase text-[#F5E6C8]/60 max-w-3xl mx-auto">
                         Find an Sanyukt Parivaar franchise partner near you
                     </p>
@@ -57,55 +57,55 @@ const PublicFranchise = () => {
             </div>
 
             {/* Stats Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 >
-                    <div className="luxury-box p-6 flex items-center gap-4">
-                        <div className="p-4 bg-[#C8A96A]/10 border border-[#C8A96A]/30">
-                            <Store className="w-8 h-8 text-[#C8A96A]" />
+                    <div className="luxury-box p-3 flex items-center gap-3">
+                        <div className="p-2 bg-[#C8A96A]/10 border border-[#C8A96A]/30">
+                            <Store className="w-5 h-5 text-[#C8A96A]" />
                         </div>
                         <div>
-                            <p className="text-3xl font-serif font-bold text-[#C8A96A]">{totalFranchises}</p>
-                            <p className="text-[10px] font-black uppercase tracking-widest text-[#F5E6C8]/60">Total Franchises</p>
+                            <p className="text-xl font-serif font-bold text-[#C8A96A] leading-tight">{totalFranchises}</p>
+                            <p className="text-[8px] font-black uppercase tracking-widest text-[#F5E6C8]">Total Franchises</p>
                         </div>
                     </div>
 
-                    <div className="luxury-box p-6 flex items-center gap-4">
-                        <div className="p-4 bg-[#C8A96A]/10 border border-[#C8A96A]/30">
-                            <MapPin className="w-8 h-8 text-[#C8A96A]" />
+                    <div className="luxury-box p-3 flex items-center gap-3">
+                        <div className="p-2 bg-[#C8A96A]/10 border border-[#C8A96A]/30">
+                            <MapPin className="w-5 h-5 text-[#C8A96A]" />
                         </div>
                         <div>
-                            <p className="text-3xl font-serif font-bold text-[#C8A96A]">{cities.length}</p>
-                            <p className="text-[10px] font-black uppercase tracking-widest text-[#F5E6C8]/60">Cities Covered</p>
+                            <p className="text-xl font-serif font-bold text-[#C8A96A] leading-tight">{cities.length}</p>
+                            <p className="text-[8px] font-black uppercase tracking-widest text-[#F5E6C8]">Cities Covered</p>
                         </div>
                     </div>
 
-                    <div className="luxury-box p-6 flex items-center gap-4">
-                        <div className="p-4 bg-[#C8A96A]/10 border border-[#C8A96A]/30">
-                            <Users className="w-8 h-8 text-[#C8A96A]" />
+                    <div className="luxury-box p-3 flex items-center gap-3">
+                        <div className="p-2 bg-[#C8A96A]/10 border border-[#C8A96A]/30">
+                            <Users className="w-5 h-5 text-[#C8A96A]" />
                         </div>
                         <div>
-                            <p className="text-3xl font-serif font-bold text-[#C8A96A]">24/7</p>
-                            <p className="text-[10px] font-black uppercase tracking-widest text-[#F5E6C8]/60">Support Available</p>
+                            <p className="text-xl font-serif font-bold text-[#C8A96A] leading-tight">24/7</p>
+                            <p className="text-[8px] font-black uppercase tracking-widest text-[#F5E6C8]">Support Available</p>
                         </div>
                     </div>
                 </motion.div>
             </div>
 
             {/* Main Content */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-2 relative z-10">
                 {/* Search and Filter */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="mb-8"
+                    className="mb-2"
                 >
-                    <h2 className="text-2xl font-serif font-bold text-[#C8A96A] mb-6 flex items-center gap-2">
+                    <h2 className="text-xl font-serif font-bold text-[#C8A96A] mb-3 flex items-center gap-2">
                         <span className="w-8 h-px bg-[#C8A96A]/50 hidden sm:block"></span>
                         <Building2 className="w-6 h-6 text-[#C8A96A]" />
                         Our Franchise Partners
@@ -122,10 +122,10 @@ const PublicFranchise = () => {
                     <>
                         {/* Franchise Grid */}
                         {franchises.length === 0 ? (
-                            <div className="text-center py-16 luxury-box flex flex-col items-center justify-center">
-                                <Store className="w-16 h-16 text-[#C8A96A]/40 mx-auto mb-4" />
-                                <h3 className="text-xl font-serif font-bold text-[#C8A96A] mb-2">No Franchises Yet</h3>
-                                <p className="text-[10px] uppercase font-black tracking-widest text-[#F5E6C8]/50">Check back later for Sanyukt Parivaar opportunities</p>
+                            <div className="max-w-2xl mx-auto text-center py-6 luxury-box flex flex-col items-center justify-center">
+                                <Store className="w-12 h-12 text-[#C8A96A]/40 mx-auto mb-2" />
+                                <h3 className="text-lg font-serif font-bold text-[#C8A96A] mb-1">No Franchises Yet</h3>
+                                <p className="text-[9px] uppercase font-black tracking-widest text-[#F5E6C8]/50">Check back later for Sanyukt Parivaar opportunities</p>
                             </div>
                         ) : (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -138,7 +138,7 @@ const PublicFranchise = () => {
                                         whileHover={{ y: -5 }}
                                         className="luxury-box flex flex-col"
                                     >
-                                        <div className="p-6 flex-1 flex flex-col">
+                                        <div className="p-4 flex-1 flex flex-col">
                                             {/* Header with Icon */}
                                             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#C8A96A]/10">
                                                 <div className="p-3 bg-[#C8A96A]/10 border border-[#C8A96A]/20">
@@ -185,15 +185,15 @@ const PublicFranchise = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.6 }}
-                            className="mt-16 luxury-box p-8 md:p-12"
+                            className="mt-4 luxury-box p-4 md:p-6 max-w-5xl mx-auto"
                         >
-                            <h3 className="text-3xl font-serif font-bold text-[#C8A96A] mb-12 text-center">
+                            <h3 className="text-xl font-serif font-bold text-[#C8A96A] mb-4 text-center uppercase">
                                 Why Choose Our Franchise?
                             </h3>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="text-center group">
-                                    <div className="w-16 h-16 bg-[#1A1A1A] border border-[#C8A96A]/30 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C8A96A]/10 transition-colors">
-                                        <Award className="w-8 h-8 text-[#C8A96A]" />
+                                    <div className="w-12 h-12 bg-[#1A1A1A] border border-[#C8A96A]/30 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#C8A96A]/10 transition-colors">
+                                        <Award className="w-6 h-6 text-[#C8A96A]" />
                                     </div>
                                     <h4 className="font-bold text-[11px] tracking-widest uppercase text-[#C8A96A] mb-3">Trusted Network</h4>
                                     <p className="text-[#F5E6C8]/60 text-sm leading-relaxed">
@@ -201,8 +201,8 @@ const PublicFranchise = () => {
                                     </p>
                                 </div>
                                 <div className="text-center group">
-                                    <div className="w-16 h-16 bg-[#1A1A1A] border border-[#C8A96A]/30 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C8A96A]/10 transition-colors">
-                                        <Users className="w-8 h-8 text-[#C8A96A]" />
+                                    <div className="w-12 h-12 bg-[#1A1A1A] border border-[#C8A96A]/30 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#C8A96A]/10 transition-colors">
+                                        <Users className="w-6 h-6 text-[#C8A96A]" />
                                     </div>
                                     <h4 className="font-bold text-[11px] tracking-widest uppercase text-[#C8A96A] mb-3">Expert Support</h4>
                                     <p className="text-[#F5E6C8]/60 text-sm leading-relaxed">
@@ -210,8 +210,8 @@ const PublicFranchise = () => {
                                     </p>
                                 </div>
                                 <div className="text-center group">
-                                    <div className="w-16 h-16 bg-[#1A1A1A] border border-[#C8A96A]/30 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C8A96A]/10 transition-colors">
-                                        <Building2 className="w-8 h-8 text-[#C8A96A]" />
+                                    <div className="w-12 h-12 bg-[#1A1A1A] border border-[#C8A96A]/30 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#C8A96A]/10 transition-colors">
+                                        <Building2 className="w-6 h-6 text-[#C8A96A]" />
                                     </div>
                                     <h4 className="font-bold text-[11px] tracking-widest uppercase text-[#C8A96A] mb-3">Pan India Presence</h4>
                                     <p className="text-[#F5E6C8]/60 text-sm leading-relaxed">
@@ -246,14 +246,14 @@ const PublicFranchise = () => {
                         </div>
 
                         <div className="space-y-4">
-                            <div className="bg-[#1A1A1A] border border-[#C8A96A]/10 p-5 hover:border-[#C8A96A]/30 transition-colors">
-                                <p className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]/60 mb-1">Franchise ID</p>
-                                <p className="font-mono text-sm text-[#F5E6C8]">{selectedFranchise.franchiseId}</p>
+                            <div className="bg-[#1A1A1A] border border-[#C8A96A]/10 p-4 hover:border-[#C8A96A]/30 transition-colors">
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#C8A96A] mb-1">Franchise ID</p>
+                                <p className="font-mono text-xs text-[#F5E6C8]">{selectedFranchise.franchiseId}</p>
                             </div>
 
-                            <div className="bg-[#1A1A1A] border border-[#C8A96A]/10 p-5 hover:border-[#C8A96A]/30 transition-colors">
-                                <p className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A]/60 mb-1">Address</p>
-                                <p className="text-sm text-[#F5E6C8] leading-relaxed">{selectedFranchise.address}</p>
+                            <div className="bg-[#1A1A1A] border border-[#C8A96A]/10 p-4 hover:border-[#C8A96A]/30 transition-colors">
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#C8A96A] mb-1">Address</p>
+                                <p className="text-xs text-[#F5E6C8] leading-relaxed font-bold">{selectedFranchise.address}</p>
                             </div>
 
                             <div className="bg-[#1A1A1A] border border-[#C8A96A]/10 p-5 hover:border-[#C8A96A]/30 transition-colors">

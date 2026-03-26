@@ -64,31 +64,31 @@ function Events() {
     }
 
     return (
-        <div className="min-h-screen bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30 relative">
+        <div className="bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30 relative">
             {/* Ambient Background Effects */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#C8A96A]/5 rounded-full blur-[150px] pointer-events-none"></div>
             <div className="absolute top-[40%] left-0 w-[300px] h-[300px] bg-[#C8A96A]/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             {/* Header */}
-            <div className="relative py-24 px-6 text-center border-b border-[#C8A96A]/10 bg-[#121212]/80 backdrop-blur-sm z-10">
+            <div className="relative py-10 md:py-12 px-6 text-center border-b border-[#C8A96A]/10 bg-[#121212]/80 backdrop-blur-sm z-10">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0D0D0D] border border-[#C8A96A]/30 text-[#C8A96A] text-[10px] font-black uppercase tracking-[0.3em] mb-6 shadow-[0_0_15px_rgba(200,169,106,0.1)]">
                     <Calendar size={14} className="text-[#C8A96A]" strokeWidth={2.5} />
                     Upcoming & Recent
                 </div>
 
-                <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#F5E6C8] mb-6 tracking-tight">
+                <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#F5E6C8] mb-3 tracking-tight uppercase">
                     Our Seminars & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C8A96A] to-[#D4AF37]">Events</span>
                 </h1>
 
-                <div className="w-16 h-1 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] mx-auto rounded-full mb-6"></div>
+                <div className="w-12 h-1 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] mx-auto rounded-full mb-3"></div>
 
-                <p className="text-[#F5E6C8]/60 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-12">
+                <p className="text-[#F5E6C8] text-[11px] md:text-xs font-black uppercase tracking-widest max-w-xl mx-auto leading-relaxed mb-6 italic opacity-60">
                     Join us for exclusive seminars, prestigious celebrations, and insightful workshops designed for growth and networking.
                 </p>
 
                 {/* Stats */}
                 {events.length > 0 && (
-                    <div className="inline-flex flex-wrap justify-center gap-6 md:gap-12 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl p-6 md:py-6 md:px-12 shadow-xl shrink-0 mx-auto max-w-full">
+                    <div className="inline-flex flex-wrap justify-center gap-6 md:gap-12 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl p-4 md:py-4 md:px-10 shadow-xl shrink-0 mx-auto max-w-full">
                         {[
                             { label: 'Total Events', val: events.length },
                             { label: 'Scheduled', val: events.filter(e => e.date).length },
@@ -105,7 +105,7 @@ function Events() {
             </div>
 
             {/* Events Grid */}
-            <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
+            <div className="max-w-7xl mx-auto px-6 py-6 relative z-10">
                 {events.length === 0 ? (
                     <div className="text-center py-24 bg-[#121212] rounded-2xl border border-[#C8A96A]/10">
                         <Calendar size={48} strokeWidth={1} className="text-[#C8A96A]/30 mx-auto mb-4" />
@@ -150,12 +150,12 @@ function Events() {
                                     </div>
 
                                     {/* Content Section */}
-                                    <div className="flex flex-col flex-1 p-6">
-                                        <h3 className="text-xl font-serif font-bold text-[#F5E6C8] mb-3 leading-tight line-clamp-2 group-hover:text-[#C8A96A] transition-colors">
+                                    <div className="flex flex-col flex-1 p-4 md:p-5">
+                                        <h3 className="text-lg font-serif font-bold text-[#F5E6C8] mb-2 leading-tight line-clamp-2 group-hover:text-[#C8A96A] transition-colors uppercase">
                                             {item.title}
                                         </h3>
                                         
-                                        <p className="text-[#F5E6C8]/60 text-sm leading-relaxed mb-6 line-clamp-2">
+                                        <p className="text-[#F5E6C8] text-xs font-bold leading-relaxed mb-4 line-clamp-2 opacity-60">
                                             {item.content}
                                         </p>
 
@@ -176,12 +176,12 @@ function Events() {
                                         </div>
 
                                         {/* Action */}
-                                        <div className="pt-4 border-t border-[#C8A96A]/10 flex items-center justify-between">
-                                            <span className="text-xs font-black uppercase tracking-widest text-[#C8A96A] group-hover:text-[#D4AF37] transition-colors">
+                                        <div className="pt-3 border-t border-[#C8A96A]/10 flex items-center justify-between">
+                                            <span className="text-[10px] font-black uppercase tracking-widest text-[#C8A96A] group-hover:text-[#D4AF37] transition-colors">
                                                 View Details
                                             </span>
-                                            <div className="w-8 h-8 rounded-full bg-[#C8A96A]/10 border border-[#C8A96A]/30 flex items-center justify-center group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all">
-                                                <ChevronRight size={16} strokeWidth={2.5} className="group-hover:translate-x-0.5 transition-transform" />
+                                            <div className="w-7 h-7 rounded-full bg-[#C8A96A]/10 border border-[#C8A96A]/30 flex items-center justify-center group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all">
+                                                <ChevronRight size={14} strokeWidth={2.5} className="group-hover:translate-x-0.5 transition-transform" />
                                             </div>
                                         </div>
                                     </div>

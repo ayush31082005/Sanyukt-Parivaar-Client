@@ -3,9 +3,9 @@ import { Shield } from 'lucide-react';
 
 const AboutSection = ({ aboutImage, teamImages }) => {
     return (
-        <section className="py-6 bg-[#0D0D0D] relative overflow-hidden">
+        <section className="py-2 bg-[#0D0D0D] relative overflow-hidden">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-6">
+                <div className="text-center mb-2">
                     <h2 className="text-xl md:text-3xl font-serif font-bold text-[#C8A96A] inline-block relative pb-1 tracking-widest uppercase">
                         Who We Are
                         <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#C8A96A]/40"></span>

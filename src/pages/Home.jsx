@@ -73,19 +73,19 @@ const HomePage = () => {
     // Hero slides data
     const heroSlides = [
         {
-            image: "/hero1.png",
+            image: "/hero4.jpeg",
             title: "Welcome to Sanyukt Parivaar & Rich Life Pvt.Ltd.",
             subtitle: "A Trusted & Fast-Growing Multi-Level Marketing Plateform",
             description: "Sanyukt Parivaar & Rich Life Pvt.Ltd. is a people-driven direct selling organization committed to empowering individuals with sustainable income opportunities. Through our transparent MLM business model and high-quality products, we help ordinary people build extraordinary futures."
         },
         {
-            image: "/hero2.png",
+            image: "/hero5.jpeg",
             title: "Welcome to Sanyukt Parivaar & Rich Life Pvt.Ltd.",
             subtitle: "A Trusted & Fast-Growing Multi-Level Marketing Plateform",
             description: "Sanyukt Parivaar & Rich Life Pvt.Ltd. is a people-driven direct selling organization committed to empowering individuals with sustainable income opportunities. Through our transparent MLM business model and high-quality products, we help ordinary people build extraordinary futures."
         },
         {
-            image: "/hero3.png",
+            image: "/hero4.jpeg",
             title: "Welcome to Sanyukt Parivaar & Rich Life Pvt.Ltd.",
             subtitle: "A Trusted & Fast-Growing Multi-Level Marketing Plateform",
             description: "Sanyukt Parivaar & Rich Life Pvt.Ltd. is a people-driven direct selling organization committed to empowering individuals with sustainable income opportunities. Through our transparent MLM business model and high-quality products, we help ordinary people build extraordinary futures."
@@ -525,7 +525,18 @@ const HomePage = () => {
 
                 {/* </RechargeSection> */}
 
-                <div className="luxury-divider"><span>ESTABLISHED 2024</span></div>
+                <div className="w-full flex items-center justify-center gap-5 my-12 px-5">
+                    <div className="flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+
+                    <span
+                        className="text-center text-[32px] md:text-[38px] italic font-medium text-[#d4a64a] leading-tight whitespace-nowrap"
+                        style={{ fontFamily: '"Cormorant Garamond", serif' }}
+                    >
+                        Create a Life You Love with Your Family!
+                    </span>
+
+                    <div className="flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+                </div>
 
                 <AboutSection
                     aboutImage={aboutImage}
@@ -538,6 +549,18 @@ const HomePage = () => {
                     whyChoosePoints={whyChoosePoints}
                 />
 
+                <div className="w-full flex items-center justify-center gap-5 my-12 px-5">
+                    <div className="flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+
+                    <span
+                        className="text-center text-[32px] md:text-[38px] italic font-medium text-[#d4a64a] leading-tight whitespace-nowrap"
+                        style={{ fontFamily: '"Cormorant Garamond", serif' }}
+                    >
+                        Join Our Community!
+                    </span>
+
+                    <div className="flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+                </div>
                 <div className="luxury-divider"><span>OUR PRODUCTS</span></div>
 
                 <ProductsCarousel
@@ -578,7 +601,7 @@ const HomePage = () => {
                     </div>
                 </section>
 
-                <div className="luxury-divider"><span>ELITE TRAINING</span></div>
+                <div className="luxury-divider"><span>Sanyukt Parivaar TRAINING</span></div>
 
                 <TrainingSection
                     supportItems={supportItems}

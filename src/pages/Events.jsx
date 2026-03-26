@@ -70,34 +70,34 @@ function Events() {
             <div className="absolute top-[40%] left-0 w-[300px] h-[300px] bg-[#C8A96A]/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             {/* Header */}
-            <div className="relative py-10 md:py-12 px-6 text-center border-b border-[#C8A96A]/10 bg-[#121212]/80 backdrop-blur-sm z-10">
+            <div className="relative py-4 md:py-6 px-6 text-center border-b border-[#C8A96A]/10 bg-[#121212]/80 backdrop-blur-sm z-10">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0D0D0D] border border-[#C8A96A]/30 text-[#C8A96A] text-[10px] font-black uppercase tracking-[0.3em] mb-6 shadow-[0_0_15px_rgba(200,169,106,0.1)]">
                     <Calendar size={14} className="text-[#C8A96A]" strokeWidth={2.5} />
                     Upcoming & Recent
                 </div>
 
-                <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#F5E6C8] mb-3 tracking-tight uppercase">
+                <h1 className="text-2xl md:text-3xl font-serif font-bold text-[#F5E6C8] mb-2 tracking-tight uppercase">
                     Our Seminars & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C8A96A] to-[#D4AF37]">Events</span>
                 </h1>
 
                 <div className="w-12 h-1 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] mx-auto rounded-full mb-3"></div>
 
-                <p className="text-[#F5E6C8] text-[11px] md:text-xs font-black uppercase tracking-widest max-w-xl mx-auto leading-relaxed mb-6 italic opacity-60">
+                <p className="text-[#F5E6C8] text-[10px] md:text-[11px] font-black uppercase tracking-widest max-w-xl mx-auto leading-relaxed mb-3 italic opacity-60">
                     Join us for exclusive seminars, prestigious celebrations, and insightful workshops designed for growth and networking.
                 </p>
 
                 {/* Stats */}
                 {events.length > 0 && (
-                    <div className="inline-flex flex-wrap justify-center gap-6 md:gap-12 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl p-4 md:py-4 md:px-10 shadow-xl shrink-0 mx-auto max-w-full">
+                    <div className="inline-flex flex-wrap justify-center gap-3 md:gap-6 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-xl p-2 md:py-2 md:px-5 shadow-xl shrink-0 mx-auto max-w-full">
                         {[
                             { label: 'Total Events', val: events.length },
                             { label: 'Scheduled', val: events.filter(e => e.date).length },
                             { label: 'With Location', val: events.filter(e => e.location).length },
                         ].map((s, i) => (
                             <div key={i} className="text-center relative">
-                                {i !== 0 && <div className="hidden md:block absolute -left-6 md:-left-6 top-1/2 -translate-y-1/2 w-px h-8 bg-[#C8A96A]/20"></div>}
-                                <div className="text-2xl md:text-3xl font-serif font-bold text-[#C8A96A] mb-1">{s.val}</div>
-                                <div className="text-[9px] text-[#F5E6C8]/50 uppercase font-black tracking-widest">{s.label}</div>
+                                {i !== 0 && <div className="hidden md:block absolute -left-3 md:-left-3 top-1/2 -translate-y-1/2 w-px h-6 bg-[#C8A96A]/20"></div>}
+                                <div className="text-xl md:text-2xl font-serif font-bold text-[#C8A96A] mb-0.5">{s.val}</div>
+                                <div className="text-[8px] text-[#F5E6C8]/50 uppercase font-black tracking-widest">{s.label}</div>
                             </div>
                         ))}
                     </div>
@@ -105,7 +105,7 @@ function Events() {
             </div>
 
             {/* Events Grid */}
-            <div className="max-w-7xl mx-auto px-6 py-6 relative z-10">
+            <div className="max-w-7xl mx-auto px-6 py-3 relative z-10">
                 {events.length === 0 ? (
                     <div className="text-center py-24 bg-[#121212] rounded-2xl border border-[#C8A96A]/10">
                         <Calendar size={48} strokeWidth={1} className="text-[#C8A96A]/30 mx-auto mb-4" />
@@ -113,17 +113,17 @@ function Events() {
                         <p className="text-[#F5E6C8]/40 text-sm">Please check back later for upcoming seminars and events.</p>
                     </div>
                 ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {events.map((item, index) => {
                             const catStyle = categoryColors[item.category] || categoryColors.Other;
                             return (
                                 <div
                                     key={item._id || index}
-                                    className="group flex flex-col bg-[#121212] border border-[#C8A96A]/20 rounded-xl overflow-hidden cursor-pointer hover:border-[#C8A96A]/50 hover:shadow-[0_10px_30px_rgba(200,169,106,0.15)] hover:-translate-y-1 transition-all duration-500"
+                                    className="group flex flex-col bg-[#121212] border border-[#C8A96A]/20 rounded-lg overflow-hidden cursor-pointer hover:border-[#C8A96A]/50 hover:shadow-[0_10px_30px_rgba(200,169,106,0.15)] hover:-translate-y-1 transition-all duration-500"
                                     onClick={() => setSelectedEvent(item)}
                                 >
                                     {/* Image Section */}
-                                    <div className="relative h-56 overflow-hidden bg-[#0D0D0D] border-b border-[#C8A96A]/10">
+                                    <div className="relative h-40 overflow-hidden bg-[#0D0D0D] border-b border-[#C8A96A]/10">
                                         <img
                                             src={getImageUrl(item.image)}
                                             alt={item.title}
@@ -150,7 +150,7 @@ function Events() {
                                     </div>
 
                                     {/* Content Section */}
-                                    <div className="flex flex-col flex-1 p-4 md:p-5">
+                                    <div className="flex flex-col flex-1 p-2.5 md:p-3">
                                         <h3 className="text-lg font-serif font-bold text-[#F5E6C8] mb-2 leading-tight line-clamp-2 group-hover:text-[#C8A96A] transition-colors uppercase">
                                             {item.title}
                                         </h3>
@@ -160,7 +160,7 @@ function Events() {
                                         </p>
 
                                         {/* Metadata Row */}
-                                        <div className="mt-auto flex flex-wrap gap-3 mb-6">
+                                        <div className="mt-auto flex flex-wrap gap-2 mb-3">
                                             {item.time && (
                                                 <div className="flex items-center gap-1.5 bg-[#0D0D0D] border border-[#C8A96A]/10 rounded px-2 py-1 text-[#F5E6C8]/70">
                                                     <Clock size={12} className="text-[#C8A96A]" />
@@ -250,7 +250,7 @@ function Events() {
                                     { icon: <MapPin size={16} />, label: 'Location', val: selectedEvent.location || 'TBD' },
                                     { icon: <Tag size={16} />, label: 'Category', val: selectedEvent.category || 'General' },
                                 ].map((d, i) => (
-                                    <div key={i} className="bg-[#0D0D0D] border border-[#C8A96A]/10 rounded-xl p-4 flex flex-col items-center justify-center text-center">
+                                    <div key={i} className="bg-[#0D0D0D] border border-[#C8A96A]/10 rounded-xl p-2 flex flex-col items-center justify-center text-center">
                                         <div className="text-[#C8A96A] mb-2">{d.icon}</div>
                                         <div className="text-[9px] text-[#F5E6C8]/40 uppercase font-black tracking-widest mb-1">{d.label}</div>
                                         <div className="text-[11px] font-bold text-[#F5E6C8]">{d.val}</div>

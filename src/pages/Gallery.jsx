@@ -62,7 +62,7 @@ function Gallery() {
     return (
         <div className="bg-[#0D0D0D] font-sans text-[#F5E6C8] selection:bg-[#C8A96A]/30">
             {/* Hero Header */}
-            <div className="relative py-10 md:py-12 px-6 text-center border-b border-[#C8A96A]/10 bg-[#121212] overflow-hidden">
+            <div className="relative py-4 md:py-6 px-6 text-center border-b border-[#C8A96A]/10 bg-[#121212] overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(200,169,106,0.05)_0%,transparent_70%)] pointer-events-none"></div>
                 <div className="absolute top-0 right-0 w-96 h-96 bg-[#C8A96A]/5 rounded-full blur-[120px] pointer-events-none"></div>
                 <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#C8A96A]/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -73,27 +73,27 @@ function Gallery() {
                         Our Memories
                     </div>
 
-                    <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#F5E6C8] mb-3 tracking-tight uppercase">
+                    <h1 className="text-2xl md:text-3xl font-serif font-bold text-[#F5E6C8] mb-2 tracking-tight uppercase">
                         Beautiful <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C8A96A] to-[#D4AF37]">Moments</span>
                     </h1>
 
                     <div className="w-12 h-1 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] mx-auto rounded-full mb-3"></div>
 
-                    <p className="text-[#F5E6C8] text-[11px] md:text-xs font-black uppercase tracking-widest max-w-xl mx-auto leading-relaxed mb-4 italic opacity-60">
+                    <p className="text-[#F5E6C8] text-[10px] md:text-[11px] font-black uppercase tracking-widest max-w-xl mx-auto leading-relaxed mb-2 italic opacity-60">
                         Explore our curated collection of cherished memories, milestones, and prestigious events
                     </p>
 
                     {gallery.length > 0 && (
-                        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-[#0D0D0D] border border-[#C8A96A]/20 shadow-lg">
-                            <span className="text-[#C8A96A] font-black text-xl">{gallery.length}</span>
-                            <span className="text-[#F5E6C8]/50 text-[10px] uppercase font-bold tracking-widest">Photographs</span>
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0D0D0D] border border-[#C8A96A]/20 shadow-lg">
+                            <span className="text-[#C8A96A] font-black text-lg">{gallery.length}</span>
+                            <span className="text-[#F5E6C8]/50 text-[9px] uppercase font-bold tracking-widest">Photographs</span>
                         </div>
                     )}
                 </div>
             </div>
 
             {/* Gallery Grid */}
-            <div className="max-w-7xl mx-auto px-6 py-6 relative z-10">
+            <div className="max-w-7xl mx-auto px-6 py-3 relative z-10">
                 {gallery.length === 0 ? (
                     <div className="text-center py-12 bg-[#121212] rounded-2xl border border-[#C8A96A]/10">
                         <Camera size={32} strokeWidth={1} className="text-[#C8A96A]/30 mx-auto mb-2" />
@@ -101,15 +101,15 @@ function Gallery() {
                         <p className="text-[#F5E6C8]/40 text-xs">Our gallery is currently being curated. Check back soon.</p>
                     </div>
                 ) : (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                         {gallery.map((item, index) => (
                             <div
                                 key={item._id || index}
-                                className="group relative bg-[#121212] rounded-xl overflow-hidden border border-[#C8A96A]/20 cursor-pointer hover:border-[#C8A96A]/50 transition-all duration-500 hover:shadow-[0_10px_30px_rgba(200,169,106,0.15)] hover:-translate-y-1 block animate-fade-in-up"
+                                className="group relative bg-[#121212] rounded-lg overflow-hidden border border-[#C8A96A]/20 cursor-pointer hover:border-[#C8A96A]/50 transition-all duration-500 hover:shadow-[0_10px_30px_rgba(200,169,106,0.15)] hover:-translate-y-1 block animate-fade-in-up"
                                 style={{ animationDelay: `${index * 50}ms` }}
                                 onClick={() => openLightbox(item, index)}
                             >
-                                <div className="aspect-[4/3] bg-[#0D0D0D] overflow-hidden relative">
+                                <div className="aspect-[3/2] bg-[#0D0D0D] overflow-hidden relative">
                                     <img
                                         src={getImageUrl(item)}
                                         alt={item.title || `Gallery ${index + 1}`}
@@ -122,21 +122,21 @@ function Gallery() {
                                     />
                                     
                                     {/* Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                                        <span className="text-[#F5E6C8] font-bold text-sm mb-1 font-serif line-clamp-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                                        <span className="text-[#F5E6C8] font-bold text-[11px] mb-0.5 font-serif line-clamp-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                                             {item.title}
                                         </span>
-                                        <span className="text-[#C8A96A] text-[10px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                                        <span className="text-[#C8A96A] text-[8px] font-black uppercase tracking-widest translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                                             Click to view full size
                                         </span>
                                     </div>
                                     
                                     {/* Number Badge */}
-                                    <div className="absolute top-3 right-3 bg-[#0D0D0D]/80 backdrop-blur-md border border-[#C8A96A]/30 text-[#C8A96A] text-[9px] font-black px-2 py-1 rounded uppercase tracking-widest shadow-lg">
+                                    <div className="absolute top-2 right-2 bg-[#0D0D0D]/80 backdrop-blur-md border border-[#C8A96A]/30 text-[#C8A96A] text-[8px] font-black px-2 py-0.5 rounded uppercase tracking-widest shadow-lg">
                                         #{index + 1}
                                     </div>
                                 </div>
-                                <div className="h-1 w-full bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                                <div className="h-0.5 w-full bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                             </div>
                         ))}
                     </div>

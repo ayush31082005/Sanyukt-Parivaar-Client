@@ -71,7 +71,7 @@ const AboutUsPage = () => {
 
                 {/* Content Container */}
                 <div className="relative h-full flex flex-col items-center justify-center text-center px-4 pt-16">
-                    <h1 className="text-5xl md:text-6xl font-serif font-bold text-[#C8A96A] mb-4 drop-shadow-lg animate-fade-in">
+                    <h1 className="text-3xl md:text-4xl font-serif font-bold text-[#C8A96A] mb-2 drop-shadow-lg animate-fade-in uppercase">
                         ABOUT US
                     </h1>
 
@@ -85,19 +85,19 @@ const AboutUsPage = () => {
             </header>
 
             {/* Intro Heading Section */}
-            <section className="py-4 md:py-6 px-4 max-w-7xl mx-auto text-center relative">
+            <section className="py-2 md:py-4 px-4 max-w-7xl mx-auto text-center relative">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-gradient-to-b from-[#C8A96A] to-transparent opacity-30"></div>
 
                 {/* <div className="inline-block mb-6 px-6 py-2 rounded-full border border-[#C8A96A]/20 bg-[#C8A96A]/5">
                     <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#C8A96A]">Architects of Abundance</span>
                 </div> */}
 
-                <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#C8A96A] mb-3 leading-tight animate-slide-up">
+                <h2 className="text-2xl md:text-4xl font-serif font-bold text-[#C8A96A] mb-2 leading-tight animate-slide-up uppercase tracking-tighter">
                     Welcome to the <br />
                     <span className="text-[#F5E6C8]">Sanyukt Parivaar & Rich Life</span>
                 </h2>
 
-                <p className="text-xl md:text-2xl text-[#F5E6C8]/40 font-serif italic max-w-3xl mx-auto leading-relaxed mb-4">
+                <p className="text-sm md:text-md text-[#F5E6C8]/40 font-serif italic max-w-3xl mx-auto leading-relaxed mb-2">
                     "A People-Centric Multi-Level Marketing Organization."
                 </p>
 
@@ -109,18 +109,18 @@ const AboutUsPage = () => {
             </section>
 
             {/* ABOUT US - CONTENT + IMAGE */}
-            <section className="py-8 px-4 max-w-7xl mx-auto">
+            <section className="py-4 px-4 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     {/* Left Content */}
-                    <div className="space-y-4 animate-slide-right">
-                        <div className="space-y-3">
+                    <div className="space-y-3 animate-slide-right">
+                        <div className="space-y-2">
                             <p className="text-[#F5E6C8]/80 leading-relaxed text-lg">
                                 <span className="text-[#C8A96A] font-serif font-bold text-2xl italic mr-2"></span>Sanyukt Parivaar & Rich Life Pvt.Ltd. is a rapidly growing direct selling and multi-level marketing organization built on the foundation of trust, transparency, and teamwork.
                             </p>
                             <p className="text-[#F5E6C8]/60 leading-relaxed">
                                 At Sanyukt Parivaar, we believe success is best achieved together. Our "Parivaar" culture encourages mutual support, ethical business practices, and long-term relationships. We offer high-quality lifestyle, wellness, personal care, and daily-use products that create real value for customers.
                             </p>
-                            <p className="text-[#F5E6C8]/60 leading-relaxed">
+                            <p className="text-[#F5E6C8]/60 leading-relaxed text-sm">
                                 Through structured training, leadership development, and a proven compensation plan, we help individuals from all walks of life build a stable and scalable business with absolute confidence.
                             </p>
                         </div>
@@ -166,7 +166,7 @@ const AboutUsPage = () => {
             </section>
 
             {/* MISSION & VISION SECTION */}
-            <section className="py-8 px-4 max-w-7xl mx-auto">
+            <section className="py-4 px-4 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Mission Card */}
                     <article className="group relative">
@@ -175,8 +175,8 @@ const AboutUsPage = () => {
                             <div className="w-16 h-16 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] aspect-square flex items-center justify-center mb-4 shadow-xl shadow-gold-900/20 transform group-hover:rotate-6 transition-transform">
                                 <Target className="w-10 h-10 text-[#0D0D0D]" />
                             </div>
-                            <h3 className="text-3xl font-serif font-bold text-[#C8A96A] mb-3">Ambition</h3>
-                            <p className="text-[#F5E6C8]/60 leading-relaxed text-lg font-medium">
+                            <h3 className="text-2xl font-serif font-bold text-[#C8A96A] mb-1">Ambition</h3>
+                            <p className="text-[#F5E6C8]/60 leading-relaxed text-sm font-medium">
                                 Our mission is to architect a reliable platform for financial independence and personal development. We nurture our elite community through sophisticated training and leadership, maintaining absolute integrity in every transaction.
                             </p>
                         </div>
@@ -189,8 +189,8 @@ const AboutUsPage = () => {
                             <div className="w-16 h-16 bg-[#0D0D0D] border border-[#C8A96A]/30 aspect-square flex items-center justify-center mb-4 shadow-xl transform group-hover:-rotate-6 transition-transform">
                                 <Eye className="w-10 h-10 text-[#C8A96A]" />
                             </div>
-                            <h3 className="text-3xl font-serif font-bold text-[#F5E6C8] mb-3">Future</h3>
-                            <p className="text-[#F5E6C8]/60 leading-relaxed text-lg font-medium">
+                            <h3 className="text-2xl font-serif font-bold text-[#F5E6C8] mb-1">Future</h3>
+                            <p className="text-[#F5E6C8]/60 leading-relaxed text-sm font-medium">
                                 To lead the global direct selling landscape by defining a sustainable lifestyle model. We inspire positive transformation and encourage high-performance entrepreneurship through innovation and responsible legacy-building.
                             </p>
                         </div>
@@ -199,10 +199,10 @@ const AboutUsPage = () => {
             </section>
 
             {/* CORE VALUES SECTION */}
-            <section className="py-8 px-4 max-w-7xl mx-auto relative overflow-hidden">
+            <section className="py-4 px-4 max-w-7xl mx-auto relative overflow-hidden">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C8A96A]/5 rounded-full blur-[120px] -z-10"></div>
 
-                <h2 className="text-2xl md:text-4xl font-serif font-bold text-center text-[#C8A96A] mb-4 animate-slide-up">
+                <h2 className="text-xl md:text-3xl font-serif font-bold text-center text-[#C8A96A] mb-2 animate-slide-up uppercase">
                     Our Core Principles
                 </h2>
 
@@ -236,16 +236,16 @@ const AboutUsPage = () => {
             </section>
 
             {/* Why Sanyukt Parivaar Section */}
-            <section className="py-8 px-4">
+            <section className="py-4 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         {/* Left Content */}
-                        <div className="space-y-4 animate-slide-right">
-                            <div className="space-y-6">
-                                <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#C8A96A] leading-tight">
+                        <div className="space-y-3 animate-slide-right">
+                            <div className="space-y-4">
+                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#C8A96A] leading-tight uppercase">
                                     Why Choose the <br />  Sanyukt Parivaar?
                                 </h2>
-                                <p className="text-[#F5E6C8]/60 leading-relaxed text-lg">
+                                <p className="text-[#F5E6C8]/60 leading-relaxed text-sm">
                                     We are more than a company - we are an ecosystem committed to high-performance empowerment. Our model focuses on stability, recurring prosperity, and leadership-driven legacy.
                                 </p>
                             </div>
@@ -256,8 +256,8 @@ const AboutUsPage = () => {
                                         <Award className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-serif font-bold text-[#F5E6C8] mb-2 uppercase tracking-wide">Certified Elite</h4>
-                                        <p className="text-sm text-[#F5E6C8]/40 font-medium">Industry-leading training & mentorship.</p>
+                                        <h4 className="text-lg font-serif font-bold text-[#F5E6C8] mb-1 uppercase tracking-wide">Certified Elite</h4>
+                                        <p className="text-[10px] text-[#F5E6C8]/40 font-medium">Industry-leading training & mentorship.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4 group">
@@ -265,8 +265,8 @@ const AboutUsPage = () => {
                                         <Heart className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-serif font-bold text-[#F5E6C8] mb-2 uppercase tracking-wide">Unified Bond</h4>
-                                        <p className="text-sm text-[#F5E6C8]/40 font-medium">A family culture rooted in mutual respect.</p>
+                                        <h4 className="text-lg font-serif font-bold text-[#F5E6C8] mb-1 uppercase tracking-wide">Unified Bond</h4>
+                                        <p className="text-[10px] text-[#F5E6C8]/40 font-medium">A family culture rooted in mutual respect.</p>
                                     </div>
                                 </div>
                             </div>
@@ -274,25 +274,25 @@ const AboutUsPage = () => {
 
                         {/* Right Content - Stats View */}
                         <div className="grid grid-cols-2 gap-2 animate-slide-left">
-                            <div className="luxury-box p-3 text-center transition-all duration-500">
-                                <Users className="w-7 h-7 text-[#C8A96A] mx-auto mb-2 opacity-60" />
-                                <h4 className="font-serif font-bold text-[#F5E6C8] text-lg mb-0.5">Empowered</h4>
-                                <p className="text-[9px] text-[#C8A96A] font-black uppercase tracking-widest">5,000+ Partners</p>
+                            <div className="luxury-box p-2 text-center transition-all duration-500">
+                                <Users className="w-5 h-5 text-[#C8A96A] mx-auto mb-1 opacity-60" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-md mb-0">Empowered</h4>
+                                <p className="text-[8px] text-[#C8A96A] font-black uppercase tracking-widest leading-none">5,000+ Partners</p>
                             </div>
-                            <div className="luxury-box p-3 text-center transition-all duration-500">
-                                <Star className="w-7 h-7 text-[#C8A96A] mx-auto mb-2" />
-                                <h4 className="font-serif font-bold text-[#F5E6C8] text-lg mb-0.5">Pure</h4>
-                                <p className="text-[9px] text-[#C8A96A] font-black uppercase tracking-widest">Natural Line</p>
+                            <div className="luxury-box p-2 text-center transition-all duration-500">
+                                <Star className="w-5 h-5 text-[#C8A96A] mx-auto mb-1" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-md mb-0">Pure</h4>
+                                <p className="text-[8px] text-[#C8A96A] font-black uppercase tracking-widest leading-none">Natural Line</p>
                             </div>
-                            <div className="luxury-box p-3 text-center transition-all duration-500">
-                                <TrendingUp className="w-7 h-7 text-[#C8A96A] mx-auto mb-2" />
-                                <h4 className="font-serif font-bold text-[#F5E6C8] text-lg mb-0.5">Growth</h4>
-                                <p className="text-[9px] text-[#C8A96A] font-black uppercase tracking-widest">Success Legacy</p>
+                            <div className="luxury-box p-2 text-center transition-all duration-500">
+                                <TrendingUp className="w-5 h-5 text-[#C8A96A] mx-auto mb-1" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-md mb-0">Growth</h4>
+                                <p className="text-[8px] text-[#C8A96A] font-black uppercase tracking-widest leading-none">Success Legacy</p>
                             </div>
-                            <div className="luxury-box p-3 text-center transition-all duration-500">
-                                <Shield className="w-7 h-7 text-[#C8A96A] mx-auto mb-2 opacity-60" />
-                                <h4 className="font-serif font-bold text-[#F5E6C8] text-lg mb-0.5">Ethical</h4>
-                                <p className="text-[9px] text-[#C8A96A] font-black uppercase tracking-widest">Transparent Vision</p>
+                            <div className="luxury-box p-2 text-center transition-all duration-500">
+                                <Shield className="w-5 h-5 text-[#C8A96A] mx-auto mb-1 opacity-60" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-md mb-0">Ethical</h4>
+                                <p className="text-[8px] text-[#C8A96A] font-black uppercase tracking-widest leading-none">Transparent Vision</p>
                             </div>
                         </div>
                     </div>
@@ -300,13 +300,13 @@ const AboutUsPage = () => {
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-12 px-4 relative overflow-hidden">
+            <section className="py-5 px-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[#C8A96A] opacity-5"></div>
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#C8A96A]/30 to-transparent"></div>
 
                 <div className="max-w-4xl mx-auto text-center relative z-10">
-                    <div className="w-20 h-px bg-[#C8A96A]/40 mx-auto mb-4"></div>
-                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#F5E6C8] mb-6 leading-tight">
+                    <div className="w-16 h-px bg-[#C8A96A]/40 mx-auto mb-2"></div>
+                    <h2 className="text-xl md:text-3xl font-serif font-bold text-[#F5E6C8] mb-3 leading-tight uppercase">
                         <span className="text-[#C8A96A]">Join a Growing Community That Believes in Shared Success</span>
                     </h2>
 
@@ -314,9 +314,9 @@ const AboutUsPage = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => navigate('/register')}
-                        className="group relative inline-flex items-center justify-center px-12 py-5 font-bold text-[#0D0D0D] transition-all duration-300 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] rounded-full hover:shadow-[0_0_40px_rgba(200,169,106,0.4)]"
+                        className="group relative inline-flex items-center justify-center px-10 py-3.5 font-bold text-[#0D0D0D] transition-all duration-300 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] rounded-full hover:shadow-[0_0_40px_rgba(200,169,106,0.4)]"
                     >
-                        <span className="relative z-10 uppercase tracking-[0.2em] text-sm">Join Sanyukt Parivaar Today</span>
+                        <span className="relative z-10 uppercase tracking-[0.2em] text-xs">Join Sanyukt Parivaar Today</span>
                         <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
                     </motion.button>
                 </div>

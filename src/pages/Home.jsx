@@ -29,8 +29,8 @@ import { rechargePlans } from '../data/rechargePlans';
 
 // Simple loading fallback
 const SectionLoader = () => (
-    <div className="w-full py-20 flex items-center justify-center bg-[#0D0D0D]">
-        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#C8A96A]"></div>
+    <div className="w-full py-10 flex items-center justify-center bg-[#0D0D0D]">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#C8A96A]"></div>
     </div>
 );
 
@@ -525,17 +525,17 @@ const HomePage = () => {
 
                 {/* </RechargeSection> */}
 
-                <div className="w-full flex items-center justify-center gap-2 sm:gap-5 mt-2 mb-2 sm:my-6 px-4 sm:px-5">
-                    <div className="hidden sm:block flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+                <div className="w-full flex items-center justify-center gap-2 sm:gap-5 my-1 sm:my-2 px-4 sm:px-5">
+                    <div className="hidden sm:block flex-1 max-w-[120px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
 
                     <span
-                        className="text-center text-xl sm:text-2xl md:text-[38px] italic font-medium text-[#d4a64a] leading-tight"
+                        className="text-center text-lg sm:text-xl md:text-[28px] italic font-medium text-[#d4a64a] leading-tight"
                         style={{ fontFamily: '"Cormorant Garamond", serif' }}
                     >
                         Create a Life You Love with Your Family!
                     </span>
 
-                    <div className="hidden sm:block flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+                    <div className="hidden sm:block flex-1 max-w-[120px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
                 </div>
 
                 <AboutSection
@@ -549,17 +549,17 @@ const HomePage = () => {
                     whyChoosePoints={whyChoosePoints}
                 />
 
-                <div className="w-full flex items-center justify-center gap-2 sm:gap-5 mt-2 mb-2 sm:my-6 px-4 sm:px-5">
-                    <div className="hidden sm:block flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+                <div className="w-full flex items-center justify-center gap-2 sm:gap-5 my-1 sm:my-2 px-4 sm:px-5">
+                    <div className="hidden sm:block flex-1 max-w-[120px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
 
                     <span
-                        className="text-center text-xl sm:text-2xl md:text-[38px] italic font-medium text-[#d4a64a] leading-tight"
+                        className="text-center text-lg sm:text-xl md:text-[28px] italic font-medium text-[#d4a64a] leading-tight"
                         style={{ fontFamily: '"Cormorant Garamond", serif' }}
                     >
                         Join Our Community!
                     </span>
 
-                    <div className="hidden sm:block flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
+                    <div className="hidden sm:block flex-1 max-w-[120px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
                 </div>
                 <div className="luxury-divider"><span>OUR PRODUCTS</span></div>
 
@@ -587,9 +587,9 @@ const HomePage = () => {
                 <div className="luxury-divider"><span>SANYUKT PARIVAAR</span></div>
 
                 {/* Mid CTA Strip */}
-                <section className="py-4 px-4">
-                    <div className="max-w-5xl mx-auto luxury-box p-4 md:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
-                        <h3 className="text-sm md:text-lg font-serif font-bold text-[#F5E6C8] text-center md:text-left uppercase tracking-widest">
+                <section className="py-2 px-4">
+                    <div className="max-w-5xl mx-auto luxury-box p-3 md:p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+                        <h3 className="text-xs md:text-md font-serif font-bold text-[#F5E6C8] text-center md:text-left uppercase tracking-widest">
                             One of India's Fastest Growing <br /> Direct Selling Companies
                         </h3>
                         <button
@@ -622,18 +622,18 @@ const HomePage = () => {
                 <div className="luxury-divider"><span>OUR VISION</span></div>
 
                 {/* Final Trust Section */}
-                <section className="py-8 bg-[#0D0D0D] relative overflow-hidden" >
+                <section className="py-4 bg-[#0D0D0D] relative overflow-hidden" >
                     <div className="container mx-auto px-4 text-center relative z-10">
-                        <h2 className="text-xl md:text-3xl font-serif font-bold mb-2 text-[#C8A96A] uppercase tracking-widest">
+                        <h2 className="text-lg md:text-2xl font-serif font-bold mb-1 text-[#C8A96A] uppercase tracking-widest">
                             Together We Grow, <span className="text-[#F5E6C8]">Together We Prosper</span>
                         </h2>
-                        <div className="w-20 h-[1px] bg-[#C8A96A]/40 mx-auto mb-4"></div>
-                        <p className="text-xs md:text-sm font-light mb-6 max-w-2xl mx-auto text-[#F5E6C8]/60 uppercase tracking-tight">
+                        <div className="w-16 h-[1px] bg-[#C8A96A]/40 mx-auto mb-2"></div>
+                        <p className="text-[10px] md:text-xs font-light mb-4 max-w-2xl mx-auto text-[#F5E6C8]/60 uppercase tracking-tight">
                             We don't just build income - we build people, confidence, and a better future.
                         </p>
                         <button
                             onClick={() => handleNavigation('/registation')}
-                            className="luxury-button px-10 py-3 text-sm"
+                            className="luxury-button px-8 py-2.5 text-[10px]"
                         >
                             Join Sanyukt Parivaar Today
                         </button>

@@ -66,12 +66,12 @@ const NewsSection = () => {
 
     if (!loading && newsItems.length === 0) {
         return (
-            <section className="py-10 bg-[#121212] text-center" >
+            <section className="py-5 bg-[#121212] text-center" >
                 <div className="container mx-auto px-4">
                     <h2 className="text-2xl md:text-4xl font-serif font-bold text-[#F5E6C8] mb-3">
                         Latest News & <span className="text-[#C8A96A]">Updates</span>
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#C8A96A] to-transparent mx-auto mb-8"></div>
+                    <div className="w-16 h-[1px] bg-[#C8A96A]/40 mx-auto mb-3"></div>
                     <p className="text-[#F5E6C8]/40 max-w-2xl mx-auto text-lg font-light">
                         No news updates available at the moment. Please check back later or visit the admin panel to add news.
                     </p>
@@ -80,13 +80,13 @@ const NewsSection = () => {
         );
     }
     return (
-        <section className="pt-2 pb-6 bg-[#121212] relative overflow-hidden" >
+        <section className="py-4 bg-[#121212] relative overflow-hidden" >
             <div className="container mx-auto px-4 max-w-6xl">
                 <h2 className="text-xl md:text-3xl font-serif font-bold text-center text-[#F5E6C8] mb-1 uppercase tracking-widest">
                     Latest News & <span className="text-[#C8A96A]">Updates</span>
                 </h2>
-                <div className="w-16 h-[1px] bg-[#C8A96A]/40 mx-auto mb-4"></div>
-                <p className="text-center text-[#F5E6C8]/60 mb-5 max-w-2xl mx-auto text-[10px] md:text-xs font-light tracking-tight uppercase">
+                <div className="w-16 h-[1px] bg-[#C8A96A]/40 mx-auto mb-2"></div>
+                <p className="text-center text-[#F5E6C8]/60 mb-3 max-w-2xl mx-auto text-[10px] md:text-xs font-light tracking-tight uppercase">
                     Stay updated with the latest company announcements and success stories.
                 </p>
 

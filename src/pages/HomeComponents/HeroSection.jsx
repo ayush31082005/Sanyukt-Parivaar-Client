@@ -6,7 +6,7 @@ const HeroSection = ({ currentSlide, setCurrentSlide, heroSlides, isLoggedIn, us
     // Content always LEFT, Image always RIGHT
 
     return (
-        <section className="relative min-h-[calc(100vh-80px)] overflow-hidden bg-[#0D0D0D] flex flex-col">
+        <section className="relative min-h-0 md:min-h-[calc(100vh-80px)] overflow-hidden bg-[#0D0D0D] flex flex-col">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={currentSlide}
@@ -14,10 +14,10 @@ const HeroSection = ({ currentSlide, setCurrentSlide, heroSlides, isLoggedIn, us
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1 }}
-                    className="flex-1 flex flex-col"
+                    className="flex flex-col h-auto md:flex-1"
                 >
-                    <div className="container mx-auto px-4 sm:px-6 relative z-20 py-8 md:py-20">
-                        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center w-full">
+                    <div className="container mx-auto px-4 sm:px-6 relative z-20 pt-8 pb-2 md:py-20">
+                        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start md:items-center w-full">
                             
                             {/* Content Side */}
                             <motion.div

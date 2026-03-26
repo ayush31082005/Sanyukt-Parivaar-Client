@@ -525,7 +525,7 @@ const HomePage = () => {
 
                 {/* </RechargeSection> */}
 
-                <div className="w-full flex items-center justify-center gap-2 sm:gap-5 my-8 sm:my-12 px-4 sm:px-5">
+                <div className="w-full flex items-center justify-center gap-2 sm:gap-5 mt-4 mb-8 sm:my-12 px-4 sm:px-5">
                     <div className="hidden sm:block flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
 
                     <span
@@ -549,7 +549,7 @@ const HomePage = () => {
                     whyChoosePoints={whyChoosePoints}
                 />
 
-                <div className="w-full flex items-center justify-center gap-2 sm:gap-5 my-8 sm:my-12 px-4 sm:px-5">
+                <div className="w-full flex items-center justify-center gap-2 sm:gap-5 mt-4 mb-8 sm:my-12 px-4 sm:px-5">
                     <div className="hidden sm:block flex-1 max-w-[180px] h-px bg-gradient-to-r from-transparent via-[#b88a44] to-transparent" />
 
                     <span

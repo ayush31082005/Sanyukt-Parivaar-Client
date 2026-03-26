@@ -6,7 +6,7 @@ const HeroSection = ({ currentSlide, setCurrentSlide, heroSlides, isLoggedIn, us
     // Content always LEFT, Image always RIGHT
 
     return (
-        <section className="relative min-h-0 md:min-h-[calc(100vh-80px)] overflow-hidden bg-[#0D0D0D] flex flex-col">
+        <section className="relative overflow-hidden bg-[#0D0D0D] flex flex-col">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={currentSlide}

@@ -7,7 +7,7 @@ import MainRoutes from "./routes/MainRoutes";
 import { Toaster } from 'react-hot-toast';
 
 const PUBLIC_HEADER_OFFSET = {
-  xs: '60px',
+  xs: '72px',
   md: '80px',
 };
 

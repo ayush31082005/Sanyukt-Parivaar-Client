@@ -333,7 +333,7 @@ const Recharge = () => {
                 )}
             </AnimatePresence>
             {/* 1. PAGE BANNER / HEADER SECTION */}
-            <section className="relative min-h-[180px] md:min-h-[240px] flex items-center justify-center overflow-hidden bg-[#0D0D0D] py-12">
+            <section className="relative min-h-[260px] md:min-h-[240px] flex items-end md:items-center justify-center overflow-hidden bg-[#0D0D0D] pt-20 pb-8 md:py-12">
                 <div
                     className="absolute inset-0 bg-cover bg-center opacity-100"
                     style={{ backgroundImage: "url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070')" }}
@@ -341,17 +341,17 @@ const Recharge = () => {
 
                 <div className="absolute inset-0 bg-[#0D0D0D]/40 bg-gradient-to-r from-[#0D0D0D]/90 via-[#0D0D0D]/60 to-transparent"></div>
 
-                <div className="relative z-10 text-center px-4 w-full flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-8">
+                <div className="relative z-10 text-center px-4 w-full flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-4 md:gap-8">
                     <div className="flex-1 text-center md:text-left animate-fade-in">
-                        <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4 tracking-tight drop-shadow-2xl text-[#C8A96A]">Premium Services</h1>
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold mb-3 md:mb-4 tracking-tight drop-shadow-2xl text-[#C8A96A]">Premium Services</h1>
 
-                        <div className="flex items-center justify-center md:justify-start gap-2 text-sm md:text-base font-medium text-[#F5E6C8]/60 mb-6 tracking-widest uppercase">
+                        <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-xs sm:text-sm md:text-base font-medium text-[#F5E6C8]/60 mb-4 md:mb-6 tracking-[0.2em] md:tracking-widest uppercase">
                             <span className="hover:text-[#C8A96A] cursor-pointer transition-colors">Home</span>
                             <ChevronRight className="w-4 h-4 text-[#C8A96A]" />
                             <span className="text-[#C8A96A] font-bold">Recharge & Support</span>
                         </div>
 
-                        <p className="text-lg md:text-xl font-light text-[#F5E6C8]/80 max-w-2xl drop-shadow-md leading-relaxed">
+                        <p className="text-sm sm:text-base md:text-xl font-light text-[#F5E6C8]/80 max-w-2xl drop-shadow-md leading-relaxed">
                             Fast, secure, and exclusive services for the <span className="font-serif italic text-[#C8A96A]">Sanyukt</span> community.
                         </p>
                     </div>

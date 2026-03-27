@@ -41,8 +41,8 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
     backdropFilter: 'blur(20px)',
     boxShadow: '0 10px 40px rgba(0, 0, 0, 0.6)',
     borderBottom: '1px solid rgba(200, 169, 106, 0.4)',
-    minHeight: '60px',
-    height: '60px',
+    minHeight: '72px',
+    height: '72px',
     justifyContent: 'center',
     position: 'fixed',
     top: 0,
@@ -74,7 +74,7 @@ const LogoContainer = styled(Box)(({ theme }) => ({
 }));
 
 const LogoImage = styled('img')(({ theme }) => ({
-    height: '40px',
+    height: '36px',
     width: 'auto',
     objectFit: 'contain',
     [theme.breakpoints.up('md')]: {
@@ -759,6 +759,15 @@ const Header = () => {
                         gap: { lg: 3, xl: 4 } 
                     }}>
 
+                        {/* LEFT SPACER (MOBILE/TABLET) */}
+                        <Box
+                            sx={{
+                                display: { xs: 'flex', lg: 'none' },
+                                width: '48px',
+                                flexShrink: 0,
+                            }}
+                        />
+
                         {/* LEFT - NAVIGATION (DESKTOP) */}
                         <Box sx={{
                             display: { xs: 'none', lg: 'flex' },
@@ -880,7 +889,9 @@ const Header = () => {
                             alignItems: 'center',
                             position: { xs: 'absolute', lg: 'static' },
                             left: { xs: '50%', lg: 'auto' },
-                            transform: { xs: 'translateX(-50%)', lg: 'none' }
+                            transform: { xs: 'translateX(-50%)', lg: 'none' },
+                            width: { xs: 'calc(100% - 112px)', sm: 'auto' },
+                            maxWidth: { xs: '230px', sm: '260px', lg: 'none' },
                         }}>
                             <LogoContainer onClick={() => handleNavigation('/')}>
                                 {!logoError && (
@@ -1184,7 +1195,8 @@ const Header = () => {
                         {/* RIGHT - HAMBURGER (MOBILE/TABLET) */}
                         <Box sx={{ 
                             display: { xs: 'flex', lg: 'none' }, 
-                            flex: 1, 
+                            width: '48px',
+                            flexShrink: 0,
                             justifyContent: 'flex-end',
                             alignItems: 'center',
                             zIndex: 10 
@@ -1196,11 +1208,10 @@ const Header = () => {
                                 onClick={handleDrawerToggle}
                                 sx={{ 
                                     color: '#C9A84C',
-                                    p: 1.5, // Increase touch target
-                                    mr: -1 // Adjust margin to edge
+                                    p: 1,
                                 }}
                             >
-                                <MenuIcon sx={{ fontSize: '32px' }} />
+                                <MenuIcon sx={{ fontSize: { xs: '30px', sm: '32px' } }} />
                             </IconButton>
                         </Box>
 
